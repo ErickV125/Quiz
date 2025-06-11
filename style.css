@@ -1,0 +1,205 @@
+/* Reset de márgenes y paddings */
+@font-face {
+
+    font-family: 'Nunito';
+
+    src: url('Nunito-VariableFont_wght.ttf') format('truetype');
+    /* Ajusta la ruta según la ubicación de tu fuente */
+}
+* {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    font-weight: bold;
+    transition: all 250ms;
+}
+
+body {
+    background: var(--color-background);
+    padding: 0.5em;
+    position: relative;
+}
+
+.dark-mode {
+    /* Colores minimalistas */
+    --color-primary: #ffffff;
+    --color-secondary: #d3d3d3;
+    --color-accent: #a8a8a8;
+    --color-background: #f0f0f0;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-border: #e0e0e0;
+    --color-util: #e0c694;
+    --color-util-degrade: #837150;
+    --color-success: #60F266;
+    --color-warning: #ff9800;
+    --color-error: #f44336;
+
+    /* Bordes */
+    --border-radius: 8px;
+    --border-width: 1px;
+    --border-style: solid;
+    --border: var(--border-width) var(--border-style) var(--color-border);
+
+    /* Padding */
+    --padding-small: calc(8px * 1.618);
+    --padding-medium: calc(16px * 1.618);
+    --padding-large: calc(24px * 1.618);
+}
+
+/* Modo oscuro */
+:root {
+    --color-primary: #16171C;
+    --color-secondary: #d3d3d3;
+    --color-accent: #c8c8c8;
+    --color-background: #0B0A0F;
+    --color-text: #ffffff;
+    --color-text-min: #e2e2e2;
+    --color-text-light: #666666;
+    --color-border: #e0e0e0;
+    --color-util: #e0c694;
+    --color-util-degrade: #837150;
+    --color-success: #4CAF50;
+    --color-warning: #ff9800;
+    --color-error: #f44336;
+        --border-radius: 8px;
+    --border-width: 1px;
+    --border-style: solid;
+    --border: var(--border-width) var(--border-style) var(--color-border);
+
+    /* Padding */
+    --padding-small: calc(8px * 1.618);
+    --padding-medium: calc(16px * 1.618);
+    --padding-large: calc(24px * 1.618);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Animacion_de_aparicion {
+    animation: fadeIn 0.5s ease-out;
+}
+header{
+	position: relative;
+	width: 100%;
+    background: var(--color-primary);
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+}
+/* Estilos para el contenedor de preguntas */
+#quiz-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+.quiz-box {
+    width: 100%;
+    background: var(--color-primary);
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: var(--border-radius);
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 0.5em
+}
+.quiz-box .quiz-img{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 4em;
+    border-radius: var(--border-radius);
+    background: var(--color-primary);
+    border: 2px solid var(--color-background);
+    overflow: hidden;
+}
+.quiz-box .quiz-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.quiz-box p {
+    
+    color: var(--color-text);
+}
+
+/* Estilos para los inputs de tipo radio */
+label {
+	overflow: hidden;
+	position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    cursor: pointer;
+    background: var(--color-background);
+    border-radius: var(--border-radius);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    
+    position: absolute;
+    flex-shrink: 0;
+    left: 0;
+}
+
+input[type="radio"]:checked + span {
+    background: var(--color-success);
+}
+.Revisado label:not(.true) input[type="radio"]:checked + span {
+    background: var(--color-error);
+    opacity: 1;
+	width: 100%;
+}
+.Revisado .true :not(input[type="radio"]:checked) + span {
+	background: var(--color-success) ;
+	opacity: 0.5;
+	width: 100%;
+}
+/* Estilos para los botones */
+button {
+    background: var(--color-success);
+    color: var(--color-text);
+    padding: .5em;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border:  none;
+    width: 100%;
+    font-size: larger;
+}
+
+#dark-mode-btn {
+	background: var(--color-background);
+    position: absolute;
+    bottom:  0.5em;
+    right: 0.5em;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
