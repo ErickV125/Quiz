@@ -206,7 +206,7 @@ submitBtn.addEventListener('click', () => {
 
     let imgSrcMeme= (score < (quizData.length*0.8))? "mrd.png" : (score === quizData.length)? "alber.png" : "pensar.png";
     const imgBox = new CreateElement("div", `meme-img-box`, { ChildOf: result.element, ClassList: ['quiz-img'] });
-    const img = new CreateElement("img", "meme-img" { ChildOf: imgBox.element, PropetyList: { src:imgSrcMeme } });
+    const img = new CreateElement("img", "meme-img", { ChildOf: imgBox.element, PropetyList: { src:imgSrcMeme } });
      
    
     retryBtn.element.textContent = "Repetir prueba"
