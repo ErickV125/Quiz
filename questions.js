@@ -1,6 +1,6 @@
 let quizData = [
     {
-        img: "ImgPreguntas/pn.jpg",
+        img: "pn.jpg",
         question: "¿Qué tipo de permutaciones se usan cuando:/s-no hay elementos repetidos/s-se usan todos los elementos?",
         options: ["Permutaciones simples", "Permutaciones con repetición", "Permutaciones de r elementos tomados de n", "Permutaciones circulares"],
         answer: "Permutaciones simples"
@@ -12,7 +12,7 @@ let quizData = [
         answer: "n!"
     },
     {
-        img: "ImgPreguntas/n1n2n3.jpg",
+        img: "n1n2n3.jpg",
         question: "¿Qué tipo de permutaciones se usan cuando:/s-algunos elementos se repiten/s-se usan todos los elementos?",
         options: ["Permutaciones con repetición", "Permutaciones simples", "Permutaciones circulares", "Permutaciones parciales"],
         answer: "Permutaciones con repetición"
@@ -24,7 +24,7 @@ let quizData = [
         answer: "n! / (n1! * n2! * ...)"
     },
     {
-        img: "ImgPreguntas/n-r.jpg",
+        img: "n-r.jpg",
         question: "¿Qué tipo de permutaciones se usan cuando:/s-se seleccionan r elementos de un total de n/s-no se repiten/s-importa el orden?",
         options: ["Permutaciones de r elementos tomados de n", "Permutaciones con repetición", "Combinaciones", "Permutaciones circulares"],
         answer: "Permutaciones de r elementos tomados de n"
@@ -36,7 +36,7 @@ let quizData = [
         answer: "n! / (n - r)!"
     },
     {
-        img: "/ImgPreguntas/n-1.jpg",
+        img: "n-1.jpg",
         question: "¿Qué tipo de permutaciones se usan cuando:/s-los elementos se disponen en círculo/s-se consideran equivalentes las rotaciones?",
         options: ["Permutaciones circulares", "Permutaciones con repetición", "Permutaciones simples", "Permutaciones de r elementos"],
         answer: "Permutaciones circulares"
