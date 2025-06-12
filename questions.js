@@ -1,256 +1,363 @@
-let quizData = [
+const quizData = [
     {
-        img: "pn.jpg",
-        question: "¿Qué tipo de permutaciones se usan cuando:/s-no hay elementos repetidos/s-se usan todos los elementos?",
-        options: ["Permutaciones simples", "Permutaciones con repetición", "Permutaciones de r elementos tomados de n", "Permutaciones circulares"],
-        answer: "Permutaciones simples"
+        topic: "Electricidad - Corrientes",
+        question: "¿Qué característica tiene la corriente directa (CD)?",
+        options: [
+            "Cambia de dirección constantemente",
+            "Solo ocurre en casas",
+            "Fluye en un solo sentido",
+            "No se usa en ningún dispositivo"
+        ],
+        answer: "Fluye en un solo sentido"
     },
     {
-        img: "",
-        question: "¿Qué fórmula corresponde a las permutaciones simples?",
-        options: ["n!", "n^r", "n! / (n - r)!", "n! / (n1! * n2! * ...)"],
-        answer: "n!"
+        topic: "Electricidad - Corrientes",
+        question: "¿Qué característica tiene la corriente alterna (CA)?",
+        options: [
+            "Fluye solo en pilas",
+            "Es constante",
+            "Cambia de dirección continuamente",
+            "No sirve para electrodomésticos"
+        ],
+        answer: "Cambia de dirección continuamente"
     },
     {
-        img: "n1n2n3.jpg",
-        question: "¿Qué tipo de permutaciones se usan cuando:/s-algunos elementos se repiten/s-se usan todos los elementos?",
-        options: ["Permutaciones con repetición", "Permutaciones simples", "Permutaciones circulares", "Permutaciones parciales"],
-        answer: "Permutaciones con repetición"
+        topic: "Corriente Eléctrica",
+        question: "¿Qué es la corriente eléctrica?",
+        options: [
+            "Movimiento de neutrones",
+            "Movimiento ordenado de electrones",
+            "Movimiento aleatorio de átomos",
+            "Energía acumulada en baterías"
+        ],
+        answer: "Movimiento ordenado de electrones"
     },
     {
-        img: "",
-        question: "¿Qué fórmula se usa para permutaciones con repetición?",
-        options: ["n! / (n1! * n2! * ...)", "n!", "n! / (n - r)!", "(n - 1)!"],
-        answer: "n! / (n1! * n2! * ...)"
+        topic: "Procedimientos para obtener electricidad",
+        question: "¿Cuál de estas formas NO es una forma común de obtener electricidad?",
+        options: [
+            "Fricción",
+            "Presión",
+            "Reacción química",
+            "Fotosíntesis"
+        ],
+        answer: "Fotosíntesis"
     },
     {
-        img: "n-r.jpg",
-        question: "¿Qué tipo de permutaciones se usan cuando:/s-se seleccionan r elementos de un total de n/s-no se repiten/s-importa el orden?",
-        options: ["Permutaciones de r elementos tomados de n", "Permutaciones con repetición", "Combinaciones", "Permutaciones circulares"],
-        answer: "Permutaciones de r elementos tomados de n"
+        topic: "Intensidad de Corriente",
+        question: "¿En qué unidad se mide la intensidad de corriente?",
+        options: ["Voltios (V)", "Ohmios (Ω)", "Amperios (A)", "Watts (W)"],
+        answer: "Amperios (A)"
     },
     {
-        img: "",
-        question: "¿Qué fórmula corresponde a las permutaciones de r elementos tomados de n?",
-        options: ["n! / (n - r)!", "n! / r!", "n^r", "n! / (n1! * n2! * ...)"],
-        answer: "n! / (n - r)!"
+        topic: "Resistencia Eléctrica",
+        question: "¿Qué afecta el valor de la resistencia eléctrica?",
+        options: [
+            "Color del conductor",
+            "Forma del circuito",
+            "Longitud, grosor y material del conductor",
+            "Distancia entre interruptores"
+        ],
+        answer: "Longitud, grosor y material del conductor"
     },
     {
-        img: "n-1.jpg",
-        question: "¿Qué tipo de permutaciones se usan cuando:/s-los elementos se disponen en círculo/s-se consideran equivalentes las rotaciones?",
-        options: ["Permutaciones circulares", "Permutaciones con repetición", "Permutaciones simples", "Permutaciones de r elementos"],
-        answer: "Permutaciones circulares"
+        topic: "Ley de Ohm",
+        question: "¿Cuál es la fórmula de la Ley de Ohm?",
+        options: [
+            "I = V + R",
+            "V = I × R",
+            "R = V - I",
+            "V = I / R"
+        ],
+        answer: "V = I × R"
     },
     {
-        img: "",
-        question: "¿Qué fórmula se usa para permutaciones circulares?",
-        options: ["(n - 1)!", "n!", "n! / (n - r)!", "n^r"],
-        answer: "(n - 1)!"
+        topic: "Circuito en Serie",
+        question: "¿Qué característica tiene un circuito en serie?",
+        options: [
+            "El voltaje es igual en todos los elementos",
+            "Tiene varias rutas para la corriente",
+            "La corriente es la misma en todos los elementos",
+            "La resistencia total es menor que la individual"
+        ],
+        answer: "La corriente es la misma en todos los elementos"
     },
     {
-        img: "",
-        question: "¿Cuántas formas diferentes hay de ordenar la palabra 'MAMA'?",
-        options: ["6", "12", "24", "8"],
-        answer: "6"
+        topic: "Circuito en Paralelo",
+        question: "¿Qué característica tiene un circuito en paralelo?",
+        options: [
+            "Solo tiene una ruta para la corriente",
+            "La resistencia total se suma directamente",
+            "El voltaje es igual en cada rama",
+            "La corriente es igual en todos los elementos"
+        ],
+        answer: "El voltaje es igual en cada rama"
     },
     {
-        img: "",
-        question: "¿Qué representa el símbolo 'n!' en las fórmulas de permutaciones?",
-        options: ["Producto de todos los enteros desde n hasta 1", "División entre n y r", "Suma de n elementos", "Combinaciones posibles"],
-        answer: "Producto de todos los enteros desde n hasta 1"
-    },
-        // --- PERMUTACIONES SIMPLES (n!) ---
-    {
-        img: "",
-        question: "¿Cuántas maneras distintas hay de ordenar 5 libros diferentes?",
-        options: ["120", "60", "24", "20"],
-        answer: "120"
+        topic: "Leyes de Kirchhoff",
+        question: "¿Qué establece la Ley de Corrientes de Kirchhoff?",
+        options: [
+            "La corriente se divide de forma aleatoria",
+            "La suma de voltajes es cero",
+            "La suma de las corrientes que entran a un nodo es igual a la que sale",
+            "La energía se pierde en forma de calor"
+        ],
+        answer: "La suma de las corrientes que entran a un nodo es igual a la que sale"
     },
     {
-        img: "",
-        question: "Si tienes 6 personas y deseas ordenarlas en una fila:/s¿Cuántas permutaciones posibles existen?",
-        options: ["720", "36", "120", "360"],
-        answer: "720"
+        topic: "Leyes de Kirchhoff",
+        question: "¿Qué establece la Ley de Voltajes de Kirchhoff?",
+        options: [
+            "La suma de resistencias es constante",
+            "La corriente se mantiene estable en todas las ramas",
+            "La suma de las tensiones en una malla cerrada es cero",
+            "El voltaje total siempre es igual a cero"
+        ],
+        answer: "La suma de las tensiones en una malla cerrada es cero"
     },
     {
-        img: "",
-        question: "¿Cuántas formas se pueden ordenar las letras de la palabra 'CASA', considerando que todas son distintas?",
-        options: ["24", "12", "8", "16"],
-        answer: "24"
+        topic: "Ejemplo Ley de Corrientes",
+        question: "Si I₁ entra a un nodo y I₂, I₃ salen, ¿cuál es la ecuación correcta?",
+        options: [
+            "I₁ = I₂ - I₃",
+            "I₁ = I₂ + I₃",
+            "I₂ + I₃ = 0",
+            "I₁ + I₂ = I₃"
+        ],
+        answer: "I₁ = I₂ + I₃"
     },
     {
-        img: "",
-        question: "¿Cuántas permutaciones tiene un grupo de 3 personas distintas?",
-        options: ["6", "9", "3", "12"],
-        answer: "6"
+        topic: "Ejemplo Ley de Voltajes",
+        question: "Si Vₜ = 60V, V₁ = 20V y V₂ = 15V, ¿cuánto vale V₃?",
+        options: ["15 V", "20 V", "25 V", "30 V"],
+        answer: "25 V"
+    },
+    //problemas
+    {
+        question: "Un alambre conductor deja pasar 6 amperes al aplicarle una diferencia de potencial de 110 volts. ¿Cuál es el valor de su resistencia?",
+        options: [
+            "18.3 Ω",
+            "660 Ω",
+            "0.054 Ω",
+            "12 Ω"
+        ],
+        answer: "18.3 Ω"
     },
     {
-        img: "",
-        question: "Si hay 4 llaves distintas:/s¿Cuántas formas distintas hay de ordenarlas en una fila?",
-        options: ["24", "16", "12", "20"],
-        answer: "24"
-    },
-    
-    // --- PERMUTACIONES CON REPETICIÓN ---
-    {
-        img: "",
-        question: "¿Cuántas permutaciones se pueden formar con la palabra 'MAMA'?",
-        options: ["6", "12", "24", "8"],
-        answer: "6"
+        question: "En un circuito en serie, una resistencia es de 4 Ω y otra de 6 Ω. Si se aplican 20 V al circuito, ¿cuál es la corriente total?",
+        options: [
+            "2 A",
+            "5 A",
+            "0.5 A",
+            "1 A"
+        ],
+        answer: "2 A"
     },
     {
-        img: "",
-        question: "¿Cuántas formas de ordenar la palabra 'AABB' hay?",
-        options: ["6", "24", "12", "4"],
-        answer: "6"
+        question: "Tres resistencias de 12 Ω, 6 Ω y 4 Ω están conectadas en paralelo. ¿Cuál es la resistencia total del circuito?",
+        options: [
+            "22 Ω",
+            "2 Ω",
+            "1.5 Ω",
+            "5.14 Ω"
+        ],
+        answer: "2 Ω"
     },
     {
-        img: "",
-        question: "¿Cuántas permutaciones tiene la palabra 'PEPE'?",
-        options: ["6", "12", "24", "8"],
-        answer: "6"
+        question: "En un nodo de un circuito eléctrico entran 4 A y 2 A, y salen 3 A. ¿Cuánta corriente falta por salir?",
+        options: [
+            "3 A",
+            "2 A",
+            "1 A",
+            "6 A"
+        ],
+        answer: "3 A"
     },
     {
-        img: "",
-        question: "¿Cuántas formas distintas hay de ordenar las letras de 'LLAMA'?",
-        options: ["30", "60", "20", "15"],
-        answer: "30"
+        question: "En una malla cerrada, la fuente de voltaje entrega 12 V. Si hay dos resistencias de 3 Ω cada una y pasa una corriente de 2 A, ¿se cumple la Ley de Kirchhoff?",
+        options: [
+            "Sí, 12V = 6V + 6V",
+            "No, 12V ≠ 6V",
+            "Sí, 12V = 3V + 3V",
+            "No se puede saber"
+        ],
+        answer: "Sí, 12V = 6V + 6V"
+    },
+    // Reactancia inductiva
+    {
+        question: "¿Qué es la reactancia inductiva?",
+        options: [
+            "La resistencia que ofrece un capacitor al paso de corriente",
+            "La oposición al cambio de corriente en una bobina",
+            "La energía almacenada en un campo magnético",
+            "La fuerza electromotriz en un circuito"
+        ],
+        answer: "La oposición al cambio de corriente en una bobina"
     },
     {
-        img: "",
-        question: "¿Cuántas permutaciones tiene la palabra 'COCOA'?",
-        options: ["30", "60", "20", "15"],
-        answer: "30"
-    },
-    
-    // --- PERMUTACIONES DE r ELEMENTOS TOMADOS DE n ---
-    {
-        img: "",
-        question: "¿Cuántas formas hay de ordenar 3 personas elegidas de un grupo de 5?",
-        options: ["60", "10", "20", "120"],
-        answer: "60"
+        question: "¿Cómo se representa la reactancia inductiva?",
+        options: [
+            "Xc",
+            "Z",
+            "L",
+            "Xl"
+        ],
+        answer: "Xl"
     },
     {
-        img: "",
-        question: "De 6 letras diferentes, ¿cuántas formas hay de elegir y ordenar 2?",
-        options: ["30", "15", "36", "12"],
-        answer: "30"
+        question: "¿Cuál es la expresión matemática de la reactancia inductiva?",
+        options: [
+            "Xl = 1 / (2πfL)",
+            "Xl = 2πfL",
+            "Xl = f / (2πL)",
+            "Xl = L / f"
+        ],
+        answer: "Xl = 2πfL"
     },
     {
-        img: "",
-        question: "¿Cuántas permutaciones se pueden formar al elegir 4 elementos de 7?",
-        options: ["840", "35", "210", "5040"],
-        answer: "840"
+        question: "¿Cuál es la unidad de la reactancia inductiva?",
+        options: [
+            "Henry",
+            "Voltio",
+            "Ohm",
+            "Faradio"
+        ],
+        answer: "Ohm"
+    },
+
+    // Reactancia capacitiva
+    {
+        question: "¿Qué es la reactancia capacitiva?",
+        options: [
+            "La resistencia de una bobina al paso de corriente alterna",
+            "La oposición al cambio de voltaje en un capacitor",
+            "La energía disipada en un capacitor",
+            "La carga máxima almacenada por un capacitor"
+        ],
+        answer: "La oposición al cambio de voltaje en un capacitor"
     },
     {
-        img: "",
-        question: "Si el grupo tiene 8 personas y se eligen 2:/s¿Cuántas maneras distintas hay de ordenarlas?",
-        options: ["56", "16", "28", "64"],
-        answer: "56"
+        question: "¿Cómo se representa la reactancia capacitiva?",
+        options: [
+            "Xl",
+            "Z",
+            "C",
+            "Xc"
+        ],
+        answer: "Xc"
     },
     {
-        img: "",
-        question: "¿Cuántas permutaciones de 3 elementos se pueden hacer de un conjunto de 9?",
-        options: ["504", "720", "216", "84"],
-        answer: "504"
-    },
-    
-    // --- PERMUTACIONES CIRCULARES ---
-    {
-        img: "",
-        question: "¿Cuántas formas distintas hay de sentar 5 personas alrededor de una mesa circular?",
-        options: ["24", "120", "60", "20"],
-        answer: "24"
+        question: "¿Cuál es la expresión matemática de la reactancia capacitiva?",
+        options: [
+            "Xc = 2πfC",
+            "Xc = 1 / (2πfC)",
+            "Xc = C / (2πf)",
+            "Xc = f / (2πC)"
+        ],
+        answer: "Xc = 1 / (2πfC)"
     },
     {
-        img: "",
-        question: "Si hay 6 personas sentadas en círculo:/s¿Cuántas permutaciones circulares posibles hay?",
-        options: ["120", "720", "60", "24"],
-        answer: "120"
+        question: "¿Cuál es la unidad de la reactancia capacitiva?",
+        options: [
+            "Henry",
+            "Voltio",
+            "Ohm",
+            "Faradio"
+        ],
+        answer: "Ohm"
+    },
+
+    // Impedancia
+    {
+        question: "¿Qué es la impedancia?",
+        options: [
+            "La resistencia de un circuito a corriente continua",
+            "La oposición total al paso de corriente alterna",
+            "La carga almacenada en un circuito",
+            "La diferencia de potencial en corriente alterna"
+        ],
+        answer: "La oposición total al paso de corriente alterna"
     },
     {
-        img: "",
-        question: "¿Cuántas formas distintas hay de ordenar 7 elementos en un círculo?",
-        options: ["720", "5040", "7200", "720"],
-        answer: "720"
+        question: "¿Cómo se representa la impedancia?",
+        options: [
+            "X",
+            "Z",
+            "I",
+            "R"
+        ],
+        answer: "Z"
     },
     {
-        img: "",
-        question: "¿Cuántas maneras hay de organizar 8 figuras alrededor de un círculo?",
-        options: ["5040", "40320", "4032", "720"],
-        answer: "5040"
+        question: "¿Cuál es la expresión matemática de la impedancia en un circuito RLC?",
+        options: [
+            "Z = R + Xl - Xc",
+            "Z = R² + (Xl + Xc)²",
+            "Z = √(R² + (Xl - Xc)²)",
+            "Z = R / (Xl + Xc)"
+        ],
+        answer: "Z = √(R² + (Xl - Xc)²)"
     },
     {
-        img: "",
-        question: "Una familia de 4 personas se sienta en una mesa redonda:/s¿Cuántas formas distintas hay?",
-        options: ["6", "24", "12", "4"],
-        answer: "6"
+        question: "¿Cuál es la unidad de la impedancia?",
+        options: [
+            "Faradio",
+            "Henry",
+            "Ohm",
+            "Voltio"
+        ],
+        answer: "Ohm"
     }
 ];
+quizData.push(
+    {
+        img: "serie.png",
+        question: "¿Qué tipo de circuito se muestra en la imagen?",
+        options: ["Circuito en paralelo", "Circuito mixto", "Circuito en serie", "Circuito abierto"],
+        answer: "Circuito en serie"
+    },
+    {
+        img: "paralelo.png",
+        question: "¿Qué tipo de circuito se muestra en la imagen?",
+        options: ["Circuito en serie", "Circuito cerrado", "Circuito mixto", "Circuito en paralelo"],
+        answer: "Circuito en paralelo"
+    }
+);
+quizData.push(
+    {
+        question: "Un circuito de CA tiene una resistencia de 10 Ω y una reactancia inductiva de 5 Ω. ¿Cuál es la impedancia total del circuito?",
+        options: ["15 Ω", "√125 Ω", "11.18 Ω", "10.5 Ω"],
+        answer: "11.18 Ω" // Z = √(R² + Xl²) = √(10² + 5²) = √125 ≈ 11.18
+    },
+    {
+        question: "Un circuito de CA tiene una reactancia capacitiva de 12 Ω y una reactancia inductiva de 8 Ω. ¿Cuál es la reactancia neta (X)?",
+        options: ["4 Ω", "-4 Ω", "20 Ω", "√(8² + 12²)"],
+        answer: "-4 Ω" // X = Xl - Xc = 8 - 12 = -4
+    },
+    {
+        question: "Si un circuito RLC tiene R = 6 Ω, Xl = 10 Ω y Xc = 4 Ω, ¿cuál es su impedancia?",
+        options: ["10 Ω", "√(6² + (10 - 4)²) Ω", "6 + 10 + 4 Ω", "√(10² + 4²) Ω"],
+        answer: "√(6² + (10 - 4)²) Ω" // Z = √(R² + (Xl - Xc)²)
+    },
+    {
+        question: "¿Qué sucede en un circuito RLC cuando la reactancia inductiva es igual a la capacitiva?",
+        options: [
+            "La corriente se vuelve continua",
+            "El circuito entra en resonancia",
+            "La impedancia se anula",
+            "El voltaje disminuye a cero"
+        ],
+        answer: "El circuito entra en resonancia"
+    },
+    {
+        question: "¿Qué ocurre con la corriente en un circuito de CA cuando aumenta la frecuencia y hay un capacitor conectado?",
+        options: [
+            "La corriente aumenta",
+            "La corriente disminuye",
+            "La corriente se mantiene constante",
+            "La corriente se vuelve continua"
+        ],
+        answer: "La corriente disminuye" // Porque Xc = 1 / (2πfC) → más frecuencia, mayor oposición
+    }
+);
 
-// --- COMBINACIONES (orden no importa) ---
-quizData.push(
-    {
-        img: "",
-        question: "¿Cuántas combinaciones hay al elegir 3 personas de un grupo de 7?",
-        options: ["35", "210", "21", "42"],
-        answer: "35"
-    },
-    {
-        img: "",
-        question: "¿Cuántas combinaciones posibles hay al elegir 5 cartas de una baraja de 52?",
-        options: ["2598960", "311875200", "1533939", "2000000"],
-        answer: "2598960"
-    },
-    {
-        img: "",
-        question: "¿Cuántas formas hay de elegir 2 sabores de helado entre 6 disponibles?",
-        options: ["15", "12", "30", "36"],
-        answer: "15"
-    },
-    {
-        img: "",
-        question: "¿Cuántas combinaciones se pueden formar al seleccionar 4 alumnos entre 10?",
-        options: ["210", "5040", "120", "40"],
-        answer: "210"
-    },
-    {
-        img: "",
-        question: "¿Cuántas combinaciones hay al elegir 2 personas de un grupo de 8?",
-        options: ["28", "16", "56", "64"],
-        answer: "28"
-    }
-);
-// --- PROBABILIDAD ---
-quizData.push(
-    {
-        img: "",
-        question: "Se lanza una moneda justa. ¿Cuál es la probabilidad de obtener cara?",
-        options: ["1/2", "1/3", "2/3", "1"],
-        answer: "1/2"
-    },
-    {
-        img: "",
-        question: "Se elige una carta al azar de una baraja de 52:/s¿Cuál es la probabilidad de obtener un as?",
-        options: ["4/52", "1/4", "1/52", "13/52"],
-        answer: "4/52"
-    },
-    {
-        img: "",
-        question: "Se eligen al azar 2 cartas de una baraja sin reemplazo:/s¿Cuál es la probabilidad de que ambas sean ases?",
-        options: ["6/1326", "4/52", "1/13", "1/169"],
-        answer: "6/1326"
-    },
-    {
-        img: "",
-        question: "En una bolsa hay 3 bolas rojas y 2 azules:/s¿Cuál es la probabilidad de sacar una roja al azar?",
-        options: ["3/5", "2/5", "1/2", "3/4"],
-        answer: "3/5"
-    },
-    {
-        img: "",
-        question: "Tiras un dado:/s¿Cuál es la probabilidad de obtener un número primo?",
-        options: ["3/6", "1/2", "2/6", "4/6"],
-        answer: "3/6"
-    }
-);
