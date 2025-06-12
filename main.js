@@ -204,7 +204,7 @@ submitBtn.addEventListener('click', () => {
         EventList: { click: () => location.reload() }
     });
 
-    let imgSrcMeme= (score < (quizData.length*0.8))? "mrd.png" : (score === quizData.length)? "alber.png" : "pensar.png";
+    let imgSrcMeme=(score === 0)? "bob.png" : (score === (quizData.length*0.59))? "alesis1.png" : (score === (quizData.length*0.60))? "alesis2.png" : (score < (quizData.length*0.8))? "mrd.png" : (score === quizData.length)? "alber.png" : "pensar.png";
     const imgBox = new CreateElement("div", `meme-img-box`, {
         ChildOf: resultBox.element,
         ClassList: ['quiz-img'] 
