@@ -1,4 +1,4 @@
-const quizData = [
+let quizData = [
     {
         topic: "Electricidad - Corrientes",
         question: "¿Qué característica tiene la corriente directa (CD)?",
