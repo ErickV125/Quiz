@@ -18,7 +18,7 @@ let quizData = [
         answer: "Concatenar()"
     },
     {
-        img: "ImgPreguntas/Para.jpg",
+        img: "Para.jpg",
         question: "¿A que estructura se asocia la imagen anterior?",
         options: ["Mientras", "repetir", "para", "Si-Entonces"],
         answer: "para"
@@ -30,19 +30,19 @@ let quizData = [
         answer: "Mientras"
     },
     {
-        img: "ImgPreguntas/Repetir.jpg",
+        img: "Repetir.jpg",
         question: "¿A que estructura se asocia la imagen anterior?",
         options: ["Mientras", "repetir", "Para", "Si-Entonces"],
         answer: "repetir"
     },
     {
-        img: "ImgPreguntas/SiEntonces.jpg",
+        img: "SiEntonces.jpg",
         question: "¿A que estructura se asocia la imagen anterior?",
         options: ["Mientras", "repetir", "Para", "Si-Entonces"],
         answer: "Si-Entonces"
     },
     {
-        img: "ImgPreguntas/Segun.jpg",
+        img: "Segun.jpg",
         question: "¿A que estructura se asocia la imagen anterior?",
         options: ["Segun", "repetir", "Para", "Si-Entonces"],
         answer: "Segun"
