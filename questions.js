@@ -343,3 +343,93 @@ let quizData = [
   { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Multivaluado", img: "img/Multivaluado.png" },
 ];
 
+// Edgar F. Codd - Modelo Relacional
+quizData.push({
+    question: "¿Quién es considerado el padre del modelo relacional de bases de datos?",
+    options: [
+        "Edgar F. Codd",
+        "Peter Chen",
+        "Charles Babbage",
+        "E. F. Schumacher"
+    ],
+    answer: "Edgar F. Codd"
+});
+
+quizData.push({
+    question: "¿Cuál fue el mayor aporte de Edgar Codd a las bases de datos?",
+    options: [
+        "El modelo relacional",
+        "El modelo en red",
+        "La programación orientada a objetos",
+        "Los sistemas distribuidos"
+    ],
+    answer: "El modelo relacional"
+});
+
+quizData.push({
+    question: "¿En qué década Edgar Codd propuso el modelo relacional?",
+    options: [
+        "1970s",
+        "1960s",
+        "1980s",
+        "1950s"
+    ],
+    answer: "1970s"
+});
+
+// Peter Chen - Modelo Entidad-Relación
+quizData.push({
+    question: "¿Quién propuso el modelo Entidad-Relación (ER)?",
+    options: [
+        "Peter Chen",
+        "Edgar Codd",
+        "Alan Turing",
+        "Donald Knuth"
+    ],
+    answer: "Peter Chen"
+});
+
+quizData.push({
+    question: "¿Cuál es el principal aporte de Peter Chen a las bases de datos?",
+    options: [
+        "El modelo Entidad-Relación",
+        "El modelo lógico",
+        "La normalización",
+        "La creación de SQL"
+    ],
+    answer: "El modelo Entidad-Relación"
+});
+
+// Integridad referencial
+quizData.push({
+    question: "¿Qué garantiza la integridad referencial en bases de datos?",
+    options: [
+        "Que los valores de clave foránea correspondan a valores existentes en la clave primaria relacionada",
+        "Que no existan duplicados en la tabla",
+        "Que todos los atributos sean atómicos",
+        "Que las tablas estén en 3FN"
+    ],
+    answer: "Que los valores de clave foránea correspondan a valores existentes en la clave primaria relacionada"
+});
+
+quizData.push({
+    question: "¿Qué ocurre si intentamos insertar una clave foránea que no existe en la tabla padre?",
+    options: [
+        "Se viola la integridad referencial",
+        "Se crea automáticamente en la tabla padre",
+        "No afecta a la base de datos",
+        "Se elimina la fila de la tabla padre"
+    ],
+    answer: "Se viola la integridad referencial"
+});
+
+quizData.push({
+    question: "¿Qué sucede si eliminamos un registro en la tabla padre al que hacen referencia varias claves foráneas?",
+    options: [
+        "Puede provocar violación de integridad referencial",
+        "La base de datos lo permite siempre",
+        "No tiene ningún efecto",
+        "Se borran todos los registros hijos automáticamente"
+    ],
+    answer: "Puede provocar violación de integridad referencial"
+});
