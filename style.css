@@ -23,6 +23,8 @@ body {
     position: relative;
 }
 
+
+
 .dark-mode {
     /* Colores minimalistas */
     --color-primary: #ffffff;
@@ -96,7 +98,7 @@ header{
 	width: 100%;
     background: var(--color-primary);
     padding: 0.5em;
-    margin-bottom: 0.0em;
+    margin-bottom:1em;
     border-radius: var(--border-radius);
     color: var(--color-text);
 }
@@ -105,7 +107,10 @@ header{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	
+}
+#quiz-container {
+  justify-content: center;
+  gap: 1em; /* para que tengan espacio entre cajas */
 }
 .quiz-box {
     width: 100%;
@@ -205,3 +210,29 @@ button {
 }
 
 
+@media screen and (min-width: 900px) {
+  .quiz-box {
+    width: 60%;
+	
+  }
+	#quiz-container{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+    justify-content: center;	
+}
+}
+@media screen and (min-width: 1200px) {
+  .quiz-box {
+    width: 40%;
+	
+  }
+	#quiz-container{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+    justify-content: center;	
+}
+}
