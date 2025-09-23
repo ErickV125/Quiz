@@ -332,14 +332,14 @@ let quizData = [
   },
 
   // --- Imagen: Identificar conceptos ---
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad", img: "Entidad.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Relación", img: "Relacion.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Atributo", img: "Atributo.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad débil", img: "Entidad_debil.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad", img: "img/Entidad.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Relación", img: "img/Relacion.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Atributo", img: "img/Atributo.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad débil", img: "img/Entidad_debil.png" },
 
   // --- Imagen: atributos ---
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Derivado", img: "Derivado.png" },
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Compuesto", img: "Compuesto.png" },
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Multivaluado", img: "Multivaluado.png" },
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Derivado", img: "img/Derivado.png" },
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Compuesto", img: "img/Compuesto.png" },
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Multivaluado", img: "img/Multivaluado.png" },
 ];
 
