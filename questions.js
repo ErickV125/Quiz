@@ -184,6 +184,26 @@ let quizData = [
     options: ["varchar", "boolean custom", "xml-node"],
     answer: "varchar"
   },
+  {
+    question: "¿Qué tipo de dato se usa para almacenar texto de longitud fija?",
+    options: ["char", "varchar", "float"],
+    answer: "char"
+  },
+  {
+    question: "¿Qué tipo de dato se usa para almacenar números con decimales?",
+    options: ["int", "float", "varchar"],
+    answer: "float"
+  },
+  {
+    question: "¿Qué tipo de dato se usa para almacenar fechas?",
+    options: ["date", "char", "numeric"],
+    answer: "date"
+  },
+  {
+    question: "¿Qué tipo de dato se usa para almacenar números enteros?",
+    options: ["int", "float", "varchar"],
+    answer: "int"
+  },
 
   // --- Componentes DBMS ---
   {
@@ -284,6 +304,55 @@ let quizData = [
       "Una ocurrencia de A con varias de B",
     ],
     answer: "Varias ocurrencias de A se relacionan con varias de B"
+  },
+
+  // --- Imagen: Identificar conceptos ---
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
+    answer: "Entidad",
+    img: "img/entidad.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
+    answer: "Relación",
+    img: "img/relacion.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
+    answer: "Atributo",
+    img: "img/atributo.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
+    answer: "Entidad débil",
+    img: "img/entidad_debil.png"
+  },
+
+  // --- Imagen: sin opciones (usuario las agregará) ---
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: [],
+    img: "img/pregunta1.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: [],
+    img: "img/pregunta2.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: [],
+    img: "img/pregunta3.png"
+  },
+  {
+    question: "¿A qué corresponde la imagen?",
+    options: [],
+    img: "img/pregunta4.png"
   }
 ];
+
 
