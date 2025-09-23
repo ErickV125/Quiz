@@ -352,5 +352,123 @@ let quizData = [
     img: "Multivaluado.png"
   },
 ];
+// Pregunta 1 - Modelado de base de datos
+quizData.push({
+    question: "¿Qué es el modelado de base de datos?",
+    options: [
+        "El proceso de diseñar cómo se organizará la información en una base de datos",
+        "Un método para programar consultas SQL",
+        "Un lenguaje de programación",
+        "Un proceso exclusivo de bases NoSQL"
+    ],
+    answer: "El proceso de diseñar cómo se organizará la información en una base de datos"
+});
 
+// Pregunta 2 - Niveles de modelado
+quizData.push({
+    question: "¿Cuáles son los tres niveles principales de modelado de bases de datos?",
+    options: [
+        "Conceptual, lógico y físico",
+        "Visual, lógico y numérico",
+        "Jerárquico, en red y relacional",
+        "Cliente, servidor y distribuido"
+    ],
+    answer: "Conceptual, lógico y físico"
+});
+
+// Pregunta 3 - Elementos del modelo ER
+quizData.push({
+    question: "¿Cuál de los siguientes NO es un elemento del modelo entidad-relación?",
+    options: [
+        "Entidad",
+        "Atributos",
+        "Clave primaria (PK)",
+        "Servidor web"
+    ],
+    answer: "Servidor web"
+});
+
+// Pregunta 4 - Relaciones en el modelo ER
+quizData.push({
+    question: "¿Qué tipo de relación requiere una tabla intermedia al pasar al modelo relacional?",
+    options: [
+        "1 a 1",
+        "1 a muchos",
+        "Muchos a muchos",
+        "Ninguna de las anteriores"
+    ],
+    answer: "Muchos a muchos"
+});
+
+// Pregunta 5 - Normalización
+quizData.push({
+    question: "¿Cuál es el objetivo de la normalización en bases de datos?",
+    options: [
+        "Evitar redundancias y anomalías",
+        "Aumentar el tamaño de las tablas",
+        "Reducir la cantidad de claves primarias",
+        "Eliminar la necesidad de relaciones"
+    ],
+    answer: "Evitar redundancias y anomalías"
+});
+
+// Pregunta 6 - 1FN
+quizData.push({
+    question: "¿Qué exige la Primera Forma Normal (1FN)?",
+    options: [
+        "Que los atributos sean atómicos",
+        "Que cada tabla tenga al menos dos claves primarias",
+        "Que no existan dependencias transitivas",
+        "Que todo atributo dependa de la clave primaria completa"
+    ],
+    answer: "Que los atributos sean atómicos"
+});
+
+// Pregunta 7 - 2FN
+quizData.push({
+    question: "En la Segunda Forma Normal (2FN), los atributos deben depender de:",
+    options: [
+        "Toda la clave primaria completa",
+        "Otro atributo de la tabla",
+        "El motor de base de datos",
+        "Un índice externo"
+    ],
+    answer: "Toda la clave primaria completa"
+});
+
+// Pregunta 8 - 3FN
+quizData.push({
+    question: "¿Qué se elimina en la Tercera Forma Normal (3FN)?",
+    options: [
+        "Dependencias transitivas",
+        "Claves primarias",
+        "Atributos atómicos",
+        "Entidades débiles"
+    ],
+    answer: "Dependencias transitivas"
+});
+
+// Pregunta 9 - Ejemplo de normalización
+quizData.push({
+    question: "Si en una tabla de Pedidos guardas el campo 'NombreCliente', ¿qué deberías hacer para cumplir con la normalización?",
+    options: [
+        "Crear una tabla Clientes y usar clave foránea",
+        "Eliminar el campo",
+        "Unirlo con la tabla Productos",
+        "Dejarlo igual, no afecta"
+    ],
+    answer: "Crear una tabla Clientes y usar clave foránea"
+});
+
+// Pregunta 10 - Ejemplo ER
+quizData.push({
+    question: "En el modelo entidad-relación de una escuela (Alumno — cursa — Materia), la relación 'cursa' corresponde a:",
+    options: [
+        "Muchos a muchos",
+        "Uno a uno",
+        "Uno a muchos",
+        "Ninguna de las anteriores"
+    ],
+    answer: "Muchos a muchos"
+});
 
