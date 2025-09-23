@@ -19,7 +19,7 @@ let quizData = [
     answer: "La estructura de la base de datos"
   },
   {
-    question: "¿Dónde se almacenan los metadatos?",
+    question: "¿Dónde se almacenan los metadatos en un DBMS?",
     options: ["En tablas del sistema", "En archivos XML", "En hojas Excel"],
     answer: "En tablas del sistema"
   },
@@ -42,11 +42,6 @@ let quizData = [
     answer: "Datos integrados y menos duplicación"
   },
   {
-    question: "¿Qué modelo de base de datos utiliza tablas bidimensionales?",
-    options: ["Jerárquico", "En red", "Relacional"],
-    answer: "Relacional"
-  },
-  {
     question: "¿Cuál fue una evolución posterior de los sistemas de BD?",
     options: [
       "BD distribuidas y cliente/servidor",
@@ -56,7 +51,7 @@ let quizData = [
     answer: "BD distribuidas y cliente/servidor"
   },
 
-  // --- Modelo Relacional ---
+  // --- Modelo Relacional y ER ---
   {
     question: "¿Qué representa el modelo relacional?",
     options: [
@@ -85,7 +80,7 @@ let quizData = [
     answer: "Una instancia particular de una entidad"
   },
   {
-    question: "¿Cómo se representa una relación en un diagrama?",
+    question: "¿Cómo se representa una relación en un diagrama ER?",
     options: ["Con un rombo", "Con un círculo", "Con un triángulo"],
     answer: "Con un rombo"
   },
@@ -170,42 +165,39 @@ let quizData = [
     answer: "Que pueden contener varios valores del mismo dominio"
   },
   {
-    question: "¿Qué tipo de atributo sirve como PK?",
-    options: ["Identificador", "Derivado", "Multivaluado"],
-    answer: "Identificador"
-  },
-  {
     question: "¿Qué atributo diferencia ocurrencias en entidades débiles?",
     options: ["Discriminador", "Derivado", "Multivaluado"],
     answer: "Discriminador"
   },
+
+  // --- Tipos de datos ---
   {
     question: "¿Cuál de estos es un tipo de dato frecuente en BD?",
     options: ["varchar", "boolean custom", "xml-node"],
     answer: "varchar"
   },
   {
-    question: "¿Qué tipo de dato se usa para almacenar texto de longitud fija?",
+    question: "¿Qué tipo de dato se usa para texto de longitud fija?",
     options: ["char", "varchar", "float"],
     answer: "char"
   },
   {
-    question: "¿Qué tipo de dato se usa para almacenar números con decimales?",
+    question: "¿Qué tipo de dato se usa para números con decimales?",
     options: ["int", "float", "varchar"],
     answer: "float"
   },
   {
-    question: "¿Qué tipo de dato se usa para almacenar fechas?",
+    question: "¿Qué tipo de dato se usa para fechas?",
     options: ["date", "char", "numeric"],
     answer: "date"
   },
   {
-    question: "¿Qué tipo de dato se usa para almacenar números enteros?",
+    question: "¿Qué tipo de dato se usa para números enteros?",
     options: ["int", "float", "varchar"],
     answer: "int"
   },
 
-  // --- Componentes DBMS ---
+  // --- DBMS ---
   {
     question: "¿Qué hace el subsistema de diseño de un DBMS?",
     options: [
@@ -239,24 +231,26 @@ let quizData = [
     answer: "Transacciones, bloqueos, respaldo y recuperación"
   },
 
-  // --- Desarrollo de BD ---
+  // --- Desarrollo y normalización ---
   {
-    question: "¿Cuál es una estrategia de desarrollo de BD?",
+    question: "¿Qué es el modelado de base de datos?",
     options: [
-      "De lo general a lo particular",
-      "Por prueba y error",
-      "Copiar hojas de cálculo",
+      "El proceso de diseñar cómo se organizará la información en una base de datos",
+      "Un método para programar consultas SQL",
+      "Un lenguaje de programación",
+      "Un proceso exclusivo de bases NoSQL"
     ],
-    answer: "De lo general a lo particular"
+    answer: "El proceso de diseñar cómo se organizará la información en una base de datos"
   },
   {
-    question: "¿Qué incluye el modelado de datos?",
+    question: "¿Cuáles son los tres niveles principales de modelado de BD?",
     options: [
-      "Identificar entidades, atributos y relaciones",
-      "Solo escribir código SQL",
-      "Definir consultas complejas",
+        "Conceptual, lógico y físico",
+        "Visual, lógico y numérico",
+        "Jerárquico, en red y relacional",
+        "Cliente, servidor y distribuido"
     ],
-    answer: "Identificar entidades, atributos y relaciones"
+    answer: "Conceptual, lógico y físico"
   },
   {
     question: "¿Qué define un esquema de BD?",
@@ -266,6 +260,46 @@ let quizData = [
       "La interfaz de usuario",
     ],
     answer: "Tablas, relaciones, dominios y reglas de negocio"
+  },
+  {
+    question: "¿Cuál es el objetivo de la normalización?",
+    options: [
+        "Evitar redundancias y anomalías",
+        "Aumentar el tamaño de las tablas",
+        "Reducir la cantidad de claves primarias",
+        "Eliminar la necesidad de relaciones"
+    ],
+    answer: "Evitar redundancias y anomalías"
+  },
+  {
+    question: "¿Qué exige la Primera Forma Normal (1FN)?",
+    options: [
+        "Que los atributos sean atómicos",
+        "Que cada tabla tenga al menos dos claves primarias",
+        "Que no existan dependencias transitivas",
+        "Que todo atributo dependa de la clave primaria completa"
+    ],
+    answer: "Que los atributos sean atómicos"
+  },
+  {
+    question: "En la Segunda Forma Normal (2FN), los atributos deben depender de:",
+    options: [
+        "Toda la clave primaria completa",
+        "Otro atributo de la tabla",
+        "El motor de base de datos",
+        "Un índice externo"
+    ],
+    answer: "Toda la clave primaria completa"
+  },
+  {
+    question: "¿Qué se elimina en la Tercera Forma Normal (3FN)?",
+    options: [
+        "Dependencias transitivas",
+        "Claves primarias",
+        "Atributos atómicos",
+        "Entidades débiles"
+    ],
+    answer: "Dependencias transitivas"
   },
 
   // --- Cardinalidades ---
@@ -288,15 +322,6 @@ let quizData = [
     answer: "Una ocurrencia de A con varias de B"
   },
   {
-    question: "¿Qué significa la cardinalidad N:1?",
-    options: [
-      "Varias ocurrencias de A se relacionan con una de B",
-      "Una ocurrencia de A con varias de B",
-      "Una ocurrencia de A con una sola de B",
-    ],
-    answer: "Varias ocurrencias de A se relacionan con una de B"
-  },
-  {
     question: "¿Qué significa la cardinalidad N:M?",
     options: [
       "Varias ocurrencias de A se relacionan con varias de B",
@@ -307,168 +332,14 @@ let quizData = [
   },
 
   // --- Imagen: Identificar conceptos ---
-  {
-    question: "¿A qué corresponde la imagen?",
-    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
-    answer: "Entidad",
-    img: "Entidad.png"
-  },
-  {
-    question: "¿A qué corresponde la imagen?",
-    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
-    answer: "Relación",
-    img: "Relacion.png"
-  },
-  {
-    question: "¿A qué corresponde la imagen?",
-    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
-    answer: "Atributo",
-    img: "Atributo.png"
-  },
-  {
-    question: "¿A qué corresponde la imagen?",
-    options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
-    answer: "Entidad débil",
-    img: "Entidad_debil.png"
-  },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad", img: "Entidad.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Relación", img: "Relacion.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Atributo", img: "Atributo.png" },
+  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad débil", img: "Entidad_debil.png" },
 
-  // --- Imagen: sin opciones (usuario las agregará) ---
-  {
-    question: "¿A qué tipo de atributo corresponde la imagen?",
-    options: ["Derivado","Compuesto","Multi evaluados"],
-    answer: "Derivado",
-    img: "Derivado.png"
-  },
-  {
-    question: "¿A qué tipo de atributo corresponde la imagen?",
-    options: ["Derivado","Compuesto","Multi evaluados"],
-    answer: "Compuesto",
-    img: "Compuesto.png"
-  },
-  {
-    question: "¿A qué tipo de atributo corresponde la imagen?",
-    options: ["Derivado","Compuesto","Multi evaluados"],
-    answer: "Multi evaluados",
-    img: "Multivaluado.png"
-  },
+  // --- Imagen: atributos ---
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Derivado", img: "Derivado.png" },
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Compuesto", img: "Compuesto.png" },
+  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Multivaluado", img: "Multivaluado.png" },
 ];
-// Pregunta 1 - Modelado de base de datos
-quizData.push({
-    question: "¿Qué es el modelado de base de datos?",
-    options: [
-        "El proceso de diseñar cómo se organizará la información en una base de datos",
-        "Un método para programar consultas SQL",
-        "Un lenguaje de programación",
-        "Un proceso exclusivo de bases NoSQL"
-    ],
-    answer: "El proceso de diseñar cómo se organizará la información en una base de datos"
-});
-
-// Pregunta 2 - Niveles de modelado
-quizData.push({
-    question: "¿Cuáles son los tres niveles principales de modelado de bases de datos?",
-    options: [
-        "Conceptual, lógico y físico",
-        "Visual, lógico y numérico",
-        "Jerárquico, en red y relacional",
-        "Cliente, servidor y distribuido"
-    ],
-    answer: "Conceptual, lógico y físico"
-});
-
-// Pregunta 3 - Elementos del modelo ER
-quizData.push({
-    question: "¿Cuál de los siguientes NO es un elemento del modelo entidad-relación?",
-    options: [
-        "Entidad",
-        "Atributos",
-        "Clave primaria (PK)",
-        "Servidor web"
-    ],
-    answer: "Servidor web"
-});
-
-// Pregunta 4 - Relaciones en el modelo ER
-quizData.push({
-    question: "¿Qué tipo de relación requiere una tabla intermedia al pasar al modelo relacional?",
-    options: [
-        "1 a 1",
-        "1 a muchos",
-        "Muchos a muchos",
-        "Ninguna de las anteriores"
-    ],
-    answer: "Muchos a muchos"
-});
-
-// Pregunta 5 - Normalización
-quizData.push({
-    question: "¿Cuál es el objetivo de la normalización en bases de datos?",
-    options: [
-        "Evitar redundancias y anomalías",
-        "Aumentar el tamaño de las tablas",
-        "Reducir la cantidad de claves primarias",
-        "Eliminar la necesidad de relaciones"
-    ],
-    answer: "Evitar redundancias y anomalías"
-});
-
-// Pregunta 6 - 1FN
-quizData.push({
-    question: "¿Qué exige la Primera Forma Normal (1FN)?",
-    options: [
-        "Que los atributos sean atómicos",
-        "Que cada tabla tenga al menos dos claves primarias",
-        "Que no existan dependencias transitivas",
-        "Que todo atributo dependa de la clave primaria completa"
-    ],
-    answer: "Que los atributos sean atómicos"
-});
-
-// Pregunta 7 - 2FN
-quizData.push({
-    question: "En la Segunda Forma Normal (2FN), los atributos deben depender de:",
-    options: [
-        "Toda la clave primaria completa",
-        "Otro atributo de la tabla",
-        "El motor de base de datos",
-        "Un índice externo"
-    ],
-    answer: "Toda la clave primaria completa"
-});
-
-// Pregunta 8 - 3FN
-quizData.push({
-    question: "¿Qué se elimina en la Tercera Forma Normal (3FN)?",
-    options: [
-        "Dependencias transitivas",
-        "Claves primarias",
-        "Atributos atómicos",
-        "Entidades débiles"
-    ],
-    answer: "Dependencias transitivas"
-});
-
-// Pregunta 9 - Ejemplo de normalización
-quizData.push({
-    question: "Si en una tabla de Pedidos guardas el campo 'NombreCliente', ¿qué deberías hacer para cumplir con la normalización?",
-    options: [
-        "Crear una tabla Clientes y usar clave foránea",
-        "Eliminar el campo",
-        "Unirlo con la tabla Productos",
-        "Dejarlo igual, no afecta"
-    ],
-    answer: "Crear una tabla Clientes y usar clave foránea"
-});
-
-// Pregunta 10 - Ejemplo ER
-quizData.push({
-    question: "En el modelo entidad-relación de una escuela (Alumno — cursa — Materia), la relación 'cursa' corresponde a:",
-    options: [
-        "Muchos a muchos",
-        "Uno a uno",
-        "Uno a muchos",
-        "Ninguna de las anteriores"
-    ],
-    answer: "Muchos a muchos"
-});
 
