@@ -215,7 +215,7 @@ button {
     width: 60%;
 	
   }
-	#quiz-container{
+	#quiz-container, #Box{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -228,7 +228,7 @@ button {
     width: 40%;
 	
   }
-	#quiz-container{
+	#quiz-container, #Box{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
