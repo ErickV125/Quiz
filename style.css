@@ -224,7 +224,7 @@ button {
 }
 }
 @media screen and (min-width: 1200px) {
-  .quiz-box, header {
+  .quiz-box, header,#submit-btn {
     width: 40%;
 	
   }
@@ -235,4 +235,9 @@ button {
 	align-items: center;
     justify-content: center;	
 }
+}
+header{
+	position:relative;
+	left :50%;
+	transform: translate(-50%);
 }
