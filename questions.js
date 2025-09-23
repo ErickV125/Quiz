@@ -311,48 +311,46 @@ let quizData = [
     question: "¿A qué corresponde la imagen?",
     options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
     answer: "Entidad",
-    img: "img/entidad.png"
+    img: "Entidad.png"
   },
   {
     question: "¿A qué corresponde la imagen?",
     options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
     answer: "Relación",
-    img: "img/relacion.png"
+    img: "Relacion.png"
   },
   {
     question: "¿A qué corresponde la imagen?",
     options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
     answer: "Atributo",
-    img: "img/atributo.png"
+    img: "Atributo.png"
   },
   {
     question: "¿A qué corresponde la imagen?",
     options: ["Entidad", "Relación", "Atributo", "Entidad débil"],
     answer: "Entidad débil",
-    img: "img/entidad_debil.png"
+    img: "Entidad_debil.png"
   },
 
   // --- Imagen: sin opciones (usuario las agregará) ---
   {
-    question: "¿A qué corresponde la imagen?",
-    options: [],
-    img: "img/pregunta1.png"
+    question: "¿A qué tipo de atributo corresponde la imagen?",
+    options: ["Derivado","Compuesto","Multi evaluados"],
+    answer: "Derivado",
+    img: "Derivado.png"
   },
   {
-    question: "¿A qué corresponde la imagen?",
-    options: [],
-    img: "img/pregunta2.png"
+    question: "¿A qué tipo de atributo corresponde la imagen?",
+    options: ["Derivado","Compuesto","Multi evaluados"],
+    answer: "Compuesto",
+    img: "Compuesto.png"
   },
   {
-    question: "¿A qué corresponde la imagen?",
-    options: [],
-    img: "img/pregunta3.png"
+    question: "¿A qué tipo de atributo corresponde la imagen?",
+    options: ["Derivado","Compuesto","Multi evaluados"],
+    answer: "Multi evaluados",
+    img: "Multivaluado.png"
   },
-  {
-    question: "¿A qué corresponde la imagen?",
-    options: [],
-    img: "img/pregunta4.png"
-  }
 ];
 
 
