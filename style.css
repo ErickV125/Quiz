@@ -224,7 +224,7 @@ button {
 }
 }
 @media screen and (min-width: 1200px) {
-  .quiz-box {
+  .quiz-box, header {
     width: 40%;
 	
   }
