@@ -1,435 +1,425 @@
 let quizData = [
   // --- Concepto y Origen ---
   {
-    question: "¿Qué es una Base de Datos (BD)?",
+    question: "¿Qué es la contabilidad?",
     options: [
-      "Conjunto autodescriptivo de registros integrados",
-      "Un archivo de texto plano",
-      "Una hoja de cálculo",
+      "Técnica que se utiliza como registro de las operaciones económicas de una entidad",
+      "Un método para calcular impuestos",
+      "Un informe anual de utilidades"
     ],
-    answer: "Conjunto autodescriptivo de registros integrados"
-  },
-  {
-    question: "¿Qué describen los metadatos en una BD?",
-    options: [
-      "El contenido de los registros",
-      "La estructura de la base de datos",
-      "La dirección física del servidor",
-    ],
-    answer: "La estructura de la base de datos"
-  },
-  {
-    question: "¿Dónde se almacenan los metadatos en un DBMS?",
-    options: ["En tablas del sistema", "En archivos XML", "En hojas Excel"],
-    answer: "En tablas del sistema"
-  },
-  {
-    question: "¿Cuál era una limitación de los sistemas de archivos?",
-    options: [
-      "Independencia programa/datos",
-      "Duplicación e incompatibilidad",
-      "Facilidad para representar vistas de usuario",
-    ],
-    answer: "Duplicación e incompatibilidad"
-  },
-  {
-    question: "¿Qué ventaja trajo el sistema de bases de datos frente al de archivos?",
-    options: [
-      "Datos integrados y menos duplicación",
-      "Mayor dependencia del programa",
-      "Mayor dificultad de acceso",
-    ],
-    answer: "Datos integrados y menos duplicación"
-  },
-  {
-    question: "¿Cuál fue una evolución posterior de los sistemas de BD?",
-    options: [
-      "BD distribuidas y cliente/servidor",
-      "Archivos binarios",
-      "Registros manuales",
-    ],
-    answer: "BD distribuidas y cliente/servidor"
+    answer: "Técnica que se utiliza como registro de las operaciones económicas de una entidad"
   },
 
-  // --- Modelo Relacional y ER ---
+  // --- Causación ---
   {
-    question: "¿Qué representa el modelo relacional?",
+    question: "Según el principio de causación, ¿cuándo se reconocen los hechos contables?",
     options: [
-      "Tablas de dos dimensiones",
-      "Árboles con jerarquías",
-      "Nodos en red",
+      "Cuando se realiza la operación, independientemente de pago o cobro",
+      "Cuando se recibe el dinero",
+      "Cuando se paga el gasto"
     ],
-    answer: "Tablas de dos dimensiones"
-  },
-  {
-    question: "¿Qué es una entidad?",
-    options: [
-      "Un valor único",
-      "Algo identificable e importante en el entorno de usuarios",
-      "Un campo numérico",
-    ],
-    answer: "Algo identificable e importante en el entorno de usuarios"
-  },
-  {
-    question: "¿Qué es una ocurrencia de una entidad?",
-    options: [
-      "Una asociación entre entidades",
-      "Una instancia particular de una entidad",
-      "Un atributo calculado",
-    ],
-    answer: "Una instancia particular de una entidad"
-  },
-  {
-    question: "¿Cómo se representa una relación en un diagrama ER?",
-    options: ["Con un rombo", "Con un círculo", "Con un triángulo"],
-    answer: "Con un rombo"
-  },
-  {
-    question: "¿Qué indica la cardinalidad en una relación?",
-    options: [
-      "El tipo de atributo",
-      "El número de ocurrencias que pueden relacionarse",
-      "El tamaño del dominio",
-    ],
-    answer: "El número de ocurrencias que pueden relacionarse"
-  },
-  {
-    question: "¿Qué significa una restricción mandatory?",
-    options: ["Opcional", "Obligatoria", "Redundante"],
-    answer: "Obligatoria"
+    answer: "Cuando se realiza la operación, independientemente de pago o cobro"
   },
 
-  // --- Claves y atributos ---
+  // --- Ecuación patrimonial ---
   {
-    question: "¿Qué es una clave primaria (PK)?",
+    question: "¿Cuál es la ecuación patrimonial básica?",
     options: [
-      "Atributo que enlaza tablas",
-      "Atributo único que distingue cada ocurrencia",
-      "Un campo calculado",
+      "ACTIVO = PASIVO + PATRIMONIO",
+      "INGRESOS = GASTOS + CAPITAL",
+      "ACTIVO = CAPITAL - PASIVO"
     ],
-    answer: "Atributo único que distingue cada ocurrencia"
-  },
-  {
-    question: "¿Qué es una clave foránea (FK)?",
-    options: [
-      "Atributo único de la entidad",
-      "Atributo que enlaza una entidad con otra",
-      "Atributo opcional",
-    ],
-    answer: "Atributo que enlaza una entidad con otra"
-  },
-  {
-    question: "¿Qué es una entidad fuerte?",
-    options: [
-      "La que depende de otra entidad",
-      "La que tiene clave primaria propia",
-      "La que tiene atributos multivaluados",
-    ],
-    answer: "La que tiene clave primaria propia"
-  },
-  {
-    question: "¿Qué es una entidad débil?",
-    options: [
-      "La que depende de otra entidad",
-      "La que tiene clave primaria propia",
-      "La que siempre tiene atributos derivados",
-    ],
-    answer: "La que depende de otra entidad"
-  },
-  {
-    question: "¿Qué son atributos simples?",
-    options: ["Indivisibles", "Que se dividen en subatributos", "Calculados"],
-    answer: "Indivisibles"
-  },
-  {
-    question: "¿Qué son atributos compuestos?",
-    options: [
-      "Indivisibles",
-      "Descomponibles en otros atributos",
-      "Siempre numéricos",
-    ],
-    answer: "Descomponibles en otros atributos"
-  },
-  {
-    question: "¿Qué son atributos derivados?",
-    options: ["Calculados a partir de otros", "Siempre de texto", "Siempre opcionales"],
-    answer: "Calculados a partir de otros"
-  },
-  {
-    question: "¿Qué son atributos multivaluados?",
-    options: [
-      "Que pueden contener varios valores del mismo dominio",
-      "Que son claves foráneas",
-      "Que siempre son enteros",
-    ],
-    answer: "Que pueden contener varios valores del mismo dominio"
-  },
-  {
-    question: "¿Qué atributo diferencia ocurrencias en entidades débiles?",
-    options: ["Discriminador", "Derivado", "Multivaluado"],
-    answer: "Discriminador"
+    answer: "ACTIVO = PASIVO + PATRIMONIO"
   },
 
-  // --- Tipos de datos ---
+  // --- NIF ---
   {
-    question: "¿Cuál de estos es un tipo de dato frecuente en BD?",
-    options: ["varchar", "boolean custom", "xml-node"],
-    answer: "varchar"
+    question: "¿Qué son las NIF (Normas de Información Financiera)?",
+    options: [
+      "Conjunto de normas que regulan la información contenida en los estados financieros",
+      "Reglas internas de cada empresa",
+      "Tablas para calcular impuestos"
+    ],
+    answer: "Conjunto de normas que regulan la información contenida en los estados financieros"
   },
   {
-    question: "¿Qué tipo de dato se usa para texto de longitud fija?",
-    options: ["char", "varchar", "float"],
-    answer: "char"
-  },
-  {
-    question: "¿Qué tipo de dato se usa para números con decimales?",
-    options: ["int", "float", "varchar"],
-    answer: "float"
-  },
-  {
-    question: "¿Qué tipo de dato se usa para fechas?",
-    options: ["date", "char", "numeric"],
-    answer: "date"
-  },
-  {
-    question: "¿Qué tipo de dato se usa para números enteros?",
-    options: ["int", "float", "varchar"],
-    answer: "int"
+    question: "¿Cómo deben ser las NIF?",
+    options: [
+      "Claras, sencillas, objetivas y de alta calidad",
+      "Opcionales y flexibles",
+      "Dependientes del giro de la empresa"
+    ],
+    answer: "Claras, sencillas, objetivas y de alta calidad"
   },
 
-  // --- DBMS ---
+  // --- Partida doble ---
   {
-    question: "¿Qué hace el subsistema de diseño de un DBMS?",
+    question: "¿Qué establece la teoría de la partida doble?",
     options: [
-      "Procesa consultas en tiempo real",
-      "Proporciona herramientas para crear tablas, consultas y reportes",
-      "Traduce solicitudes en operaciones físicas",
+      "A todo cargo le corresponde un abono de la misma proporción numérica",
+      "Cada ingreso debe ser mayor que el gasto",
+      "Los activos siempre son mayores que los pasivos"
     ],
-    answer: "Proporciona herramientas para crear tablas, consultas y reportes"
+    answer: "A todo cargo le corresponde un abono de la misma proporción numérica"
   },
   {
-    question: "¿Qué hace el subsistema de tiempo de ejecución?",
-    options: ["Procesa consultas y reportes", "Administra backups", "Define reglas"],
-    answer: "Procesa consultas y reportes"
+    question: "En una cuenta contable, ¿en qué lado se registran los cargos?",
+    options: [
+      "Debe (izquierda)",
+      "Haber (derecha)",
+      "Centro"
+    ],
+    answer: "Debe (izquierda)"
   },
   {
-    question: "¿Qué hace el motor de BD?",
+    question: "Cargar también se conoce como:",
     options: [
-      "Traduce solicitudes en operaciones de lectura/escritura",
-      "Edita diagramas",
-      "Administra pantallas gráficas",
+      "Debitar",
+      "Acreditar",
+      "Invertir"
     ],
-    answer: "Traduce solicitudes en operaciones de lectura/escritura"
-  },
-  {
-    question: "¿Qué gestiona el motor de BD además de lecturas/escrituras?",
-    options: [
-      "Transacciones, bloqueos, respaldo y recuperación",
-      "Solo pantallas",
-      "Solo reportes gráficos",
-    ],
-    answer: "Transacciones, bloqueos, respaldo y recuperación"
+    answer: "Debitar"
   },
 
-  // --- Desarrollo y normalización ---
+  // --- Cuentas ---
   {
-    question: "¿Qué es el modelado de base de datos?",
+    question: "¿Qué es una cuenta contable?",
     options: [
-      "El proceso de diseñar cómo se organizará la información en una base de datos",
-      "Un método para programar consultas SQL",
-      "Un lenguaje de programación",
-      "Un proceso exclusivo de bases NoSQL"
+      "Unidad básica para registrar transacciones de la entidad",
+      "Documento fiscal",
+      "Factura de venta"
     ],
-    answer: "El proceso de diseñar cómo se organizará la información en una base de datos"
+    answer: "Unidad básica para registrar transacciones de la entidad"
   },
   {
-    question: "¿Cuáles son los tres niveles principales de modelado de BD?",
+    question: "¿Qué tipo de cuentas se refieren a los integrantes del balance general?",
     options: [
-        "Conceptual, lógico y físico",
-        "Visual, lógico y numérico",
-        "Jerárquico, en red y relacional",
-        "Cliente, servidor y distribuido"
+      "Reales",
+      "Nominales",
+      "Personales"
     ],
-    answer: "Conceptual, lógico y físico"
+    answer: "Reales"
   },
   {
-    question: "¿Qué define un esquema de BD?",
+    question: "¿Qué tipo de cuentas indican ingresos y egresos?",
     options: [
-      "Tablas, relaciones, dominios y reglas de negocio",
-      "Solo tablas físicas",
-      "La interfaz de usuario",
+      "Nominales",
+      "Reales",
+      "Circulantes"
     ],
-    answer: "Tablas, relaciones, dominios y reglas de negocio"
+    answer: "Nominales"
   },
   {
-    question: "¿Cuál es el objetivo de la normalización?",
+    question: "Si en una cuenta el debe es mayor que el haber, ¿qué tipo de saldo tiene?",
     options: [
-        "Evitar redundancias y anomalías",
-        "Aumentar el tamaño de las tablas",
-        "Reducir la cantidad de claves primarias",
-        "Eliminar la necesidad de relaciones"
+      "Deudor",
+      "Acreedor",
+      "Nulo"
     ],
-    answer: "Evitar redundancias y anomalías"
-  },
-  {
-    question: "¿Qué exige la Primera Forma Normal (1FN)?",
-    options: [
-        "Que los atributos sean atómicos",
-        "Que cada tabla tenga al menos dos claves primarias",
-        "Que no existan dependencias transitivas",
-        "Que todo atributo dependa de la clave primaria completa"
-    ],
-    answer: "Que los atributos sean atómicos"
-  },
-  {
-    question: "En la Segunda Forma Normal (2FN), los atributos deben depender de:",
-    options: [
-        "Toda la clave primaria completa",
-        "Otro atributo de la tabla",
-        "El motor de base de datos",
-        "Un índice externo"
-    ],
-    answer: "Toda la clave primaria completa"
-  },
-  {
-    question: "¿Qué se elimina en la Tercera Forma Normal (3FN)?",
-    options: [
-        "Dependencias transitivas",
-        "Claves primarias",
-        "Atributos atómicos",
-        "Entidades débiles"
-    ],
-    answer: "Dependencias transitivas"
+    answer: "Deudor"
   },
 
-  // --- Cardinalidades ---
+  // --- Estados Financieros / Activo ---
   {
-    question: "¿Qué significa la cardinalidad 1:1?",
+    question: "¿Qué es un activo?",
     options: [
-      "Una ocurrencia de A se relaciona con una sola de B",
-      "Una ocurrencia de A con varias de B",
-      "Varias ocurrencias de A con varias de B",
+      "Recurso económico que se espera brinde beneficios futuros",
+      "Obligación que se debe pagar",
+      "Aportación de los accionistas"
     ],
-    answer: "Una ocurrencia de A se relaciona con una sola de B"
+    answer: "Recurso económico que se espera brinde beneficios futuros"
   },
   {
-    question: "¿Qué significa la cardinalidad 1:N?",
+    question: "¿Cuál es una característica de los activos circulantes?",
     options: [
-      "Una ocurrencia de A con varias de B",
-      "Una ocurrencia de A con una de B",
-      "Varias ocurrencias de A con varias de B",
+      "Se convierten en efectivo en menos de un año",
+      "Se convierten en efectivo en más de un año",
+      "No generan beneficios"
     ],
-    answer: "Una ocurrencia de A con varias de B"
-  },
-  {
-    question: "¿Qué significa la cardinalidad N:M?",
-    options: [
-      "Varias ocurrencias de A se relacionan con varias de B",
-      "Una ocurrencia de A con una sola de B",
-      "Una ocurrencia de A con varias de B",
-    ],
-    answer: "Varias ocurrencias de A se relacionan con varias de B"
+    answer: "Se convierten en efectivo en menos de un año"
   },
 
-  // --- Imagen: Identificar conceptos ---
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad", img: "img/Entidad.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Relación", img: "img/Relacion.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Atributo", img: "img/Atributo.png" },
-  { question: "¿A qué corresponde la imagen?", options: ["Entidad", "Relación", "Atributo", "Entidad débil"], answer: "Entidad débil", img: "img/Entidad_debil.png" },
+  // --- Pasivo ---
+  {
+    question: "¿Qué es un pasivo?",
+    options: [
+      "Lo que el negocio debe a sus acreedores",
+      "Aportación de los dueños",
+      "Recurso económico a futuro"
+    ],
+    answer: "Lo que el negocio debe a sus acreedores"
+  },
+  {
+    question: "¿Cómo se clasifican los pasivos según su vencimiento?",
+    options: [
+      "Corto plazo y largo plazo",
+      "Real y nominal",
+      "Activo y patrimonio"
+    ],
+    answer: "Corto plazo y largo plazo"
+  },
 
-  // --- Imagen: atributos ---
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Derivado", img: "img/Derivado.png" },
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Compuesto", img: "img/Compuesto.png" },
-  { question: "¿A qué tipo de atributo corresponde la imagen?", options: ["Derivado","Compuesto","Multivaluado"], answer: "Multivaluado", img: "img/Multivaluado.png" },
+  // --- Capital ---
+  {
+    question: "¿Qué es el capital contribuido?",
+    options: [
+      "Aportaciones de los dueños y accionistas",
+      "Utilidades retenidas",
+      "Pasivos pagados"
+    ],
+    answer: "Aportaciones de los dueños y accionistas"
+  },
+  {
+    question: "El capital ganado se genera a partir de:",
+    options: [
+      "Operaciones normales menos dividendos repartidos",
+      "Deudas adquiridas",
+      "Venta de activos fijos"
+    ],
+    answer: "Operaciones normales menos dividendos repartidos"
+  },
+
+  // --- Ingresos y Gastos ---
+  {
+    question: "¿Qué son los ingresos?",
+    options: [
+      "Recursos que recibe un negocio por la venta de bienes o servicios",
+      "Aportaciones de los accionistas",
+      "Obligaciones a pagar"
+    ],
+    answer: "Recursos que recibe un negocio por la venta de bienes o servicios"
+  },
+  {
+    question: "¿Qué son los gastos en contabilidad?",
+    options: [
+      "Activos que se han usado para obtener ingresos",
+      "Dinero guardado en caja",
+      "Pasivos pagados a proveedores"
+    ],
+    answer: "Activos que se han usado para obtener ingresos"
+  }
 ];
-
-// Edgar F. Codd - Modelo Relacional
-quizData.push({
-    question: "¿Quién es considerado el padre del modelo relacional de bases de datos?",
+quizData.push(
+  // --- Naturaleza de una cuenta ---
+  {
+    question: "¿Cuáles son cuentas de naturaleza deudora?",
     options: [
-        "Edgar F. Codd",
-        "Peter Chen",
-        "Charles Babbage",
-        "E. F. Schumacher"
+      "Activos y gastos",
+      "Pasivo y capital",
+      "Capital e ingresos"
     ],
-    answer: "Edgar F. Codd"
-});
-
-quizData.push({
-    question: "¿Cuál fue el mayor aporte de Edgar Codd a las bases de datos?",
+    answer: "Activos y gastos"
+  },
+  {
+    question: "¿Cuáles son cuentas de naturaleza acreedora?",
     options: [
-        "El modelo relacional",
-        "El modelo en red",
-        "La programación orientada a objetos",
-        "Los sistemas distribuidos"
+      "Pasivo, capital e ingresos",
+      "Activos y gastos",
+      "Solo ingresos"
     ],
-    answer: "El modelo relacional"
-});
-
-quizData.push({
-    question: "¿En qué década Edgar Codd propuso el modelo relacional?",
+    answer: "Pasivo, capital e ingresos"
+  },
+  {
+    question: "¿Cómo aumenta una cuenta deudora?",
     options: [
-        "1970s",
-        "1960s",
-        "1980s",
-        "1950s"
+      "Con el cargo",
+      "Con el abono",
+      "Con capital adicional"
     ],
-    answer: "1970s"
-});
-
-// Peter Chen - Modelo Entidad-Relación
-quizData.push({
-    question: "¿Quién propuso el modelo Entidad-Relación (ER)?",
+    answer: "Con el cargo"
+  },
+  {
+    question: "¿Cómo aumenta una cuenta acreedora?",
     options: [
-        "Peter Chen",
-        "Edgar Codd",
-        "Alan Turing",
-        "Donald Knuth"
+      "Con el abono",
+      "Con el cargo",
+      "Con aportaciones de socios"
     ],
-    answer: "Peter Chen"
-});
+    answer: "Con el abono"
+  },
 
-quizData.push({
-    question: "¿Cuál es el principal aporte de Peter Chen a las bases de datos?",
+  // --- Ciclos contables ---
+  {
+    question: "¿Qué son los ciclos contables?",
     options: [
-        "El modelo Entidad-Relación",
-        "El modelo lógico",
-        "La normalización",
-        "La creación de SQL"
+      "Conjunto de operaciones durante un ejercicio económico",
+      "La rotación de inventarios",
+      "Un tipo de asiento contable"
     ],
-    answer: "El modelo Entidad-Relación"
-});
+    answer: "Conjunto de operaciones durante un ejercicio económico"
+  },
+  {
+    question: "¿Cuál es el primer paso del proceso contable?",
+    options: [
+      "Asiento de apertura",
+      "Balance de comprobación",
+      "Ajustes de fin de mes"
+    ],
+    answer: "Asiento de apertura"
+  },
+  {
+    question: "¿En qué libro se registran inicialmente las operaciones?",
+    options: [
+      "Libro diario",
+      "Libro mayor",
+      "Estados financieros"
+    ],
+    answer: "Libro diario"
+  },
 
-// Integridad referencial
-quizData.push({
-    question: "¿Qué garantiza la integridad referencial en bases de datos?",
+  // --- Transacciones ---
+  {
+    question: "¿Qué es una transacción contable?",
     options: [
-        "Que los valores de clave foránea correspondan a valores existentes en la clave primaria relacionada",
-        "Que no existan duplicados en la tabla",
-        "Que todos los atributos sean atómicos",
-        "Que las tablas estén en 3FN"
+      "Evento económico que afecta la situación financiera y puede registrarse",
+      "Pago de nómina",
+      "Declaración de impuestos"
     ],
-    answer: "Que los valores de clave foránea correspondan a valores existentes en la clave primaria relacionada"
-});
+    answer: "Evento económico que afecta la situación financiera y puede registrarse"
+  },
 
-quizData.push({
-    question: "¿Qué ocurre si intentamos insertar una clave foránea que no existe en la tabla padre?",
+  // --- Cuentas (definición extra) ---
+  {
+    question: "El nombre de una cuenta debe ser:",
     options: [
-        "Se viola la integridad referencial",
-        "Se crea automáticamente en la tabla padre",
-        "No afecta a la base de datos",
-        "Se elimina la fila de la tabla padre"
+      "Claro y expresar la idea de la transacción registrada",
+      "Creativo y corto",
+      "Asignado libremente"
     ],
-    answer: "Se viola la integridad referencial"
-});
+    answer: "Claro y expresar la idea de la transacción registrada"
+  },
 
-quizData.push({
-    question: "¿Qué sucede si eliminamos un registro en la tabla padre al que hacen referencia varias claves foráneas?",
+  // --- Registro de operaciones ---
+  {
+    question: "Para registrar operaciones correctamente se debe considerar:",
     options: [
-        "Puede provocar violación de integridad referencial",
-        "La base de datos lo permite siempre",
-        "No tiene ningún efecto",
-        "Se borran todos los registros hijos automáticamente"
+      "La causa y el efecto que produce cada operación",
+      "Solo el efecto económico",
+      "Solo el ingreso o gasto generado"
     ],
-    answer: "Puede provocar violación de integridad referencial"
-});
+    answer: "La causa y el efecto que produce cada operación"
+  },
+
+  // --- Libro diario ---
+  {
+    question: "¿Qué es el libro diario?",
+    options: [
+      "Registro pormenorizado de todas las operaciones cotidianas",
+      "Resumen anual de ventas",
+      "Documento para declarar impuestos"
+    ],
+    answer: "Registro pormenorizado de todas las operaciones cotidianas"
+  },
+
+  // --- Asiento contable ---
+  {
+    question: "¿Qué son los asientos contables?",
+    options: [
+      "Registros de operaciones que modifican el patrimonio de la empresa",
+      "Listas de inventario",
+      "Documentos fiscales"
+    ],
+    answer: "Registros de operaciones que modifican el patrimonio de la empresa"
+  },
+  {
+    question: "La suma de los cargos y abonos en un asiento contable debe ser:",
+    options: [
+      "Igual",
+      "Mayor el cargo",
+      "Mayor el abono"
+    ],
+    answer: "Igual"
+  },
+
+  // --- IVA ---
+  {
+    question: "¿Qué es el IVA trasladado?",
+    options: [
+      "IVA que la empresa cobra a sus clientes en ventas",
+      "IVA que la empresa paga en compras",
+      "IVA retenido a proveedores"
+    ],
+    answer: "IVA que la empresa cobra a sus clientes en ventas"
+  },
+  {
+    question: "¿Qué es el IVA acreditable?",
+    options: [
+      "IVA que la empresa paga en gastos y compras",
+      "IVA que se devuelve al cliente",
+      "IVA incluido en los dividendos"
+    ],
+    answer: "IVA que la empresa paga en gastos y compras"
+  }
+);
+quizData.push(
+  // --- Registro de capital ---
+  {
+    question: "¿Qué cuentas se usan para registrar el capital inicial de una empresa?",
+    options: [
+      "Bancos, Equipo y Capital",
+      "Inventario, IVA acreditable y Proveedores",
+      "Ventas, Bancos y Clientes"
+    ],
+    answer: "Bancos, Equipo y Capital"
+  },
+
+  // --- Registro de compras ---
+  {
+    question: "En una compra de contado, ¿qué cuentas se utilizan?",
+    options: [
+      "Inventario, IVA acreditable y Bancos",
+      "Inventario, IVA acreditable y Proveedores",
+      "Compras, Ventas y Bancos"
+    ],
+    answer: "Inventario, IVA acreditable y Bancos"
+  },
+  {
+    question: "En una compra a crédito, ¿qué cuentas se utilizan?",
+    options: [
+      "Inventario, IVA acreditable y Proveedores",
+      "Bancos, IVA trasladado y Ventas",
+      "Clientes, IVA acreditable y Bancos"
+    ],
+    answer: "Inventario, IVA acreditable y Proveedores"
+  },
+
+  // --- Registro de ventas ---
+  {
+    question: "En una venta de contado, ¿qué cuentas se utilizan para registrar la venta?",
+    options: [
+      "Bancos, IVA trasladado y Ventas",
+      "Clientes, IVA trasladado y Ventas",
+      "Bancos, IVA acreditable y Ventas"
+    ],
+    answer: "Bancos, IVA trasladado y Ventas"
+  },
+  {
+    question: "En una venta a crédito, ¿qué cuentas se utilizan para registrar la venta?",
+    options: [
+      "Clientes, IVA trasladado y Ventas",
+      "Bancos, IVA trasladado y Ventas",
+      "Proveedores, IVA acreditable y Ventas"
+    ],
+    answer: "Clientes, IVA trasladado y Ventas"
+  },
+
+  // --- Pago a proveedores y de clientes ---
+  {
+    question: "Para registrar un pago a proveedores, ¿qué cuentas se usan?",
+    options: [
+      "Proveedores y Bancos",
+      "Clientes y Bancos",
+      "Inventario y Bancos"
+    ],
+    answer: "Proveedores y Bancos"
+  },
+  {
+    question: "Para registrar el pago de un cliente, ¿qué cuentas se usan?",
+    options: [
+      "Bancos y Clientes",
+      "Clientes y Bancos",
+      "Bancos y Proveedores"
+    ],
+    answer: "Bancos y Clientes"
+  }
+);
