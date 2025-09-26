@@ -1,425 +1,151 @@
 let quizData = [
-  // --- Concepto y Origen ---
+  // --- Concepto de SO ---
   {
-    question: "¿Qué es la contabilidad?",
+    question: "¿Qué es un sistema operativo?",
     options: [
-      "Técnica que se utiliza como registro de las operaciones económicas de una entidad",
-      "Un método para calcular impuestos",
-      "Un informe anual de utilidades"
+      "Un conjunto de programas que controla, coordina y dirige los servicios y aplicaciones de la computadora",
+      "Un tipo de hardware especializado",
+      "Un lenguaje de programación"
     ],
-    answer: "Técnica que se utiliza como registro de las operaciones económicas de una entidad"
+    answer: "Un conjunto de programas que controla, coordina y dirige los servicios y aplicaciones de la computadora"
+  },
+  {
+    question: "¿Cuál es la jerarquía correcta de los elementos de una computadora?",
+    options: [
+      "Hardware → SO → Aplicación → Usuario",
+      "Usuario → Aplicación → SO → Hardware",
+      "Aplicación → Usuario → SO → Hardware"
+    ],
+    answer: "Usuario → Aplicación → SO → Hardware"
+  },
+  {
+    question: "¿Qué tipos de recursos administra el sistema operativo?",
+    options: [
+      "Recursos físicos o lógicos",
+      "Solamente recursos físicos",
+      "Solamente recursos lógicos"
+    ],
+    answer: "Recursos físicos o lógicos"
   },
 
-  // --- Causación ---
+  // --- Componentes ---
   {
-    question: "Según el principio de causación, ¿cuándo se reconocen los hechos contables?",
+    question: "¿Cuál NO es un componente básico del sistema operativo?",
     options: [
-      "Cuando se realiza la operación, independientemente de pago o cobro",
-      "Cuando se recibe el dinero",
-      "Cuando se paga el gasto"
+      "Gestor de procesos",
+      "Gestor de memoria",
+      "Compilador de código"
     ],
-    answer: "Cuando se realiza la operación, independientemente de pago o cobro"
+    answer: "Compilador de código"
+  },
+  {
+    question: "¿Qué hace el intérprete de comandos?",
+    options: [
+      "Traduce lo que el usuario escribe en la terminal en instrucciones para el SO",
+      "Administra la memoria entre procesos",
+      "Crea la estructura de árbol del sistema de archivos"
+    ],
+    answer: "Traduce lo que el usuario escribe en la terminal en instrucciones para el SO"
   },
 
-  // --- Ecuación patrimonial ---
+  // --- Procesos ---
   {
-    question: "¿Cuál es la ecuación patrimonial básica?",
+    question: "¿Cuáles son los 5 estados de un proceso?",
     options: [
-      "ACTIVO = PASIVO + PATRIMONIO",
-      "INGRESOS = GASTOS + CAPITAL",
-      "ACTIVO = CAPITAL - PASIVO"
+      "Inicio, Listo, Ejecución, Bloqueado, Fin",
+      "Inicio, Espera, Ejecución, Suspensión, Fin",
+      "Creación, Ejecución, Bloqueo, Suspensión, Terminación"
     ],
-    answer: "ACTIVO = PASIVO + PATRIMONIO"
+    answer: "Inicio, Listo, Ejecución, Bloqueado, Fin"
+  },
+  {
+    question: "¿Cuál NO es una causa de interrupción de procesos?",
+    options: [
+      "Por el propio sistema operativo",
+      "Por hardware",
+      "Por compilación de código"
+    ],
+    answer: "Por compilación de código"
   },
 
-  // --- NIF ---
+  // --- Memoria ---
   {
-    question: "¿Qué son las NIF (Normas de Información Financiera)?",
+    question: "¿Cuál es la función principal de la gestión de memoria?",
     options: [
-      "Conjunto de normas que regulan la información contenida en los estados financieros",
-      "Reglas internas de cada empresa",
-      "Tablas para calcular impuestos"
+      "Asignar y proteger espacios de memoria a procesos",
+      "Ejecutar instrucciones en la CPU",
+      "Optimizar la velocidad del disco duro"
     ],
-    answer: "Conjunto de normas que regulan la información contenida en los estados financieros"
+    answer: "Asignar y proteger espacios de memoria a procesos"
   },
   {
-    question: "¿Cómo deben ser las NIF?",
+    question: "¿Qué ocurre en un sistema monoprogramado?",
     options: [
-      "Claras, sencillas, objetivas y de alta calidad",
-      "Opcionales y flexibles",
-      "Dependientes del giro de la empresa"
+      "La memoria se divide en dos: una para el SO y otra para el programa en ejecución",
+      "La memoria se subdivide en múltiples particiones dinámicas",
+      "Cada proceso obtiene un espacio lógico independiente"
     ],
-    answer: "Claras, sencillas, objetivas y de alta calidad"
-  },
-
-  // --- Partida doble ---
-  {
-    question: "¿Qué establece la teoría de la partida doble?",
-    options: [
-      "A todo cargo le corresponde un abono de la misma proporción numérica",
-      "Cada ingreso debe ser mayor que el gasto",
-      "Los activos siempre son mayores que los pasivos"
-    ],
-    answer: "A todo cargo le corresponde un abono de la misma proporción numérica"
+    answer: "La memoria se divide en dos: una para el SO y otra para el programa en ejecución"
   },
   {
-    question: "En una cuenta contable, ¿en qué lado se registran los cargos?",
+    question: "¿Qué ocurre en un sistema multiprogramado?",
     options: [
-      "Debe (izquierda)",
-      "Haber (derecha)",
-      "Centro"
+      "Solo puede ejecutarse un proceso a la vez",
+      "La memoria se subdivide para alojar varios procesos",
+      "No existe protección entre procesos"
     ],
-    answer: "Debe (izquierda)"
-  },
-  {
-    question: "Cargar también se conoce como:",
-    options: [
-      "Debitar",
-      "Acreditar",
-      "Invertir"
-    ],
-    answer: "Debitar"
+    answer: "La memoria se subdivide para alojar varios procesos"
   },
 
-  // --- Cuentas ---
+  // --- Reubicación ---
   {
-    question: "¿Qué es una cuenta contable?",
+    question: "La reubicación estática:",
     options: [
-      "Unidad básica para registrar transacciones de la entidad",
-      "Documento fiscal",
-      "Factura de venta"
+      "Se hace antes o durante la carga del proceso y genera fragmentación interna",
+      "Se hace en tiempo de ejecución y genera fragmentación externa",
+      "Elimina por completo la fragmentación"
     ],
-    answer: "Unidad básica para registrar transacciones de la entidad"
+    answer: "Se hace antes o durante la carga del proceso y genera fragmentación interna"
   },
   {
-    question: "¿Qué tipo de cuentas se refieren a los integrantes del balance general?",
+    question: "La reubicación dinámica:",
     options: [
-      "Reales",
-      "Nominales",
-      "Personales"
+      "Se hace antes de la carga del proceso",
+      "Traduce direcciones virtuales a físicas en tiempo de ejecución y puede generar fragmentación externa",
+      "Solo se aplica en sistemas monoprogramados"
     ],
-    answer: "Reales"
-  },
-  {
-    question: "¿Qué tipo de cuentas indican ingresos y egresos?",
-    options: [
-      "Nominales",
-      "Reales",
-      "Circulantes"
-    ],
-    answer: "Nominales"
-  },
-  {
-    question: "Si en una cuenta el debe es mayor que el haber, ¿qué tipo de saldo tiene?",
-    options: [
-      "Deudor",
-      "Acreedor",
-      "Nulo"
-    ],
-    answer: "Deudor"
+    answer: "Traduce direcciones virtuales a físicas en tiempo de ejecución y puede generar fragmentación externa"
   },
 
-  // --- Estados Financieros / Activo ---
+  // --- Kernel ---
   {
-    question: "¿Qué es un activo?",
+    question: "¿Qué es el núcleo (kernel) de un sistema operativo?",
     options: [
-      "Recurso económico que se espera brinde beneficios futuros",
-      "Obligación que se debe pagar",
-      "Aportación de los accionistas"
+      "El código central encargado de gestionar hardware, servicios y procesos",
+      "El sistema de archivos",
+      "El intérprete de comandos"
     ],
-    answer: "Recurso económico que se espera brinde beneficios futuros"
+    answer: "El código central encargado de gestionar hardware, servicios y procesos"
   },
   {
-    question: "¿Cuál es una característica de los activos circulantes?",
+    question: "¿Qué caracteriza a un kernel monolítico?",
     options: [
-      "Se convierten en efectivo en menos de un año",
-      "Se convierten en efectivo en más de un año",
-      "No generan beneficios"
+      "Todos los componentes están integrados en un único programa",
+      "Es modular y fácil de modificar",
+      "Oculta información entre sus componentes"
     ],
-    answer: "Se convierten en efectivo en menos de un año"
-  },
-
-  // --- Pasivo ---
-  {
-    question: "¿Qué es un pasivo?",
-    options: [
-      "Lo que el negocio debe a sus acreedores",
-      "Aportación de los dueños",
-      "Recurso económico a futuro"
-    ],
-    answer: "Lo que el negocio debe a sus acreedores"
-  },
-  {
-    question: "¿Cómo se clasifican los pasivos según su vencimiento?",
-    options: [
-      "Corto plazo y largo plazo",
-      "Real y nominal",
-      "Activo y patrimonio"
-    ],
-    answer: "Corto plazo y largo plazo"
+    answer: "Todos los componentes están integrados en un único programa"
   },
 
-  // --- Capital ---
+  // --- Componentes Esenciales ---
   {
-    question: "¿Qué es el capital contribuido?",
+    question: "¿Cuáles son los tres componentes esenciales de un sistema operativo?",
     options: [
-      "Aportaciones de los dueños y accionistas",
-      "Utilidades retenidas",
-      "Pasivos pagados"
+      "Sistema de archivos, intérprete de comandos y núcleo",
+      "Gestor de procesos, gestor de memoria y gestor de E/S",
+      "Archivo de arranque, compilador y núcleo"
     ],
-    answer: "Aportaciones de los dueños y accionistas"
-  },
-  {
-    question: "El capital ganado se genera a partir de:",
-    options: [
-      "Operaciones normales menos dividendos repartidos",
-      "Deudas adquiridas",
-      "Venta de activos fijos"
-    ],
-    answer: "Operaciones normales menos dividendos repartidos"
-  },
-
-  // --- Ingresos y Gastos ---
-  {
-    question: "¿Qué son los ingresos?",
-    options: [
-      "Recursos que recibe un negocio por la venta de bienes o servicios",
-      "Aportaciones de los accionistas",
-      "Obligaciones a pagar"
-    ],
-    answer: "Recursos que recibe un negocio por la venta de bienes o servicios"
-  },
-  {
-    question: "¿Qué son los gastos en contabilidad?",
-    options: [
-      "Activos que se han usado para obtener ingresos",
-      "Dinero guardado en caja",
-      "Pasivos pagados a proveedores"
-    ],
-    answer: "Activos que se han usado para obtener ingresos"
+    answer: "Sistema de archivos, intérprete de comandos y núcleo"
   }
 ];
-quizData.push(
-  // --- Naturaleza de una cuenta ---
-  {
-    question: "¿Cuáles son cuentas de naturaleza deudora?",
-    options: [
-      "Activos y gastos",
-      "Pasivo y capital",
-      "Capital e ingresos"
-    ],
-    answer: "Activos y gastos"
-  },
-  {
-    question: "¿Cuáles son cuentas de naturaleza acreedora?",
-    options: [
-      "Pasivo, capital e ingresos",
-      "Activos y gastos",
-      "Solo ingresos"
-    ],
-    answer: "Pasivo, capital e ingresos"
-  },
-  {
-    question: "¿Cómo aumenta una cuenta deudora?",
-    options: [
-      "Con el cargo",
-      "Con el abono",
-      "Con capital adicional"
-    ],
-    answer: "Con el cargo"
-  },
-  {
-    question: "¿Cómo aumenta una cuenta acreedora?",
-    options: [
-      "Con el abono",
-      "Con el cargo",
-      "Con aportaciones de socios"
-    ],
-    answer: "Con el abono"
-  },
 
-  // --- Ciclos contables ---
-  {
-    question: "¿Qué son los ciclos contables?",
-    options: [
-      "Conjunto de operaciones durante un ejercicio económico",
-      "La rotación de inventarios",
-      "Un tipo de asiento contable"
-    ],
-    answer: "Conjunto de operaciones durante un ejercicio económico"
-  },
-  {
-    question: "¿Cuál es el primer paso del proceso contable?",
-    options: [
-      "Asiento de apertura",
-      "Balance de comprobación",
-      "Ajustes de fin de mes"
-    ],
-    answer: "Asiento de apertura"
-  },
-  {
-    question: "¿En qué libro se registran inicialmente las operaciones?",
-    options: [
-      "Libro diario",
-      "Libro mayor",
-      "Estados financieros"
-    ],
-    answer: "Libro diario"
-  },
-
-  // --- Transacciones ---
-  {
-    question: "¿Qué es una transacción contable?",
-    options: [
-      "Evento económico que afecta la situación financiera y puede registrarse",
-      "Pago de nómina",
-      "Declaración de impuestos"
-    ],
-    answer: "Evento económico que afecta la situación financiera y puede registrarse"
-  },
-
-  // --- Cuentas (definición extra) ---
-  {
-    question: "El nombre de una cuenta debe ser:",
-    options: [
-      "Claro y expresar la idea de la transacción registrada",
-      "Creativo y corto",
-      "Asignado libremente"
-    ],
-    answer: "Claro y expresar la idea de la transacción registrada"
-  },
-
-  // --- Registro de operaciones ---
-  {
-    question: "Para registrar operaciones correctamente se debe considerar:",
-    options: [
-      "La causa y el efecto que produce cada operación",
-      "Solo el efecto económico",
-      "Solo el ingreso o gasto generado"
-    ],
-    answer: "La causa y el efecto que produce cada operación"
-  },
-
-  // --- Libro diario ---
-  {
-    question: "¿Qué es el libro diario?",
-    options: [
-      "Registro pormenorizado de todas las operaciones cotidianas",
-      "Resumen anual de ventas",
-      "Documento para declarar impuestos"
-    ],
-    answer: "Registro pormenorizado de todas las operaciones cotidianas"
-  },
-
-  // --- Asiento contable ---
-  {
-    question: "¿Qué son los asientos contables?",
-    options: [
-      "Registros de operaciones que modifican el patrimonio de la empresa",
-      "Listas de inventario",
-      "Documentos fiscales"
-    ],
-    answer: "Registros de operaciones que modifican el patrimonio de la empresa"
-  },
-  {
-    question: "La suma de los cargos y abonos en un asiento contable debe ser:",
-    options: [
-      "Igual",
-      "Mayor el cargo",
-      "Mayor el abono"
-    ],
-    answer: "Igual"
-  },
-
-  // --- IVA ---
-  {
-    question: "¿Qué es el IVA trasladado?",
-    options: [
-      "IVA que la empresa cobra a sus clientes en ventas",
-      "IVA que la empresa paga en compras",
-      "IVA retenido a proveedores"
-    ],
-    answer: "IVA que la empresa cobra a sus clientes en ventas"
-  },
-  {
-    question: "¿Qué es el IVA acreditable?",
-    options: [
-      "IVA que la empresa paga en gastos y compras",
-      "IVA que se devuelve al cliente",
-      "IVA incluido en los dividendos"
-    ],
-    answer: "IVA que la empresa paga en gastos y compras"
-  }
-);
-quizData.push(
-  // --- Registro de capital ---
-  {
-    question: "¿Qué cuentas se usan para registrar el capital inicial de una empresa?",
-    options: [
-      "Bancos, Equipo y Capital",
-      "Inventario, IVA acreditable y Proveedores",
-      "Ventas, Bancos y Clientes"
-    ],
-    answer: "Bancos, Equipo y Capital"
-  },
-
-  // --- Registro de compras ---
-  {
-    question: "En una compra de contado, ¿qué cuentas se utilizan?",
-    options: [
-      "Inventario, IVA acreditable y Bancos",
-      "Inventario, IVA acreditable y Proveedores",
-      "Compras, Ventas y Bancos"
-    ],
-    answer: "Inventario, IVA acreditable y Bancos"
-  },
-  {
-    question: "En una compra a crédito, ¿qué cuentas se utilizan?",
-    options: [
-      "Inventario, IVA acreditable y Proveedores",
-      "Bancos, IVA trasladado y Ventas",
-      "Clientes, IVA acreditable y Bancos"
-    ],
-    answer: "Inventario, IVA acreditable y Proveedores"
-  },
-
-  // --- Registro de ventas ---
-  {
-    question: "En una venta de contado, ¿qué cuentas se utilizan para registrar la venta?",
-    options: [
-      "Bancos, IVA trasladado y Ventas",
-      "Clientes, IVA trasladado y Ventas",
-      "Bancos, IVA acreditable y Ventas"
-    ],
-    answer: "Bancos, IVA trasladado y Ventas"
-  },
-  {
-    question: "En una venta a crédito, ¿qué cuentas se utilizan para registrar la venta?",
-    options: [
-      "Clientes, IVA trasladado y Ventas",
-      "Bancos, IVA trasladado y Ventas",
-      "Proveedores, IVA acreditable y Ventas"
-    ],
-    answer: "Clientes, IVA trasladado y Ventas"
-  },
-
-  // --- Pago a proveedores y de clientes ---
-  {
-    question: "Para registrar un pago a proveedores, ¿qué cuentas se usan?",
-    options: [
-      "Proveedores y Bancos",
-      "Clientes y Bancos",
-      "Inventario y Bancos"
-    ],
-    answer: "Proveedores y Bancos"
-  },
-  {
-    question: "Para registrar el pago de un cliente, ¿qué cuentas se usan?",
-    options: [
-      "Bancos y Clientes",
-      "Clientes y Bancos",
-      "Bancos y Proveedores"
-    ],
-    answer: "Bancos y Clientes"
-  }
-);
