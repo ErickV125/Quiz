@@ -181,7 +181,7 @@ input[type="radio"]:checked + span {
 	width: 100%;
 }
 .Revisado .true :not(input[type="radio"]:checked) + span {
-	background: var(--color-success) ;
+	background: lime ;
 	opacity: 0.5;
 	width: 100%;
 }
