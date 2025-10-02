@@ -1,151 +1,396 @@
 let quizData = [
-  // --- Concepto de SO ---
+  // --- AP (Punto de acceso) ---
   {
-    question: "¿Qué es un sistema operativo?",
+    question: "¿Qué es un Punto de Acceso (AP)?",
     options: [
-      "Un conjunto de programas que controla, coordina y dirige los servicios y aplicaciones de la computadora",
-      "Un tipo de hardware especializado",
-      "Un lenguaje de programación"
+      "Un dispositivo que brinda acceso Wi-Fi a una LAN",
+      "Un protocolo de capa 3",
+      "Un router perimetral"
     ],
-    answer: "Un conjunto de programas que controla, coordina y dirige los servicios y aplicaciones de la computadora"
+    answer: "Un dispositivo que brinda acceso Wi-Fi a una LAN"
   },
   {
-    question: "¿Cuál es la jerarquía correcta de los elementos de una computadora?",
-    options: [
-      "Hardware → SO → Aplicación → Usuario",
-      "Usuario → Aplicación → SO → Hardware",
-      "Aplicación → Usuario → SO → Hardware"
-    ],
-    answer: "Usuario → Aplicación → SO → Hardware"
-  },
-  {
-    question: "¿Qué tipos de recursos administra el sistema operativo?",
-    options: [
-      "Recursos físicos o lógicos",
-      "Solamente recursos físicos",
-      "Solamente recursos lógicos"
-    ],
-    answer: "Recursos físicos o lógicos"
+    question: "¿En qué estándar opera un AP?",
+    options: ["IEEE 802.11", "IEEE 802.3", "IEEE 802.5"],
+    answer: "IEEE 802.11"
   },
 
-  // --- Componentes ---
+  // --- Host ---
   {
-    question: "¿Cuál NO es un componente básico del sistema operativo?",
+    question: "¿Qué es un host en redes?",
     options: [
-      "Gestor de procesos",
-      "Gestor de memoria",
-      "Compilador de código"
+      "Un dispositivo final con dirección de red que envía/recibe datos",
+      "Un switch de capa 2",
+      "Un router intermedio"
     ],
-    answer: "Compilador de código"
+    answer: "Un dispositivo final con dirección de red que envía/recibe datos"
   },
   {
-    question: "¿Qué hace el intérprete de comandos?",
+    question: "¿Qué configuraciones necesita un host para conectarse a la red?",
     options: [
-      "Traduce lo que el usuario escribe en la terminal en instrucciones para el SO",
-      "Administra la memoria entre procesos",
-      "Crea la estructura de árbol del sistema de archivos"
+      "IP, máscara de subred, gateway y DNS",
+      "Solo dirección IPv4",
+      "Tabla de ruteo"
     ],
-    answer: "Traduce lo que el usuario escribe en la terminal en instrucciones para el SO"
-  },
-
-  // --- Procesos ---
-  {
-    question: "¿Cuáles son los 5 estados de un proceso?",
-    options: [
-      "Inicio, Listo, Ejecución, Bloqueado, Fin",
-      "Inicio, Espera, Ejecución, Suspensión, Fin",
-      "Creación, Ejecución, Bloqueo, Suspensión, Terminación"
-    ],
-    answer: "Inicio, Listo, Ejecución, Bloqueado, Fin"
-  },
-  {
-    question: "¿Cuál NO es una causa de interrupción de procesos?",
-    options: [
-      "Por el propio sistema operativo",
-      "Por hardware",
-      "Por compilación de código"
-    ],
-    answer: "Por compilación de código"
+    answer: "IP, máscara de subred, gateway y DNS"
   },
 
-  // --- Memoria ---
+  // --- HTTP/HTTPS ---
   {
-    question: "¿Cuál es la función principal de la gestión de memoria?",
+    question: "¿Qué diferencia hay entre HTTP y HTTPS?",
     options: [
-      "Asignar y proteger espacios de memoria a procesos",
-      "Ejecutar instrucciones en la CPU",
-      "Optimizar la velocidad del disco duro"
+      "HTTPS añade TLS para confidencialidad e integridad",
+      "HTTP es más seguro que HTTPS",
+      "Son exactamente iguales"
     ],
-    answer: "Asignar y proteger espacios de memoria a procesos"
+    answer: "HTTPS añade TLS para confidencialidad e integridad"
   },
   {
-    question: "¿Qué ocurre en un sistema monoprogramado?",
-    options: [
-      "La memoria se divide en dos: una para el SO y otra para el programa en ejecución",
-      "La memoria se subdivide en múltiples particiones dinámicas",
-      "Cada proceso obtiene un espacio lógico independiente"
-    ],
-    answer: "La memoria se divide en dos: una para el SO y otra para el programa en ejecución"
-  },
-  {
-    question: "¿Qué ocurre en un sistema multiprogramado?",
-    options: [
-      "Solo puede ejecutarse un proceso a la vez",
-      "La memoria se subdivide para alojar varios procesos",
-      "No existe protección entre procesos"
-    ],
-    answer: "La memoria se subdivide para alojar varios procesos"
+    question: "¿Qué puertos estándar usan HTTP y HTTPS?",
+    options: ["80 y 443", "20 y 21", "25 y 110"],
+    answer: "80 y 443"
   },
 
-  // --- Reubicación ---
+  // --- LAN ---
   {
-    question: "La reubicación estática:",
+    question: "¿Qué es una LAN?",
     options: [
-      "Se hace antes o durante la carga del proceso y genera fragmentación interna",
-      "Se hace en tiempo de ejecución y genera fragmentación externa",
-      "Elimina por completo la fragmentación"
+      "Una red de área local que cubre aulas, edificios o campus",
+      "Una red de cobertura global",
+      "Una red metropolitana"
     ],
-    answer: "Se hace antes o durante la carga del proceso y genera fragmentación interna"
+    answer: "Una red de área local que cubre aulas, edificios o campus"
   },
   {
-    question: "La reubicación dinámica:",
+    question: "¿Qué ventaja tiene una LAN?",
     options: [
-      "Se hace antes de la carga del proceso",
-      "Traduce direcciones virtuales a físicas en tiempo de ejecución y puede generar fragmentación externa",
-      "Solo se aplica en sistemas monoprogramados"
+      "Alta velocidad y baja latencia",
+      "Cobertura global",
+      "Conexión satelital"
     ],
-    answer: "Traduce direcciones virtuales a físicas en tiempo de ejecución y puede generar fragmentación externa"
-  },
-
-  // --- Kernel ---
-  {
-    question: "¿Qué es el núcleo (kernel) de un sistema operativo?",
-    options: [
-      "El código central encargado de gestionar hardware, servicios y procesos",
-      "El sistema de archivos",
-      "El intérprete de comandos"
-    ],
-    answer: "El código central encargado de gestionar hardware, servicios y procesos"
-  },
-  {
-    question: "¿Qué caracteriza a un kernel monolítico?",
-    options: [
-      "Todos los componentes están integrados en un único programa",
-      "Es modular y fácil de modificar",
-      "Oculta información entre sus componentes"
-    ],
-    answer: "Todos los componentes están integrados en un único programa"
+    answer: "Alta velocidad y baja latencia"
   },
 
-  // --- Componentes Esenciales ---
+  // --- MAC ---
   {
-    question: "¿Cuáles son los tres componentes esenciales de un sistema operativo?",
+    question: "¿Qué es una dirección MAC?",
     options: [
-      "Sistema de archivos, intérprete de comandos y núcleo",
-      "Gestor de procesos, gestor de memoria y gestor de E/S",
-      "Archivo de arranque, compilador y núcleo"
+      "Una dirección física única asignada a interfaces de red",
+      "Una dirección lógica de capa 3",
+      "Una dirección de broadcast"
     ],
-    answer: "Sistema de archivos, intérprete de comandos y núcleo"
+    answer: "Una dirección física única asignada a interfaces de red"
+  },
+  {
+    question: "¿En qué capa OSI opera la dirección MAC?",
+    options: ["Capa 2", "Capa 3", "Capa 7"],
+    answer: "Capa 2"
+  },
+
+  // --- MAN ---
+  {
+    question: "¿Qué es una MAN?",
+    options: [
+      "Red que cubre una ciudad o zona metropolitana",
+      "Red de corto alcance personal",
+      "Red que conecta países"
+    ],
+    answer: "Red que cubre una ciudad o zona metropolitana"
+  },
+  {
+    question: "Ejemplo: Para enlazar dos campus dentro de la misma ciudad, se usa:",
+    options: ["MAN", "LAN", "WAN"],
+    answer: "MAN"
+  },
+
+  // --- Medios de transmisión ---
+  {
+    question: "¿Cuál de los siguientes es un medio guiado?",
+    options: ["Fibra óptica", "Wi-Fi", "Microondas"],
+    answer: "Fibra óptica"
+  },
+  {
+    question: "¿Cuál de los siguientes es un medio no guiado?",
+    options: ["Radio", "Par trenzado", "Coaxial"],
+    answer: "Radio"
+  },
+
+  // --- Mensajería instantánea ---
+  {
+    question: "¿Qué ofrece la mensajería instantánea (IM)?",
+    options: [
+      "Intercambio de mensajes en tiempo real",
+      "Solo transferencia de archivos grandes",
+      "Solo navegación web"
+    ],
+    answer: "Intercambio de mensajes en tiempo real"
+  },
+
+  // --- Microblogging ---
+  {
+    question: "¿Qué caracteriza al microblogging?",
+    options: [
+      "Publicaciones breves y frecuentes",
+      "Transferencia de datos en bloque",
+      "Gestión de sesiones en red"
+    ],
+    answer: "Publicaciones breves y frecuentes"
+  },
+
+  // --- Modelo OSI ---
+  {
+    question: "¿Cuántas capas tiene el modelo OSI?",
+    options: ["7", "4", "5"],
+    answer: "7"
+  },
+  {
+    question: "El modelo OSI es...",
+    options: [
+      "Un marco de referencia para entender y diseñar redes",
+      "Un protocolo de transporte",
+      "Un sistema operativo"
+    ],
+    answer: "Un marco de referencia para entender y diseñar redes"
+  },
+
+  // --- Modelo TCP/IP ---
+  {
+    question: "¿Cuántas capas tiene el modelo TCP/IP?",
+    options: ["4", "7", "6"],
+    answer: "4"
+  },
+  {
+    question: "El modelo TCP/IP es...",
+    options: [
+      "El conjunto real de protocolos usados en Internet",
+      "Un modelo solo teórico sin uso",
+      "Un protocolo de almacenamiento"
+    ],
+    answer: "El conjunto real de protocolos usados en Internet"
+  },
+
+  // --- Máscara de subred ---
+  {
+    question: "¿Para qué sirve la máscara de subred?",
+    options: [
+      "Para separar parte de red y host en una IP",
+      "Para asignar direcciones MAC",
+      "Para cifrar los datos en capa 6"
+    ],
+    answer: "Para separar parte de red y host en una IP"
+  },
+
+  // --- Nodo ---
+  {
+    question: "¿Qué es un nodo en la red?",
+    options: [
+      "Un punto que puede originar, recibir o reenviar información",
+      "Un protocolo de aplicación",
+      "Un puerto de transporte"
+    ],
+    answer: "Un punto que puede originar, recibir o reenviar información"
+  },
+
+  // --- NOS ---
+  {
+    question: "¿Qué es un NOS (Sistema Operativo de Red)?",
+    options: [
+      "Software que administra recursos y servicios de red",
+      "Un hardware dedicado al enrutamiento",
+      "Un protocolo de comunicación"
+    ],
+    answer: "Software que administra recursos y servicios de red"
+  },
+
+  // --- PAN ---
+  {
+    question: "¿Qué es una PAN?",
+    options: [
+      "Red de corto alcance que conecta dispositivos personales",
+      "Red de área metropolitana",
+      "Red que cubre un campus universitario"
+    ],
+    answer: "Red de corto alcance que conecta dispositivos personales"
+  },
+  {
+    question: "Ejemplo: Conectar un smartwatch a un smartphone usa una:",
+    options: ["PAN", "LAN", "WAN"],
+    answer: "PAN"
+  },
+
+  // --- Pila de protocolos ---
+  {
+    question: "La pila de protocolos se organiza en...",
+    options: [
+      "Capas que cooperan entre sí",
+      "Un único protocolo centralizado",
+      "Un hardware especializado"
+    ],
+    answer: "Capas que cooperan entre sí"
+  },
+
+  // --- Presentación (Capa 6) ---
+  {
+    question: "¿Qué función tiene la capa de presentación?",
+    options: [
+      "Transformar y presentar datos (formato, cifrado, compresión)",
+      "Reenviar tramas por MAC",
+      "Asignar direcciones IP"
+    ],
+    answer: "Transformar y presentar datos (formato, cifrado, compresión)"
+  },
+
+  // --- Red (Capa 3) ---
+  {
+    question: "¿Qué hace la capa de red?",
+    options: [
+      "Direcciona lógicamente y enruta paquetes",
+      "Cifra sesiones",
+      "Establece diálogos de aplicación"
+    ],
+    answer: "Direcciona lógicamente y enruta paquetes"
+  },
+
+  // --- Router ---
+  {
+    question: "¿Qué hace un router?",
+    options: [
+      "Enruta entre subredes y hacia Internet",
+      "Asigna direcciones MAC",
+      "Solo reenvía tramas de capa 2"
+    ],
+    answer: "Enruta entre subredes y hacia Internet"
+  },
+  {
+    question: "Ejemplo: Para conectar sucursales en distintas ciudades se usa principalmente:",
+    options: ["WAN", "LAN", "PAN"],
+    answer: "WAN"
+  },
+
+  // --- SAN ---
+  {
+    question: "¿Qué es una SAN?",
+    options: [
+      "Red especializada para almacenamiento de datos",
+      "Red inalámbrica de área local",
+      "Red de capa 2"
+    ],
+    answer: "Red especializada para almacenamiento de datos"
+  },
+
+  // --- Servidor ---
+  {
+    question: "¿Qué es un servidor?",
+    options: [
+      "Equipo que ofrece servicios a clientes en la red",
+      "Un protocolo de red",
+      "Un dispositivo de capa 2"
+    ],
+    answer: "Equipo que ofrece servicios a clientes en la red"
+  },
+
+  // --- Sesión (Capa 5) ---
+  {
+    question: "¿Qué gestiona la capa de sesión?",
+    options: [
+      "Establece, administra y termina diálogos entre aplicaciones",
+      "Entrega confiable extremo a extremo",
+      "Conexiones físicas"
+    ],
+    answer: "Establece, administra y termina diálogos entre aplicaciones"
+  },
+
+  // --- Subred ---
+  {
+    question: "¿Qué es una subred?",
+    options: [
+      "Un segmento de red definido por una máscara",
+      "Un servidor especializado",
+      "Un protocolo de capa 7"
+    ],
+    answer: "Un segmento de red definido por una máscara"
+  },
+
+  // --- Switch ---
+  {
+    question: "¿Qué hace un switch?",
+    options: [
+      "Reenvía tramas basadas en MAC",
+      "Enruta paquetes basados en IP",
+      "Asigna direcciones DNS"
+    ],
+    answer: "Reenvía tramas basadas en MAC"
+  },
+
+  // --- Topologías ---
+  {
+    question: "¿Cuál de las siguientes NO es una topología de red?",
+    options: ["Árbol", "Estrella", "DNS"],
+    answer: "DNS"
+  },
+
+  // --- Transporte (Capa 4) ---
+  {
+    question: "¿Qué protocolo de transporte es confiable y orientado a conexión?",
+    options: ["TCP", "UDP", "IP"],
+    answer: "TCP"
+  },
+  {
+    question: "¿Qué protocolo de transporte es más rápido pero sin garantías?",
+    options: ["UDP", "TCP", "ICMP"],
+    answer: "UDP"
+  },
+
+  // --- Unicast/Multicast/Broadcast ---
+  {
+    question: "Una conexión SSH es un ejemplo de:",
+    options: ["Unicast", "Multicast", "Broadcast"],
+    answer: "Unicast"
+  },
+  {
+    question: "Un anuncio ARP es un ejemplo de:",
+    options: ["Broadcast", "Multicast", "Unicast"],
+    answer: "Broadcast"
+  },
+
+  // --- VLAN ---
+  {
+    question: "¿Qué permite una VLAN?",
+    options: [
+      "Segmentación lógica de una LAN",
+      "Asignación de IPs públicas",
+      "Transmisión satelital"
+    ],
+    answer: "Segmentación lógica de una LAN"
+  },
+
+  // --- WAN ---
+  {
+    question: "¿Qué es una WAN?",
+    options: [
+      "Red que cubre grandes distancias y conecta múltiples LANs",
+      "Red personal inalámbrica",
+      "Red de almacenamiento"
+    ],
+    answer: "Red que cubre grandes distancias y conecta múltiples LANs"
+  },
+
+  // --- Wi-Fi ---
+  {
+    question: "¿Qué tecnología usa el estándar IEEE 802.11?",
+    options: ["Wi-Fi", "Ethernet", "Bluetooth"],
+    answer: "Wi-Fi"
+  },
+
+  // --- WLAN ---
+  {
+    question: "¿Qué es una WLAN?",
+    options: [
+      "Una LAN inalámbrica basada en IEEE 802.11",
+      "Una red de almacenamiento",
+      "Una red global"
+    ],
+    answer: "Una LAN inalámbrica basada en IEEE 802.11"
   }
 ];
 
