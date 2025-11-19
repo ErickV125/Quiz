@@ -1,541 +1,682 @@
-    let quizData = [
-  // ============================
-  // -------- INT (6) ----------
-  // ============================
+let quizData = [
+  // =====================================================
+  // A. MODELO ENTIDAD–RELACIÓN (ER) — CONCEPTOS GENERALES
+  // =====================================================
+
   {
-    question: "¿Qué tipo de dato representa un número entero en Python?",
-    options: ["int", "str", "float"],
-    answer: "int"
+    question: "¿Cuál es el objetivo principal del modelo Entidad–Relación?",
+    options: [
+      "Representar conceptualmente la información antes del diseño físico",
+      "Crear tablas directamente",
+      "Optimizar consultas SQL"
+    ],
+    answer: "Representar conceptualmente la información antes del diseño físico"
   },
   {
-    question: "¿Cuál de los siguientes es un int válido?",
-    options: ["42", '"42"', "42.0"],
-    answer: "42"
+    question: "Una entidad representa:",
+    options: [
+      "Una cosa u objeto del mundo real",
+      "Una regla de negocio",
+      "Una consulta SQL"
+    ],
+    answer: "Una cosa u objeto del mundo real"
   },
   {
-    question: "¿Cuál de estos NO es un int?",
-    options: ["10", "-5", "3.0"],
-    answer: "3.0"
+    question: "¿Cómo se representa una entidad en el modelo ER (Chen)?",
+    options: ["Rectángulo", "Rombo", "Óvalo"],
+    answer: "Rectángulo"
   },
   {
-    question: "¿Qué resultado es de tipo int?",
-    options: ["5 + 5", "5.0 + 5", "'5' + '5'"],
-    answer: "5 + 5"
+    question: "¿Qué representa un atributo?",
+    options: [
+      "Una propiedad de una entidad",
+      "Una conexión entre entidades",
+      "Un índice"
+    ],
+    answer: "Una propiedad de una entidad"
   },
   {
-    question: "¿Qué tipo de dato es -100?",
-    options: ["int", "float", "str"],
-    answer: "int"
+    question: "¿Qué tipo de atributo es 'fecha_actual' derivada del sistema?",
+    options: ["Derivado", "Multivaluado", "Compuesto"],
+    answer: "Derivado"
   },
   {
-    question: "¿Cuál convierte correctamente un string a int?",
-    options: ["int('20')", "str(20)", "float('20')"],
-    answer: "int('20')"
+    question: "Los atributos multivaluados deben modelarse como:",
+    options: [
+      "Una entidad propia relacionada",
+      "Una clave primaria",
+      "Un atributo compuesto"
+    ],
+    answer: "Una entidad propia relacionada"
+  },
+  {
+    question: "¿Cómo se representa una relación en el modelo ER de Chen?",
+    options: ["Rombo", "Rectángulo", "Línea punteada"],
+    answer: "Rombo"
+  },
+  {
+    question: "La cardinalidad máxima indica:",
+    options: [
+      "El número máximo de instancias relacionadas",
+      "Si la relación es obligatoria",
+      "La clave primaria"
+    ],
+    answer: "El número máximo de instancias relacionadas"
+  },
+  {
+    question: "La participación mínima indica:",
+    options: ["Opcional u obligatoria", "Número de atributos", "Tipo de clave"],
+    answer: "Opcional u obligatoria"
+  },
+  {
+    question: "Una entidad débil se caracteriza por:",
+    options: [
+      "Depender de otra entidad para existir",
+      "Tener clave natural estable",
+      "No tener atributos"
+    ],
+    answer: "Depender de otra entidad para existir"
   },
 
-  // ============================
-  // -------- STR (6) ----------
-  // ============================
+  // ======================
+  // RELACIONES Y CARDINALIDAD
+  // ======================
+
   {
-    question: "¿Qué tipo de dato es 'Hola Mundo'?",
-    options: ["str", "int", "float"],
-    answer: "str"
+    question: "En una relación 1:N, ¿dónde se coloca la clave foránea?",
+    options: [
+      "En el lado N",
+      "En el lado 1",
+      "En ambos lados"
+    ],
+    answer: "En el lado N"
   },
   {
-    question: "¿Cuál es la forma correcta de crear un string?",
-    options: ["'Python'", "Python", "str(Python)"],
-    answer: "'Python'"
+    question: "Una relación N:M debe convertirse en:",
+    options: [
+      "Una tabla intermedia",
+      "Una sola tabla",
+      "Un atributo derivado"
+    ],
+    answer: "Una tabla intermedia"
   },
   {
-    question: "¿Cuál cadena es válida?",
-    options: ["'123'", "123", "123'"],
-    answer: "'123'"
+    question: "Una relación con atributo propio (ej. fecha_inscripción) debe modelarse como:",
+    options: [
+      "Una entidad asociativa",
+      "Una entidad débil",
+      "Un atributo multivaluado"
+    ],
+    answer: "Una entidad asociativa"
   },
   {
-    question: "¿Qué operador concatena strings?",
-    options: ["+", "-", "*"],
-    answer: "+"
+    question: "Una relación recursiva ocurre cuando:",
+    options: [
+      "Una entidad se relaciona consigo misma",
+      "Dos entidades comparten clave primaria",
+      "Hay atributos compuestos"
+    ],
+    answer: "Una entidad se relaciona consigo misma"
   },
   {
-    question: "¿Cuál convierte un número a string?",
-    options: ["str(50)", "int('50')", "float('50')"],
-    answer: "str(50)"
-  },
-  {
-    question: "¿Qué tipo resulta de 'Hola' + 'Mundo'?",
-    options: ["str", "int", "float"],
-    answer: "str"
+    question: "Participación total significa:",
+    options: [
+      "Mínima = 1",
+      "Máxima = 1",
+      "Mínima = 0"
+    ],
+    answer: "Mínima = 1"
   },
 
-  // ============================
-  // -------- FLOAT (6) ----------
-  // ============================
+  // ======================
+  // CLAVES Y REGLAS
+  // ======================
+
   {
-    question: "¿Qué tipo representa números decimales?",
-    options: ["float", "int", "str"],
-    answer: "float"
+    question: "Una clave primaria debe ser:",
+    options: [
+      "Única, no nula y estable",
+      "Multivaluada",
+      "Siempre compuesta"
+    ],
+    answer: "Única, no nula y estable"
   },
   {
-    question: "¿Cuál de los siguientes es un float?",
-    options: ["3.14", "'3.14'", "3"],
-    answer: "3.14"
+    question: "Una clave surrogate es:",
+    options: [
+      "Un identificador artificial como un autoincrement",
+      "Una clave derivada",
+      "Una clave compuesta"
+    ],
+    answer: "Un identificador artificial como un autoincrement"
   },
   {
-    question: "¿Cuál operación produce un float?",
-    options: ["5 / 2", "5 // 2", "5 % 2"],
-    answer: "5 / 2"
+    question: "Una clave candidata es:",
+    options: [
+      "Cualquier atributo que pueda servir como clave primaria",
+      "Una clave que no se usa",
+      "Una clave foránea"
+    ],
+    answer: "Cualquier atributo que pueda servir como clave primaria"
   },
   {
-    question: "¿Cuál convierte correctamente un int a float?",
-    options: ["float(10)", "int(10.5)", "str(10.5)"],
-    answer: "float(10)"
+    question: "Una superllave es:",
+    options: [
+      "Un conjunto de atributos que identifica tuplas, aunque tenga extras",
+      "Una clave foránea",
+      "Una clave compuesta obligatoria"
+    ],
+    answer: "Un conjunto de atributos que identifica tuplas, aunque tenga extras"
   },
   {
-    question: "¿Qué tipo es 2.0?",
-    options: ["float", "int", "str"],
-    answer: "float"
-  },
-  {
-    question: "¿Cuál expresión da como resultado un float?",
-    options: ["3 + 3.0", "3 + 3", "'3' + '3'"],
-    answer: "3 + 3.0"
+    question: "Una clave compuesta se forma por:",
+    options: ["Más de un atributo", "Un atributo único", "Atributos derivados"],
+    answer: "Más de un atributo"
   },
 
-  // ============================
-  // -------- INPUT (6) ----------
-  // ============================
+  // ======================
+  // NORMALIZACIÓN – 1FN, 2FN, 3FN, BCNF, 4FN, 5FN
+  // ======================
+
   {
-    question: "¿Qué retorna la función input() por defecto?",
-    options: ["Un str", "Un int", "Un float"],
-    answer: "Un str"
+    question: "La 1FN exige:",
+    options: [
+      "Atributos atómicos",
+      "Eliminar dependencias parciales",
+      "Eliminar transitivas"
+    ],
+    answer: "Atributos atómicos"
   },
   {
-    question: "¿Cómo conviertes un input a número entero?",
-    options: ["int(input())", "float(input())", "str(input())"],
-    answer: "int(input())"
+    question: "En 1FN, un atributo multivaluado debe:",
+    options: [
+      "Moverse a una tabla nueva",
+      "Convertirse en clave",
+      "Unirse con otros atributos"
+    ],
+    answer: "Moverse a una tabla nueva"
   },
   {
-    question: "¿Qué función usas para leer datos del usuario?",
-    options: ["input()", "print()", "read()"],
-    answer: "input()"
+    question: "La 2FN aplica solo si:",
+    options: [
+      "La clave primaria es compuesta",
+      "La clave es surrogate",
+      "No hay clave primaria"
+    ],
+    answer: "La clave primaria es compuesta"
   },
   {
-    question: "input('edad: ') retorna:",
-    options: ["Siempre str", "Siempre int", "Depende del usuario"],
-    answer: "Siempre str"
+    question: "La 2FN elimina:",
+    options: [
+      "Dependencias parciales",
+      "Dependencias transitivas",
+      "Atributos nulos"
+    ],
+    answer: "Dependencias parciales"
   },
   {
-    question: "¿Cómo se lee un float del usuario?",
-    options: ["float(input())", "input(float)", "toFloat(input())"],
-    answer: "float(input())"
+    question: "La 3FN elimina:",
+    options: [
+      "Dependencias transitivas",
+      "Dependencias multivaluadas",
+      "Clave primaria compuesta"
+    ],
+    answer: "Dependencias transitivas"
   },
   {
-    question: "¿Qué pasa si int(input()) recibe 'hola'?",
-    options: ["Error", "Retorna 0", "Retorna 'hola'"],
-    answer: "Error"
+    question: "BCNF es más estricta que 3FN porque:",
+    options: [
+      "Exige que todo determinante sea superclave",
+      "Prohíbe claves compuestas",
+      "No permite atributos derivados"
+    ],
+    answer: "Exige que todo determinante sea superclave"
+  },
+  {
+    question: "La 4FN trata dependencias:",
+    options: ["Multivaluadas", "Transitivas", "Funcionales simples"],
+    answer: "Multivaluadas"
+  },
+  {
+    question: "La 5FN se enfoca en:",
+    options: [
+      "Dependencias por unión",
+      "Dependencias parciales",
+      "Dependencias multivaluadas"
+    ],
+    answer: "Dependencias por unión"
+  },
+  {
+    question: "La dependencia funcional A → B significa:",
+    options: [
+      "Que A determina a B",
+      "Que B determina a A",
+      "Que A y B no se relacionan"
+    ],
+    answer: "Que A determina a B"
+  },
+  {
+    question: "La cerradura de atributos sirve para:",
+    options: [
+      "Determinar claves candidatas",
+      "Optimizar consultas",
+      "Crear índices"
+    ],
+    answer: "Determinar claves candidatas"
   },
 
-  // ============================
-  // -------- FOR (6) ----------
-  // ============================
+  // ======================
+  // ÁLGEBRA RELACIONAL
+  // ======================
+
   {
-    question: "¿Qué estructura se usa para iterar sobre una secuencia?",
-    options: ["for", "if", "def"],
-    answer: "for"
+    question: "La selección (σ) opera sobre:",
+    options: ["Filas", "Columnas", "Índices"],
+    answer: "Filas"
   },
   {
-    question: "¿Cuál es un ejemplo correcto de un for en Python?",
-    options: ["for i in range(5):", "for (i < 5)", "loop i to 5"],
-    answer: "for i in range(5):"
+    question: "La proyección (π) selecciona:",
+    options: ["Columnas", "Filas", "Registros duplicados"],
+    answer: "Columnas"
   },
   {
-    question: "¿Qué palabra se usa en un for?",
-    options: ["in", "into", "on"],
-    answer: "in"
+    question: "El producto cartesiano genera:",
+    options: [
+      "Todas las combinaciones entre filas",
+      "Solo coincidencias",
+      "Una tabla vacía"
+    ],
+    answer: "Todas las combinaciones entre filas"
   },
   {
-    question: "for i in 'hola': ¿cuántas iteraciones hace?",
-    options: ["4", "3", "5"],
-    answer: "4"
+    question: "La operación división (÷) se usa para:",
+    options: [
+      "Encontrar quién cumple con todos los elementos de un conjunto",
+      "Eliminar filas duplicadas",
+      "Unir relaciones"
+    ],
+    answer: "Encontrar quién cumple con todos los elementos de un conjunto"
   },
   {
-    question: "for i in range(0): ejecuta:",
-    options: ["0 veces", "1 vez", "Error"],
-    answer: "0 veces"
-  },
-  {
-    question: "¿Puede un for iterar listas?",
-    options: ["Sí", "No", "Solo números"],
-    answer: "Sí"
+    question: "El join es equivalente a:",
+    options: [
+      "Producto cartesiano + selección",
+      "Proyección + unión",
+      "Selección + división"
+    ],
+    answer: "Producto cartesiano + selección"
   },
 
-  // ============================
-  // -------- WHILE (6) ----------
-  // ============================
+  // ======================
+  // SQL AVANZADO
+  // ======================
+
   {
-    question: "¿Qué estructura repite código mientras una condición sea verdadera?",
-    options: ["while", "for", "elif"],
-    answer: "while"
+    question: "INNER JOIN devuelve:",
+    options: [
+      "Solo filas coincidentes",
+      "Todas las filas de la izquierda",
+      "Todas las filas de ambas tablas"
+    ],
+    answer: "Solo filas coincidentes"
   },
   {
-    question: "¿Cuál es una condición válida para un while?",
-    options: ["while x < 10:", "while (10):", "while range(5):"],
-    answer: "while x < 10:"
+    question: "LEFT JOIN devuelve:",
+    options: [
+      "Todas las filas de la tabla izquierda",
+      "Solo coincidencias",
+      "El producto cartesiano"
+    ],
+    answer: "Todas las filas de la tabla izquierda"
   },
   {
-    question: "¿Qué ocurre si la condición nunca cambia a False?",
-    options: ["Bucle infinito", "Error", "Termina solo"],
-    answer: "Bucle infinito"
+    question: "FULL OUTER JOIN devuelve:",
+    options: [
+      "Todas las filas de ambas tablas",
+      "Solo filas de la derecha",
+      "Solo filas sin coincidencias"
+    ],
+    answer: "Todas las filas de ambas tablas"
   },
   {
-    question: "¿Qué palabra permite salir de un while?",
-    options: ["break", "stop", "exit"],
-    answer: "break"
+    question: "Una subconsulta correlacionada:",
+    options: [
+      "Se ejecuta por cada fila de la consulta externa",
+      "Se ejecuta una sola vez",
+      "No usa tablas externas"
+    ],
+    answer: "Se ejecuta por cada fila de la consulta externa"
   },
   {
-    question: "while True: significa:",
-    options: ["Bucle infinito", "Condición inválida", "Nunca se ejecuta"],
-    answer: "Bucle infinito"
+    question: "GROUP BY agrupa por:",
+    options: ["Columnas", "Filas", "Registros vacíos"],
+    answer: "Columnas"
   },
   {
-    question: "¿Cuál es válida?",
-    options: ["while x != 0:", "while x not 0:", "while x <> 0:"],
-    answer: "while x != 0:"
+    question: "HAVING se usa para:",
+    options: [
+      "Filtrar grupos",
+      "Filtrar filas antes del agrupamiento",
+      "Crear índices"
+    ],
+    answer: "Filtrar grupos"
+  },
+  {
+    question: "Una window function usa la cláusula:",
+    options: ["OVER", "WINDOW", "BY"],
+    answer: "OVER"
+  },
+  {
+    question: "ROW_NUMBER() sirve para:",
+    options: [
+      "Enumerar filas dentro de una partición",
+      "Contar filas globales",
+      "Eliminar duplicados"
+    ],
+    answer: "Enumerar filas dentro de una partición"
+  },
+  {
+    question: "Un índice compuesto (A,B) sirve para:",
+    options: [
+      "Búsquedas por A o por A+B",
+      "Búsquedas por B siempre",
+      "Evitar claves primarias"
+    ],
+    answer: "Búsquedas por A o por A+B"
   },
 
-  // ============================
-  // -------- RANGE (6) ----------
-  // ============================
+  // ======================
+  // TRANSACTIONS, ACID, ISOLATION
+  // ======================
+
   {
-    question: "¿Qué hace range(5)?",
-    options: ["Genera una secuencia 0 a 4", "1 a 5", "Un solo número"],
-    answer: "Genera una secuencia 0 a 4"
+    question: "Atomicidad significa:",
+    options: [
+      "La transacción se ejecuta toda o nada",
+      "La transacción es rápida",
+      "No hay claves duplicadas"
+    ],
+    answer: "La transacción se ejecuta toda o nada"
   },
   {
-    question: "¿Cuál genera una secuencia del 2 al 8?",
-    options: ["range(2, 9)", "range(2, 8)", "range(1, 8)"],
-    answer: "range(2, 9)"
+    question: "Consistencia implica:",
+    options: [
+      "Mantener reglas de integridad",
+      "Evitar bloqueos",
+      "Crear índices"
+    ],
+    answer: "Mantener reglas de integridad"
   },
   {
-    question: "range(3, 3) genera:",
-    options: ["Vacío", "3", "0"],
-    answer: "Vacío"
+    question: "Aislamiento garantiza:",
+    options: [
+      "Equivalencia a ejecución serial",
+      "Evitar atributos nulos",
+      "Velocidad de consultas"
+    ],
+    answer: "Equivalencia a ejecución serial"
   },
   {
-    question: "range(0, 10, 2) genera:",
-    options: ["0,2,4,6,8", "1,3,5,7,9", "2,4,6,8"],
-    answer: "0,2,4,6,8"
+    question: "Durabilidad significa:",
+    options: [
+      "Los cambios persisten tras fallos",
+      "Las consultas son rápidas",
+      "Las transacciones son opcionales"
+    ],
+    answer: "Los cambios persisten tras fallos"
   },
   {
-    question: "range(5)[0] es:",
-    options: ["0", "1", "5"],
-    answer: "0"
+    question: "Read Uncommitted permite:",
+    options: [
+      "Dirty reads",
+      "Phantom reads pero no dirty reads",
+      "Evitar todos los problemas"
+    ],
+    answer: "Dirty reads"
   },
   {
-    question: "¿range puede ir hacia atrás?",
-    options: ["Sí", "No", "Solo hasta 0"],
-    answer: "Sí"
+    question: "Read Committed evita:",
+    options: [
+      "Dirty reads",
+      "Phantom reads",
+      "Non-repeatable reads"
+    ],
+    answer: "Dirty reads"
+  },
+  {
+    question: "Repeatable Read evita:",
+    options: [
+      "Non-repeatable reads",
+      "Dirty reads",
+      "Phantom reads exclusivamente"
+    ],
+    answer: "Non-repeatable reads"
+  },
+  {
+    question: "Serializable evita:",
+    options: [
+      "Todos los fenómenos",
+      "Solo dirty reads",
+      "Solo non-repeatable reads"
+    ],
+    answer: "Todos los fenómenos"
+  },
+  {
+    question: "Un phantom read ocurre cuando:",
+    options: [
+      "La misma consulta devuelve filas adicionales",
+      "Se lee un dato cambiado",
+      "Hay dos transacciones esperando un lock"
+    ],
+    answer: "La misma consulta devuelve filas adicionales"
+  },
+  {
+    question: "Un deadlock ocurre cuando:",
+    options: [
+      "Dos transacciones esperan recursos que la otra posee",
+      "Una tabla queda sin índices",
+      "Se corrompe el log"
+    ],
+    answer: "Dos transacciones esperan recursos que la otra posee"
   },
 
-  // ============================
-  // -------- LEN (6) ----------
-  // ============================
+  // ======================
+  // CONSTRAINTS
+  // ======================
+
   {
-    question: "¿Para qué sirve len()?",
-    options: ["Obtener tamaño", "Convertir a entero", "Cortar un string"],
-    answer: "Obtener tamaño"
+    question: "PRIMARY KEY equivale a:",
+    options: [
+      "UNIQUE + NOT NULL",
+      "CHECK + UNIQUE",
+      "FOREIGN KEY"
+    ],
+    answer: "UNIQUE + NOT NULL"
   },
   {
-    question: "len('hola') =",
-    options: ["4", "3", "5"],
-    answer: "4"
+    question: "ON DELETE CASCADE significa:",
+    options: [
+      "Borra los registros hijos al borrar el padre",
+      "Impide borrar padres con hijos",
+      "Pone los hijos a NULL"
+    ],
+    answer: "Borra los registros hijos al borrar el padre"
   },
   {
-    question: "len([]) =",
-    options: ["0", "1", "Error"],
-    answer: "0"
+    question: "ON DELETE SET NULL:",
+    options: [
+      "Pone la FK a NULL",
+      "Borra todos los registros",
+      "Impide actualización"
+    ],
+    answer: "Pone la FK a NULL"
   },
   {
-    question: "len([1,2,3]) =",
-    options: ["3", "2", "4"],
-    answer: "3"
-  },
-  {
-    question: "len(' ') =",
-    options: ["1", "0", "Error"],
-    answer: "1"
-  },
-  {
-    question: "len((1,2)) =",
-    options: ["2", "1", "Error"],
-    answer: "2"
+    question: "CHECK sirve para:",
+    options: [
+      "Validar rango o condición",
+      "Crear claves",
+      "Hacer joins"
+    ],
+    answer: "Validar rango o condición"
   },
 
-  // ============================
-  // -------- DEF / RETURN (8) ----------
-  // ============================
+  // ======================
+  // NOSQL
+  // ======================
+
   {
-    question: "¿Qué palabra clave define una función?",
-    options: ["def", "func", "make"],
-    answer: "def"
+    question: "MongoDB es un ejemplo de:",
+    options: ["Document store", "Graph DB", "Key-Value"],
+    answer: "Document store"
   },
   {
-    question: "¿Qué palabra devuelve un valor?",
-    options: ["return", "break", "yield"],
-    answer: "return"
+    question: "Redis es un ejemplo de:",
+    options: ["Key-Value", "Wide-column", "Document"],
+    answer: "Key-Value"
   },
   {
-    question: "def f(): return 5 — ¿qué retorna?",
-    options: ["5", "None", "Error"],
-    answer: "5"
+    question: "Cassandra es un ejemplo de:",
+    options: ["Wide-column", "Graph DB", "Document store"],
+    answer: "Wide-column"
   },
   {
-    question: "Si una función no tiene return, retorna:",
-    options: ["None", "0", "Error"],
-    answer: "None"
+    question: "Neo4j es un ejemplo de:",
+    options: ["Graph DB", "Document store", "Column store"],
+    answer: "Graph DB"
   },
   {
-    question: "def f(x): return x*2. ¿f(3)?",
-    options: ["6", "3", "Error"],
-    answer: "6"
+    question: "NoSQL es ideal cuando:",
+    options: [
+      "El esquema cambia frecuentemente",
+      "Se requiere integridad transaccional estricta",
+      "Hay muchas relaciones complejas"
+    ],
+    answer: "El esquema cambia frecuentemente"
   },
   {
-    question: "¿Puede una función tener varios return?",
-    options: ["Sí", "No", "Solo 1"],
-    answer: "Sí"
-  },
-  {
-    question: "¿Qué palabra indica parámetros por defecto?",
-    options: ["=", "default:", "as"],
-    answer: "="
-  },
-  {
-    question: "¿Puede return devolver strings?",
-    options: ["Sí", "No", "Solo números"],
-    answer: "Sí"
+    question: "Eventual consistency significa:",
+    options: [
+      "La consistencia se garantiza con el tiempo",
+      "No hay consistencia",
+      "Todo es siempre consistente inmediatamente"
+    ],
+    answer: "La consistencia se garantiza con el tiempo"
   },
 
-  // ============================
-  // -------- IMPORT (6) ----------
-  // ============================
+  // ======================
+  // UML y Modelado
+  // ======================
+
   {
-    question: "¿Cuál es la forma correcta de importar un módulo?",
-    options: ["import math", "include math", "using math"],
-    answer: "import math"
+    question: "En UML, una clase es similar a:",
+    options: ["Una entidad", "Una PK", "Un índice"],
+    answer: "Una entidad"
   },
   {
-    question: "¿Qué hace 'from math import sqrt'?",
-    options: ["Importa sqrt", "Importa todo math", "Elimina sqrt"],
-    answer: "Importa sqrt"
-  },
-  {
-    question: "import random permite:",
-    options: ["Usar random()", "Crear un módulo", "Cerrar Python"],
-    answer: "Usar random()"
-  },
-  {
-    question: "import math as m hace:",
-    options: ["Renombrar math a m", "Eliminar math", "Clonar math"],
-    answer: "Renombrar math a m"
-  },
-  {
-    question: "from module import * significa:",
-    options: ["Importar todo", "Importar nada", "Importar solo 1"],
-    answer: "Importar todo"
-  },
-  {
-    question: "¿Es válido importar dentro de una función?",
-    options: ["Sí", "No", "Solo en Python 2"],
-    answer: "Sí"
+    question: "La multiplicidad 1..* equivale a:",
+    options: ["1 a muchos", "1 a 1", "0 a 1"],
+    answer: "1 a muchos"
   },
 
-  // ============================
-  // -------- IF / ELIF / ELSE (8) ----------
-  // ============================
+  // ======================
+  // SQL PRÁCTICO
+  // ======================
+
   {
-    question: "¿Qué estructura se usa para tomar decisiones?",
-    options: ["if", "for", "while"],
-    answer: "if"
+    question: "¿Cuál comando inicia una transacción?",
+    options: ["BEGIN", "START VIEW", "CREATE"],
+    answer: "BEGIN"
   },
   {
-    question: "¿Qué palabra se usa para evaluar otra condición?",
-    options: ["elif", "elseif", "else if"],
-    answer: "elif"
+    question: "¿Cuál comando revierte los cambios?",
+    options: ["ROLLBACK", "DELETE", "DROP"],
+    answer: "ROLLBACK"
   },
   {
-    question: "¿Qué palabra se usa cuando nada se cumple?",
-    options: ["else", "otherwise", "default"],
-    answer: "else"
+    question: "¿Qué hace EXPLAIN?",
+    options: [
+      "Muestra el plan de ejecución",
+      "Crea índices",
+      "Cierra conexiones"
+    ],
+    answer: "Muestra el plan de ejecución"
   },
   {
-    question: "if 5 > 2: print('ok') ¿imprime?",
-    options: ["Sí", "No", "Error"],
-    answer: "Sí"
-  },
-  {
-    question: "elif solo puede usarse si antes hay:",
-    options: ["if", "while", "for"],
-    answer: "if"
-  },
-  {
-    question: "else debe ir:",
-    options: ["Al final", "Al inicio", "Entre if y elif"],
-    answer: "Al final"
-  },
-  {
-    question: "¿if puede existir sin else?",
-    options: ["Sí", "No", "Solo en funciones"],
-    answer: "Sí"
-  },
-  {
-    question: "if True: ejecuta:",
-    options: ["Siempre", "Nunca", "Depende"],
-    answer: "Siempre"
+    question: "¿Cuál es una buena práctica para producción?",
+    options: [
+      "Evitar SELECT *",
+      "Usar subconsultas correlacionadas siempre",
+      "No usar índices"
+    ],
+    answer: "Evitar SELECT *"
   },
 
-  // ============================
-  // -------- MATCH / PASS (6) ----------
-  // ============================
-  {
-    question: "¿Para qué sirve match en Python?",
-    options: ["Comparar múltiples casos", "Crear funciones", "Importar módulos"],
-    answer: "Comparar múltiples casos"
-  },
-  {
-    question: "¿Qué hace pass en un match-case?",
-    options: ["No ejecuta nada", "Detiene loop", "Devuelve valor"],
-    answer: "No ejecuta nada"
-  },
-  {
-    question: "match x: case 1: print('a') ejecuta si x:",
-    options: ["Vale 1", "Vale True", "Vale cualquier cosa"],
-    answer: "Vale 1"
-  },
-  {
-    question: "pass sirve para:",
-    options: ["Evitar errores en bloques vacíos", "Finalizar programa", "Ignorar imports"],
-    answer: "Evitar errores en bloques vacíos"
-  },
-  {
-    question: "case _: significa:",
-    options: ["Caso por defecto", "Error", "Ignorar match"],
-    answer: "Caso por defecto"
-  },
-  {
-    question: "¿match es similar a switch?",
-    options: ["Sí", "No", "Solo en Python 2"],
-    answer: "Sí"
-  },
+  // ======================
+  // MÁS PREGUNTAS PRÁCTICAS
+  // ======================
 
-  // ============================
-  // -------- BREAK (6) ----------
-  // ============================
   {
-    question: "¿Qué hace break dentro de un loop?",
-    options: ["Detiene ciclo", "Reinicia ciclo", "Salta iteración"],
-    answer: "Detiene ciclo"
+    question: "Una vista materializada:",
+    options: [
+      "Almacena los resultados",
+      "Siempre se vuelve a calcular",
+      "No permite índices"
+    ],
+    answer: "Almacena los resultados"
   },
   {
-    question: "¿En qué estructuras puede usarse break?",
-    options: ["for y while", "if y else", "def y return"],
-    answer: "for y while"
+    question: "Un trigger se ejecuta:",
+    options: [
+      "Automáticamente ante un evento",
+      "Solo manualmente",
+      "Solo durante back-ups"
+    ],
+    answer: "Automáticamente ante un evento"
   },
   {
-    question: "break dentro de un for:",
-    options: ["Termina el for", "Hace continue", "Duplica la iteración"],
-    answer: "Termina el for"
+    question: "Los atributos derivados deben almacenarse solo si:",
+    options: [
+      "Se requiere rendimiento",
+      "Son obligatorios",
+      "Son multivaluados"
+    ],
+    answer: "Se requiere rendimiento"
   },
   {
-    question: "break en un while infinito:",
-    options: ["Lo detiene", "No funciona", "Hace error"],
-    answer: "Lo detiene"
+    question: "Para reconstruir una relación sin pérdida se usa:",
+    options: [
+      "Join natural",
+      "Intersección",
+      "Diferencia"
+    ],
+    answer: "Join natural"
   },
   {
-    question: "¿break puede usarse fuera de loops?",
-    options: ["No", "Sí", "Solo en funciones"],
-    answer: "No"
+    question: "Una FD se preserva si:",
+    options: [
+      "Puede verificarse sin joins",
+      "Requiere unir todas las tablas",
+      "Depende de una clave surrogate"
+    ],
+    answer: "Puede verificarse sin joins"
   },
   {
-    question: "¿Qué instrucción se usa para saltar a la siguiente iteración?",
-    options: ["continue", "break", "skip"],
-    answer: "continue"
-  },
-
-  // ============================
-  // -------- ARITMÉTICOS (8) ----------
-  // ============================
-  {
-    question: "¿Cuál operador corresponde a la multiplicación?",
-    options: ["*", "+", "%"],
-    answer: "*"
+    question: "La relación VentaDetalle(idVenta, idProducto, cantidad) tiene PK:",
+    options: [
+      "(idVenta, idProducto)",
+      "idProducto",
+      "cantidad"
+    ],
+    answer: "(idVenta, idProducto)"
   },
   {
-    question: "¿Qué resultado da 10 % 3?",
-    options: ["1", "3", "0"],
-    answer: "1"
-  },
-  {
-    question: "5 ** 2 =",
-    options: ["25", "10", "7"],
-    answer: "25"
-  },
-  {
-    question: "10 / 2 =",
-    options: ["5.0", "5", "Error"],
-    answer: "5.0"
-  },
-  {
-    question: "10 // 3 =",
-    options: ["3", "3.33", "1"],
-    answer: "3"
-  },
-  {
-    question: "8 % 4 =",
-    options: ["0", "2", "4"],
-    answer: "0"
-  },
-  {
-    question: "2 * 3 + 1 =",
-    options: ["7", "8", "5"],
-    answer: "7"
-  },
-  {
-    question: "3 + 3 * 3 =",
-    options: ["12", "18", "9"],
-    answer: "12"
-  },
-
-  // ============================
-  // -------- COMPARACIÓN (6) ----------
-  // ============================
-  {
-    question: "¿Qué operador se usa para igualdad?",
-    options: ["==", "=", "==="],
-    answer: "=="
-  },
-  {
-    question: "¿Cuál expresión es verdadera?",
-    options: ["5 > 3", "3 > 5", "2 == 3"],
-    answer: "5 > 3"
-  },
-  {
-    question: "¿Cuál es el operador 'mayor o igual'?",
-    options: [">=", "=>", "=<"],
-    answer: ">="
-  },
-  {
-    question: "¿Qué retorna 5 != 5?",
-    options: ["False", "True", "Error"],
-    answer: "False"
-  },
-  {
-    question: "¿Cuál es verdadero?",
-    options: ["4 < 10", "10 < 4", "4 == 10"],
-    answer: "4 < 10"
-  },
-  {
-    question: "¿Comparar strings es válido?",
-    options: ["Sí", "No", "Solo números"],
-    answer: "Sí"
+    question: "Una entidad débil tiene su PK formada por:",
+    options: [
+      "La PK de la entidad fuerte + su clave parcial",
+      "Solo su clave natural",
+      "Un atributo derivado"
+    ],
+    answer: "La PK de la entidad fuerte + su clave parcial"
   }
 ];
