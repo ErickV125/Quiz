@@ -1,682 +1,293 @@
 let quizData = [
-  // =====================================================
-  // A. MODELO ENTIDAD–RELACIÓN (ER) — CONCEPTOS GENERALES
-  // =====================================================
-
+  // ==========================================
+  // 1. ANTECEDENTES Y CONCEPTOS BÁSICOS
+  // ==========================================
   {
-    question: "¿Cuál es el objetivo principal del modelo Entidad–Relación?",
+    question: "¿Qué es contabilidad?",
     options: [
-      "Representar conceptualmente la información antes del diseño físico",
-      "Crear tablas directamente",
-      "Optimizar consultas SQL"
+      "Técnica para registrar operaciones y producir información financiera",
+      "Proceso para pagar impuestos",
+      "Método para calcular precios"
     ],
-    answer: "Representar conceptualmente la información antes del diseño físico"
+    answer: "Técnica para registrar operaciones y producir información financiera"
   },
   {
-    question: "Una entidad representa:",
+    question: "¿Para qué sirve la contabilidad?",
     options: [
-      "Una cosa u objeto del mundo real",
-      "Una regla de negocio",
-      "Una consulta SQL"
+      "Para producir información financiera útil para la toma de decisiones",
+      "Para decorar informes",
+      "Para aumentar las ventas"
     ],
-    answer: "Una cosa u objeto del mundo real"
+    answer: "Para producir información financiera útil para la toma de decisiones"
   },
   {
-    question: "¿Cómo se representa una entidad en el modelo ER (Chen)?",
-    options: ["Rectángulo", "Rombo", "Óvalo"],
-    answer: "Rectángulo"
-  },
-  {
-    question: "¿Qué representa un atributo?",
+    question: "¿Qué es información financiera?",
     options: [
-      "Una propiedad de una entidad",
-      "Una conexión entre entidades",
-      "Un índice"
+      "Datos cuantificables sobre la situación económica de una entidad",
+      "Un documento legal",
+      "Una base de datos fiscal"
     ],
-    answer: "Una propiedad de una entidad"
+    answer: "Datos cuantificables sobre la situación económica de una entidad"
   },
   {
-    question: "¿Qué tipo de atributo es 'fecha_actual' derivada del sistema?",
-    options: ["Derivado", "Multivaluado", "Compuesto"],
-    answer: "Derivado"
-  },
-  {
-    question: "Los atributos multivaluados deben modelarse como:",
+    question: "¿Qué es una entidad económica?",
     options: [
-      "Una entidad propia relacionada",
-      "Una clave primaria",
-      "Un atributo compuesto"
+      "Unidad identificable que realiza actividades económicas",
+      "El gobierno federal",
+      "Cualquier persona física"
     ],
-    answer: "Una entidad propia relacionada"
-  },
-  {
-    question: "¿Cómo se representa una relación en el modelo ER de Chen?",
-    options: ["Rombo", "Rectángulo", "Línea punteada"],
-    answer: "Rombo"
-  },
-  {
-    question: "La cardinalidad máxima indica:",
-    options: [
-      "El número máximo de instancias relacionadas",
-      "Si la relación es obligatoria",
-      "La clave primaria"
-    ],
-    answer: "El número máximo de instancias relacionadas"
-  },
-  {
-    question: "La participación mínima indica:",
-    options: ["Opcional u obligatoria", "Número de atributos", "Tipo de clave"],
-    answer: "Opcional u obligatoria"
-  },
-  {
-    question: "Una entidad débil se caracteriza por:",
-    options: [
-      "Depender de otra entidad para existir",
-      "Tener clave natural estable",
-      "No tener atributos"
-    ],
-    answer: "Depender de otra entidad para existir"
+    answer: "Unidad identificable que realiza actividades económicas"
   },
 
-  // ======================
-  // RELACIONES Y CARDINALIDAD
-  // ======================
-
+  // ==========================================
+  // 2. PARTIDA DOBLE
+  // ==========================================
   {
-    question: "En una relación 1:N, ¿dónde se coloca la clave foránea?",
+    question: "Principio fundamental de la partida doble:",
     options: [
-      "En el lado N",
-      "En el lado 1",
-      "En ambos lados"
+      "No hay cargo sin abono",
+      "Todo cargo debe ser mayor",
+      "Solo afecta una cuenta"
     ],
-    answer: "En el lado N"
+    answer: "No hay cargo sin abono"
   },
   {
-    question: "Una relación N:M debe convertirse en:",
-    options: [
-      "Una tabla intermedia",
-      "Una sola tabla",
-      "Un atributo derivado"
-    ],
-    answer: "Una tabla intermedia"
+    question: "¿Cuántas cuentas afecta una transacción en partida doble?",
+    options: ["Al menos 2 cuentas", "Solo 1 cuenta", "Hasta 5 cuentas"],
+    answer: "Al menos 2 cuentas"
   },
   {
-    question: "Una relación con atributo propio (ej. fecha_inscripción) debe modelarse como:",
-    options: [
-      "Una entidad asociativa",
-      "Una entidad débil",
-      "Un atributo multivaluado"
-    ],
-    answer: "Una entidad asociativa"
+    question: "La suma de cargos debe ser igual a:",
+    options: ["La suma de abonos", "El capital", "El inventario"],
+    answer: "La suma de abonos"
   },
   {
-    question: "Una relación recursiva ocurre cuando:",
-    options: [
-      "Una entidad se relaciona consigo misma",
-      "Dos entidades comparten clave primaria",
-      "Hay atributos compuestos"
-    ],
-    answer: "Una entidad se relaciona consigo misma"
+    question: "El activo aumenta con:",
+    options: ["Cargo", "Abono", "Ninguno"],
+    answer: "Cargo"
   },
   {
-    question: "Participación total significa:",
-    options: [
-      "Mínima = 1",
-      "Máxima = 1",
-      "Mínima = 0"
-    ],
-    answer: "Mínima = 1"
+    question: "El pasivo aumenta con:",
+    options: ["Abono", "Cargo", "Pago"],
+    answer: "Abono"
+  },
+  {
+    question: "El capital aumenta con:",
+    options: ["Abono", "Cargo", "Ambos"],
+    answer: "Abono"
+  },
+  {
+    question: "Los gastos aumentan con:",
+    options: ["Cargo", "Abono", "Inventario"],
+    answer: "Cargo"
+  },
+  {
+    question: "Los ingresos aumentan con:",
+    options: ["Abono", "Cargo", "Pago"],
+    answer: "Abono"
   },
 
-  // ======================
-  // CLAVES Y REGLAS
-  // ======================
-
+  // ==========================================
+  // 3. CATÁLOGO DE CUENTAS
+  // ==========================================
   {
-    question: "Una clave primaria debe ser:",
-    options: [
-      "Única, no nula y estable",
-      "Multivaluada",
-      "Siempre compuesta"
-    ],
-    answer: "Única, no nula y estable"
+    question: "¿Caja es…?",
+    options: ["Activo circulante", "Pasivo", "Capital"],
+    answer: "Activo circulante"
   },
   {
-    question: "Una clave surrogate es:",
-    options: [
-      "Un identificador artificial como un autoincrement",
-      "Una clave derivada",
-      "Una clave compuesta"
-    ],
-    answer: "Un identificador artificial como un autoincrement"
+    question: "¿Clientes es…?",
+    options: ["Activo circulante", "Pasivo CP", "Gasto"],
+    answer: "Activo circulante"
   },
   {
-    question: "Una clave candidata es:",
-    options: [
-      "Cualquier atributo que pueda servir como clave primaria",
-      "Una clave que no se usa",
-      "Una clave foránea"
-    ],
-    answer: "Cualquier atributo que pueda servir como clave primaria"
+    question: "¿Edificios es…?",
+    options: ["Activo no circulante", "Gasto", "Pasivo"],
+    answer: "Activo no circulante"
   },
   {
-    question: "Una superllave es:",
-    options: [
-      "Un conjunto de atributos que identifica tuplas, aunque tenga extras",
-      "Una clave foránea",
-      "Una clave compuesta obligatoria"
-    ],
-    answer: "Un conjunto de atributos que identifica tuplas, aunque tenga extras"
-  },
-  {
-    question: "Una clave compuesta se forma por:",
-    options: ["Más de un atributo", "Un atributo único", "Atributos derivados"],
-    answer: "Más de un atributo"
+    question: "¿Proveedores es…?",
+    options: ["Pasivo a corto plazo", "Activo fijo", "Capital"],
+    answer: "Pasivo a corto plazo"
   },
 
-  // ======================
-  // NORMALIZACIÓN – 1FN, 2FN, 3FN, BCNF, 4FN, 5FN
-  // ======================
-
+  // ==========================================
+  // 4. LIBRO DIARIO Y MAYOR
+  // ==========================================
   {
-    question: "La 1FN exige:",
+    question: "¿Qué es el libro diario?",
     options: [
-      "Atributos atómicos",
-      "Eliminar dependencias parciales",
-      "Eliminar transitivas"
+      "Donde se registran las operaciones cronológicamente",
+      "Donde se guardan facturas",
+      "Un estado financiero"
     ],
-    answer: "Atributos atómicos"
+    answer: "Donde se registran las operaciones cronológicamente"
   },
   {
-    question: "En 1FN, un atributo multivaluado debe:",
-    options: [
-      "Moverse a una tabla nueva",
-      "Convertirse en clave",
-      "Unirse con otros atributos"
-    ],
-    answer: "Moverse a una tabla nueva"
+    question: "¿Qué es el libro mayor?",
+    options: ["Cuentas T", "Facturas", "Notas de venta"],
+    answer: "Cuentas T"
   },
   {
-    question: "La 2FN aplica solo si:",
+    question: "¿Qué es un asiento contable?",
     options: [
-      "La clave primaria es compuesta",
-      "La clave es surrogate",
-      "No hay clave primaria"
+      "Registro de cargos y abonos de una operación",
+      "Un documento fiscal",
+      "Un contrato"
     ],
-    answer: "La clave primaria es compuesta"
-  },
-  {
-    question: "La 2FN elimina:",
-    options: [
-      "Dependencias parciales",
-      "Dependencias transitivas",
-      "Atributos nulos"
-    ],
-    answer: "Dependencias parciales"
-  },
-  {
-    question: "La 3FN elimina:",
-    options: [
-      "Dependencias transitivas",
-      "Dependencias multivaluadas",
-      "Clave primaria compuesta"
-    ],
-    answer: "Dependencias transitivas"
-  },
-  {
-    question: "BCNF es más estricta que 3FN porque:",
-    options: [
-      "Exige que todo determinante sea superclave",
-      "Prohíbe claves compuestas",
-      "No permite atributos derivados"
-    ],
-    answer: "Exige que todo determinante sea superclave"
-  },
-  {
-    question: "La 4FN trata dependencias:",
-    options: ["Multivaluadas", "Transitivas", "Funcionales simples"],
-    answer: "Multivaluadas"
-  },
-  {
-    question: "La 5FN se enfoca en:",
-    options: [
-      "Dependencias por unión",
-      "Dependencias parciales",
-      "Dependencias multivaluadas"
-    ],
-    answer: "Dependencias por unión"
-  },
-  {
-    question: "La dependencia funcional A → B significa:",
-    options: [
-      "Que A determina a B",
-      "Que B determina a A",
-      "Que A y B no se relacionan"
-    ],
-    answer: "Que A determina a B"
-  },
-  {
-    question: "La cerradura de atributos sirve para:",
-    options: [
-      "Determinar claves candidatas",
-      "Optimizar consultas",
-      "Crear índices"
-    ],
-    answer: "Determinar claves candidatas"
+    answer: "Registro de cargos y abonos de una operación"
   },
 
-  // ======================
-  // ÁLGEBRA RELACIONAL
-  // ======================
-
+  // ==========================================
+  // 5. BALANZA DE COMPROBACIÓN
+  // ==========================================
   {
-    question: "La selección (σ) opera sobre:",
-    options: ["Filas", "Columnas", "Índices"],
-    answer: "Filas"
-  },
-  {
-    question: "La proyección (π) selecciona:",
-    options: ["Columnas", "Filas", "Registros duplicados"],
-    answer: "Columnas"
-  },
-  {
-    question: "El producto cartesiano genera:",
+    question: "¿Para qué sirve la balanza de comprobación?",
     options: [
-      "Todas las combinaciones entre filas",
-      "Solo coincidencias",
-      "Una tabla vacía"
+      "Para verificar que cargos y abonos coinciden",
+      "Para calcular impuestos",
+      "Para registrar ventas"
     ],
-    answer: "Todas las combinaciones entre filas"
+    answer: "Para verificar que cargos y abonos coinciden"
   },
   {
-    question: "La operación división (÷) se usa para:",
+    question: "La balanza de comprobación es:",
     options: [
-      "Encontrar quién cumple con todos los elementos de un conjunto",
-      "Eliminar filas duplicadas",
-      "Unir relaciones"
+      "Un procedimiento de verificación",
+      "Un estado financiero",
+      "Un documento fiscal"
     ],
-    answer: "Encontrar quién cumple con todos los elementos de un conjunto"
-  },
-  {
-    question: "El join es equivalente a:",
-    options: [
-      "Producto cartesiano + selección",
-      "Proyección + unión",
-      "Selección + división"
-    ],
-    answer: "Producto cartesiano + selección"
+    answer: "Un procedimiento de verificación"
   },
 
-  // ======================
-  // SQL AVANZADO
-  // ======================
-
+  // ==========================================
+  // 6. BALANCE GENERAL
+  // ==========================================
   {
-    question: "INNER JOIN devuelve:",
+    question: "El balance general muestra:",
     options: [
-      "Solo filas coincidentes",
-      "Todas las filas de la izquierda",
-      "Todas las filas de ambas tablas"
+      "La situación financiera a una fecha específica",
+      "Las ventas del año",
+      "El flujo de efectivo"
     ],
-    answer: "Solo filas coincidentes"
+    answer: "La situación financiera a una fecha específica"
   },
   {
-    question: "LEFT JOIN devuelve:",
+    question: "¿Cuál es la fórmula del balance general?",
     options: [
-      "Todas las filas de la tabla izquierda",
-      "Solo coincidencias",
-      "El producto cartesiano"
+      "Activo = Pasivo + Capital",
+      "Ingresos – Egresos",
+      "Ventas – Costo"
     ],
-    answer: "Todas las filas de la tabla izquierda"
+    answer: "Activo = Pasivo + Capital"
   },
   {
-    question: "FULL OUTER JOIN devuelve:",
-    options: [
-      "Todas las filas de ambas tablas",
-      "Solo filas de la derecha",
-      "Solo filas sin coincidencias"
-    ],
-    answer: "Todas las filas de ambas tablas"
-  },
-  {
-    question: "Una subconsulta correlacionada:",
-    options: [
-      "Se ejecuta por cada fila de la consulta externa",
-      "Se ejecuta una sola vez",
-      "No usa tablas externas"
-    ],
-    answer: "Se ejecuta por cada fila de la consulta externa"
-  },
-  {
-    question: "GROUP BY agrupa por:",
-    options: ["Columnas", "Filas", "Registros vacíos"],
-    answer: "Columnas"
-  },
-  {
-    question: "HAVING se usa para:",
-    options: [
-      "Filtrar grupos",
-      "Filtrar filas antes del agrupamiento",
-      "Crear índices"
-    ],
-    answer: "Filtrar grupos"
-  },
-  {
-    question: "Una window function usa la cláusula:",
-    options: ["OVER", "WINDOW", "BY"],
-    answer: "OVER"
-  },
-  {
-    question: "ROW_NUMBER() sirve para:",
-    options: [
-      "Enumerar filas dentro de una partición",
-      "Contar filas globales",
-      "Eliminar duplicados"
-    ],
-    answer: "Enumerar filas dentro de una partición"
-  },
-  {
-    question: "Un índice compuesto (A,B) sirve para:",
-    options: [
-      "Búsquedas por A o por A+B",
-      "Búsquedas por B siempre",
-      "Evitar claves primarias"
-    ],
-    answer: "Búsquedas por A o por A+B"
+    question: "Los pasivos se clasifican según su:",
+    options: ["Exigibilidad", "Costo", "Orden alfabético"],
+    answer: "Exigibilidad"
   },
 
-  // ======================
-  // TRANSACTIONS, ACID, ISOLATION
-  // ======================
-
+  // ==========================================
+  // 7. ESTADO DE RESULTADOS
+  // ==========================================
   {
-    question: "Atomicidad significa:",
+    question: "Estado financiero que muestra la rentabilidad:",
     options: [
-      "La transacción se ejecuta toda o nada",
-      "La transacción es rápida",
-      "No hay claves duplicadas"
+      "Estado de resultados",
+      "Balance general",
+      "Flujo de efectivo"
     ],
-    answer: "La transacción se ejecuta toda o nada"
+    answer: "Estado de resultados"
   },
   {
-    question: "Consistencia implica:",
+    question: "Utilidad bruta =",
     options: [
-      "Mantener reglas de integridad",
-      "Evitar bloqueos",
-      "Crear índices"
+      "Ventas netas – Costo de ventas",
+      "Activo – Pasivo",
+      "Ingresos – Gastos"
     ],
-    answer: "Mantener reglas de integridad"
+    answer: "Ventas netas – Costo de ventas"
   },
   {
-    question: "Aislamiento garantiza:",
+    question: "Utilidad neta =",
     options: [
-      "Equivalencia a ejecución serial",
-      "Evitar atributos nulos",
-      "Velocidad de consultas"
+      "Ingresos – Egresos del periodo",
+      "Activo – Pasivo",
+      "Ventas – Inventario"
     ],
-    answer: "Equivalencia a ejecución serial"
-  },
-  {
-    question: "Durabilidad significa:",
-    options: [
-      "Los cambios persisten tras fallos",
-      "Las consultas son rápidas",
-      "Las transacciones son opcionales"
-    ],
-    answer: "Los cambios persisten tras fallos"
-  },
-  {
-    question: "Read Uncommitted permite:",
-    options: [
-      "Dirty reads",
-      "Phantom reads pero no dirty reads",
-      "Evitar todos los problemas"
-    ],
-    answer: "Dirty reads"
-  },
-  {
-    question: "Read Committed evita:",
-    options: [
-      "Dirty reads",
-      "Phantom reads",
-      "Non-repeatable reads"
-    ],
-    answer: "Dirty reads"
-  },
-  {
-    question: "Repeatable Read evita:",
-    options: [
-      "Non-repeatable reads",
-      "Dirty reads",
-      "Phantom reads exclusivamente"
-    ],
-    answer: "Non-repeatable reads"
-  },
-  {
-    question: "Serializable evita:",
-    options: [
-      "Todos los fenómenos",
-      "Solo dirty reads",
-      "Solo non-repeatable reads"
-    ],
-    answer: "Todos los fenómenos"
-  },
-  {
-    question: "Un phantom read ocurre cuando:",
-    options: [
-      "La misma consulta devuelve filas adicionales",
-      "Se lee un dato cambiado",
-      "Hay dos transacciones esperando un lock"
-    ],
-    answer: "La misma consulta devuelve filas adicionales"
-  },
-  {
-    question: "Un deadlock ocurre cuando:",
-    options: [
-      "Dos transacciones esperan recursos que la otra posee",
-      "Una tabla queda sin índices",
-      "Se corrompe el log"
-    ],
-    answer: "Dos transacciones esperan recursos que la otra posee"
+    answer: "Ingresos – Egresos del periodo"
   },
 
-  // ======================
-  // CONSTRAINTS
-  // ======================
-
+  // ==========================================
+  // 8. MÉTODOS DE INVENTARIOS
+  // ==========================================
   {
-    question: "PRIMARY KEY equivale a:",
-    options: [
-      "UNIQUE + NOT NULL",
-      "CHECK + UNIQUE",
-      "FOREIGN KEY"
-    ],
-    answer: "UNIQUE + NOT NULL"
+    question: "Método donde salen las primeras entradas:",
+    options: ["PEPS (FIFO)", "UEPS (LIFO)", "Promedio ponderado"],
+    answer: "PEPS (FIFO)"
   },
   {
-    question: "ON DELETE CASCADE significa:",
-    options: [
-      "Borra los registros hijos al borrar el padre",
-      "Impide borrar padres con hijos",
-      "Pone los hijos a NULL"
-    ],
-    answer: "Borra los registros hijos al borrar el padre"
+    question: "Método permitido por el SAT:",
+    options: ["Promedio ponderado", "UEPS", "PEPS"],
+    answer: "Promedio ponderado"
   },
   {
-    question: "ON DELETE SET NULL:",
-    options: [
-      "Pone la FK a NULL",
-      "Borra todos los registros",
-      "Impide actualización"
-    ],
-    answer: "Pone la FK a NULL"
-  },
-  {
-    question: "CHECK sirve para:",
-    options: [
-      "Validar rango o condición",
-      "Crear claves",
-      "Hacer joins"
-    ],
-    answer: "Validar rango o condición"
+    question: "Método ya no permitido por el SAT:",
+    options: ["UEPS (LIFO)", "PEPS", "Promedio"],
+    answer: "UEPS (LIFO)"
   },
 
-  // ======================
-  // NOSQL
-  // ======================
-
+  // ==========================================
+  // 9. DEPRECIACIONES Y AMORTIZACIONES
+  // ==========================================
   {
-    question: "MongoDB es un ejemplo de:",
-    options: ["Document store", "Graph DB", "Key-Value"],
-    answer: "Document store"
+    question: "La depreciación se aplica a:",
+    options: ["Activos fijos", "Intangibles", "Gastos"],
+    answer: "Activos fijos"
   },
   {
-    question: "Redis es un ejemplo de:",
-    options: ["Key-Value", "Wide-column", "Document"],
-    answer: "Key-Value"
+    question: "La amortización se aplica a:",
+    options: ["Intangibles o pagos anticipados", "Activos fijos", "Ingresos"],
+    answer: "Intangibles o pagos anticipados"
   },
   {
-    question: "Cassandra es un ejemplo de:",
-    options: ["Wide-column", "Graph DB", "Document store"],
-    answer: "Wide-column"
-  },
-  {
-    question: "Neo4j es un ejemplo de:",
-    options: ["Graph DB", "Document store", "Column store"],
-    answer: "Graph DB"
-  },
-  {
-    question: "NoSQL es ideal cuando:",
+    question: "Fórmula de depreciación línea recta:",
     options: [
-      "El esquema cambia frecuentemente",
-      "Se requiere integridad transaccional estricta",
-      "Hay muchas relaciones complejas"
+      "(Costo – valor de rescate) / años de vida útil",
+      "Costo × años",
+      "Costo – pasivo"
     ],
-    answer: "El esquema cambia frecuentemente"
-  },
-  {
-    question: "Eventual consistency significa:",
-    options: [
-      "La consistencia se garantiza con el tiempo",
-      "No hay consistencia",
-      "Todo es siempre consistente inmediatamente"
-    ],
-    answer: "La consistencia se garantiza con el tiempo"
+    answer: "(Costo – valor de rescate) / años de vida útil"
   },
 
-  // ======================
-  // UML y Modelado
-  // ======================
-
+  // ==========================================
+  // 10. ESTADOS FINANCIEROS BÁSICOS
+  // ==========================================
   {
-    question: "En UML, una clase es similar a:",
-    options: ["Una entidad", "Una PK", "Un índice"],
-    answer: "Una entidad"
-  },
-  {
-    question: "La multiplicidad 1..* equivale a:",
-    options: ["1 a muchos", "1 a 1", "0 a 1"],
-    answer: "1 a muchos"
-  },
-
-  // ======================
-  // SQL PRÁCTICO
-  // ======================
-
-  {
-    question: "¿Cuál comando inicia una transacción?",
-    options: ["BEGIN", "START VIEW", "CREATE"],
-    answer: "BEGIN"
-  },
-  {
-    question: "¿Cuál comando revierte los cambios?",
-    options: ["ROLLBACK", "DELETE", "DROP"],
-    answer: "ROLLBACK"
-  },
-  {
-    question: "¿Qué hace EXPLAIN?",
+    question: "Estado que muestra liquidez:",
     options: [
-      "Muestra el plan de ejecución",
-      "Crea índices",
-      "Cierra conexiones"
+      "Estado de flujo de efectivo",
+      "Balance general",
+      "Estado de resultados"
     ],
-    answer: "Muestra el plan de ejecución"
+    answer: "Estado de flujo de efectivo"
   },
   {
-    question: "¿Cuál es una buena práctica para producción?",
+    question: "Estado que se hace a una fecha específica:",
     options: [
-      "Evitar SELECT *",
-      "Usar subconsultas correlacionadas siempre",
-      "No usar índices"
+      "Balance general",
+      "Estado de resultados",
+      "Flujo de efectivo"
     ],
-    answer: "Evitar SELECT *"
-  },
-
-  // ======================
-  // MÁS PREGUNTAS PRÁCTICAS
-  // ======================
-
-  {
-    question: "Una vista materializada:",
-    options: [
-      "Almacena los resultados",
-      "Siempre se vuelve a calcular",
-      "No permite índices"
-    ],
-    answer: "Almacena los resultados"
+    answer: "Balance general"
   },
   {
-    question: "Un trigger se ejecuta:",
+    question: "Estado que cubre un periodo determinado:",
     options: [
-      "Automáticamente ante un evento",
-      "Solo manualmente",
-      "Solo durante back-ups"
+      "Estado de resultados",
+      "Balance general",
+      "Balanza de comprobación"
     ],
-    answer: "Automáticamente ante un evento"
-  },
-  {
-    question: "Los atributos derivados deben almacenarse solo si:",
-    options: [
-      "Se requiere rendimiento",
-      "Son obligatorios",
-      "Son multivaluados"
-    ],
-    answer: "Se requiere rendimiento"
-  },
-  {
-    question: "Para reconstruir una relación sin pérdida se usa:",
-    options: [
-      "Join natural",
-      "Intersección",
-      "Diferencia"
-    ],
-    answer: "Join natural"
-  },
-  {
-    question: "Una FD se preserva si:",
-    options: [
-      "Puede verificarse sin joins",
-      "Requiere unir todas las tablas",
-      "Depende de una clave surrogate"
-    ],
-    answer: "Puede verificarse sin joins"
-  },
-  {
-    question: "La relación VentaDetalle(idVenta, idProducto, cantidad) tiene PK:",
-    options: [
-      "(idVenta, idProducto)",
-      "idProducto",
-      "cantidad"
-    ],
-    answer: "(idVenta, idProducto)"
-  },
-  {
-    question: "Una entidad débil tiene su PK formada por:",
-    options: [
-      "La PK de la entidad fuerte + su clave parcial",
-      "Solo su clave natural",
-      "Un atributo derivado"
-    ],
-    answer: "La PK de la entidad fuerte + su clave parcial"
+    answer: "Estado de resultados"
   }
 ];
