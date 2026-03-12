@@ -1,293 +1,282 @@
 let quizData = [
+
   // ==========================================
-  // 1. ANTECEDENTES Y CONCEPTOS BÁSICOS
+  // 1. CONTABILIDAD
   // ==========================================
   {
-    question: "¿Qué es contabilidad?",
+    question: "¿Qué es la contabilidad financiera?",
     options: [
-      "Técnica para registrar operaciones y producir información financiera",
-      "Proceso para pagar impuestos",
-      "Método para calcular precios"
+      "Rama que registra operaciones para generar información financiera",
+      "Método para calcular salarios",
+      "Sistema para vender productos"
     ],
-    answer: "Técnica para registrar operaciones y producir información financiera"
+    answer: "Rama que registra operaciones para generar información financiera"
   },
   {
-    question: "¿Para qué sirve la contabilidad?",
+    question: "¿Qué es la contabilidad de costos?",
     options: [
-      "Para producir información financiera útil para la toma de decisiones",
-      "Para decorar informes",
-      "Para aumentar las ventas"
+      "Rama que analiza y controla los costos de producción",
+      "Sistema para pagar impuestos",
+      "Proceso de contratación laboral"
     ],
-    answer: "Para producir información financiera útil para la toma de decisiones"
-  },
-  {
-    question: "¿Qué es información financiera?",
-    options: [
-      "Datos cuantificables sobre la situación económica de una entidad",
-      "Un documento legal",
-      "Una base de datos fiscal"
-    ],
-    answer: "Datos cuantificables sobre la situación económica de una entidad"
-  },
-  {
-    question: "¿Qué es una entidad económica?",
-    options: [
-      "Unidad identificable que realiza actividades económicas",
-      "El gobierno federal",
-      "Cualquier persona física"
-    ],
-    answer: "Unidad identificable que realiza actividades económicas"
+    answer: "Rama que analiza y controla los costos de producción"
   },
 
   // ==========================================
-  // 2. PARTIDA DOBLE
+  // 2. USUARIOS DE LA INFORMACIÓN
   // ==========================================
   {
-    question: "Principio fundamental de la partida doble:",
+    question: "¿Quiénes son usuarios internos de la información contable?",
     options: [
-      "No hay cargo sin abono",
-      "Todo cargo debe ser mayor",
-      "Solo afecta una cuenta"
+      "Gerentes y administradores",
+      "Clientes y proveedores",
+      "Gobierno y bancos"
     ],
-    answer: "No hay cargo sin abono"
+    answer: "Gerentes y administradores"
   },
   {
-    question: "¿Cuántas cuentas afecta una transacción en partida doble?",
-    options: ["Al menos 2 cuentas", "Solo 1 cuenta", "Hasta 5 cuentas"],
-    answer: "Al menos 2 cuentas"
-  },
-  {
-    question: "La suma de cargos debe ser igual a:",
-    options: ["La suma de abonos", "El capital", "El inventario"],
-    answer: "La suma de abonos"
-  },
-  {
-    question: "El activo aumenta con:",
-    options: ["Cargo", "Abono", "Ninguno"],
-    answer: "Cargo"
-  },
-  {
-    question: "El pasivo aumenta con:",
-    options: ["Abono", "Cargo", "Pago"],
-    answer: "Abono"
-  },
-  {
-    question: "El capital aumenta con:",
-    options: ["Abono", "Cargo", "Ambos"],
-    answer: "Abono"
-  },
-  {
-    question: "Los gastos aumentan con:",
-    options: ["Cargo", "Abono", "Inventario"],
-    answer: "Cargo"
-  },
-  {
-    question: "Los ingresos aumentan con:",
-    options: ["Abono", "Cargo", "Pago"],
-    answer: "Abono"
+    question: "¿Quiénes son usuarios externos de la información contable?",
+    options: [
+      "Inversionistas, bancos y gobierno",
+      "Gerentes de la empresa",
+      "Supervisores de producción"
+    ],
+    answer: "Inversionistas, bancos y gobierno"
   },
 
   // ==========================================
-  // 3. CATÁLOGO DE CUENTAS
+  // 3. PATRIMONIO
   // ==========================================
   {
-    question: "¿Caja es…?",
-    options: ["Activo circulante", "Pasivo", "Capital"],
-    answer: "Activo circulante"
-  },
-  {
-    question: "¿Clientes es…?",
-    options: ["Activo circulante", "Pasivo CP", "Gasto"],
-    answer: "Activo circulante"
-  },
-  {
-    question: "¿Edificios es…?",
-    options: ["Activo no circulante", "Gasto", "Pasivo"],
-    answer: "Activo no circulante"
-  },
-  {
-    question: "¿Proveedores es…?",
-    options: ["Pasivo a corto plazo", "Activo fijo", "Capital"],
-    answer: "Pasivo a corto plazo"
+    question: "¿Qué es el patrimonio en contabilidad?",
+    options: [
+      "Conjunto de bienes, derechos y obligaciones de una entidad",
+      "El dinero guardado en caja",
+      "El valor de los salarios"
+    ],
+    answer: "Conjunto de bienes, derechos y obligaciones de una entidad"
   },
 
   // ==========================================
-  // 4. LIBRO DIARIO Y MAYOR
+  // 4. COSTOS Y GASTOS
   // ==========================================
   {
-    question: "¿Qué es el libro diario?",
+    question: "¿Qué es un costo?",
     options: [
-      "Donde se registran las operaciones cronológicamente",
-      "Donde se guardan facturas",
-      "Un estado financiero"
+      "Recurso utilizado en la producción de bienes o servicios",
+      "Dinero gastado en publicidad",
+      "Pago de impuestos"
     ],
-    answer: "Donde se registran las operaciones cronológicamente"
+    answer: "Recurso utilizado en la producción de bienes o servicios"
   },
   {
-    question: "¿Qué es el libro mayor?",
-    options: ["Cuentas T", "Facturas", "Notas de venta"],
-    answer: "Cuentas T"
-  },
-  {
-    question: "¿Qué es un asiento contable?",
+    question: "¿Qué es un gasto?",
     options: [
-      "Registro de cargos y abonos de una operación",
-      "Un documento fiscal",
-      "Un contrato"
+      "Recurso usado para operar o administrar la empresa",
+      "Materia prima utilizada",
+      "Pago de maquinaria"
     ],
-    answer: "Registro de cargos y abonos de una operación"
+    answer: "Recurso usado para operar o administrar la empresa"
   },
 
   // ==========================================
-  // 5. BALANZA DE COMPROBACIÓN
+  // 5. COSTOS FIJOS Y VARIABLES
   // ==========================================
   {
-    question: "¿Para qué sirve la balanza de comprobación?",
+    question: "¿Qué son los costos fijos?",
     options: [
-      "Para verificar que cargos y abonos coinciden",
-      "Para calcular impuestos",
-      "Para registrar ventas"
+      "Costos que no cambian aunque cambie la producción",
+      "Costos que dependen de la producción",
+      "Costos de materias primas"
     ],
-    answer: "Para verificar que cargos y abonos coinciden"
+    answer: "Costos que no cambian aunque cambie la producción"
   },
   {
-    question: "La balanza de comprobación es:",
+    question: "¿Qué son los costos variables?",
     options: [
-      "Un procedimiento de verificación",
-      "Un estado financiero",
-      "Un documento fiscal"
+      "Costos que cambian según la cantidad producida",
+      "Costos que nunca cambian",
+      "Costos administrativos"
     ],
-    answer: "Un procedimiento de verificación"
+    answer: "Costos que cambian según la cantidad producida"
   },
 
   // ==========================================
-  // 6. BALANCE GENERAL
+  // 6. ELEMENTOS DEL COSTO
   // ==========================================
   {
-    question: "El balance general muestra:",
+    question: "¿Cuáles son los tres elementos del costo de producción?",
     options: [
-      "La situación financiera a una fecha específica",
-      "Las ventas del año",
-      "El flujo de efectivo"
+      "Materia prima, mano de obra y gastos indirectos de fabricación",
+      "Ventas, impuestos y utilidades",
+      "Producción, marketing y finanzas"
     ],
-    answer: "La situación financiera a una fecha específica"
+    answer: "Materia prima, mano de obra y gastos indirectos de fabricación"
   },
+
   {
-    question: "¿Cuál es la fórmula del balance general?",
+    question: "¿Qué es la materia prima directa?",
     options: [
-      "Activo = Pasivo + Capital",
-      "Ingresos – Egresos",
-      "Ventas – Costo"
+      "Material que se identifica directamente con el producto",
+      "Material usado en oficinas",
+      "Material de limpieza"
     ],
-    answer: "Activo = Pasivo + Capital"
+    answer: "Material que se identifica directamente con el producto"
   },
+
   {
-    question: "Los pasivos se clasifican según su:",
-    options: ["Exigibilidad", "Costo", "Orden alfabético"],
-    answer: "Exigibilidad"
+    question: "¿Qué es la mano de obra directa?",
+    options: [
+      "Trabajo que participa directamente en la producción",
+      "Trabajo administrativo",
+      "Trabajo de supervisión"
+    ],
+    answer: "Trabajo que participa directamente en la producción"
+  },
+
+  {
+    question: "¿Qué son los gastos indirectos de fabricación?",
+    options: [
+      "Costos de producción que no se identifican directamente con un producto",
+      "Costos de publicidad",
+      "Costos de ventas"
+    ],
+    answer: "Costos de producción que no se identifican directamente con un producto"
   },
 
   // ==========================================
-  // 7. ESTADO DE RESULTADOS
+  // 7. TIPOS DE COSTO
   // ==========================================
   {
-    question: "Estado financiero que muestra la rentabilidad:",
+    question: "¿Qué es el costo primo?",
     options: [
-      "Estado de resultados",
-      "Balance general",
-      "Flujo de efectivo"
+      "Materia prima directa + mano de obra directa",
+      "Mano de obra indirecta + gastos administrativos",
+      "Costos de venta + costos financieros"
     ],
-    answer: "Estado de resultados"
+    answer: "Materia prima directa + mano de obra directa"
   },
+
   {
-    question: "Utilidad bruta =",
+    question: "¿Qué es el costo de transformación o conversión?",
     options: [
-      "Ventas netas – Costo de ventas",
-      "Activo – Pasivo",
-      "Ingresos – Gastos"
+      "Mano de obra directa + gastos indirectos de fabricación",
+      "Materia prima directa + gastos financieros",
+      "Gastos de venta + gastos administrativos"
     ],
-    answer: "Ventas netas – Costo de ventas"
+    answer: "Mano de obra directa + gastos indirectos de fabricación"
   },
+
   {
-    question: "Utilidad neta =",
+    question: "¿Qué es el costo de producción?",
     options: [
-      "Ingresos – Egresos del periodo",
-      "Activo – Pasivo",
-      "Ventas – Inventario"
+      "Materia prima directa + mano de obra directa + gastos indirectos",
+      "Solo mano de obra",
+      "Solo materia prima"
     ],
-    answer: "Ingresos – Egresos del periodo"
+    answer: "Materia prima directa + mano de obra directa + gastos indirectos"
+  },
+
+  {
+    question: "¿Qué es el costo total?",
+    options: [
+      "Costo de producción + gastos de operación",
+      "Ventas totales",
+      "Solo gastos administrativos"
+    ],
+    answer: "Costo de producción + gastos de operación"
   },
 
   // ==========================================
-  // 8. MÉTODOS DE INVENTARIOS
+  // 8. UTILIDADES
   // ==========================================
   {
-    question: "Método donde salen las primeras entradas:",
-    options: ["PEPS (FIFO)", "UEPS (LIFO)", "Promedio ponderado"],
-    answer: "PEPS (FIFO)"
+    question: "¿Qué es la utilidad bruta?",
+    options: [
+      "Ventas menos costo de ventas",
+      "Ventas menos impuestos",
+      "Ventas menos gastos financieros"
+    ],
+    answer: "Ventas menos costo de ventas"
   },
+
   {
-    question: "Método permitido por el SAT:",
-    options: ["Promedio ponderado", "UEPS", "PEPS"],
-    answer: "Promedio ponderado"
+    question: "¿Qué es la utilidad neta?",
+    options: [
+      "Ganancia final después de restar todos los gastos",
+      "Dinero total en caja",
+      "Ventas totales"
+    ],
+    answer: "Ganancia final después de restar todos los gastos"
   },
+
   {
-    question: "Método ya no permitido por el SAT:",
-    options: ["UEPS (LIFO)", "PEPS", "Promedio"],
-    answer: "UEPS (LIFO)"
+    question: "¿Qué es el margen de utilidad?",
+    options: [
+      "Diferencia entre precio de venta y costos",
+      "Cantidad de productos vendidos",
+      "Cantidad de empleados"
+    ],
+    answer: "Diferencia entre precio de venta y costos"
   },
 
   // ==========================================
-  // 9. DEPRECIACIONES Y AMORTIZACIONES
+  // 9. PRECIO DE VENTA
   // ==========================================
   {
-    question: "La depreciación se aplica a:",
-    options: ["Activos fijos", "Intangibles", "Gastos"],
-    answer: "Activos fijos"
-  },
-  {
-    question: "La amortización se aplica a:",
-    options: ["Intangibles o pagos anticipados", "Activos fijos", "Ingresos"],
-    answer: "Intangibles o pagos anticipados"
-  },
-  {
-    question: "Fórmula de depreciación línea recta:",
+    question: "¿Qué es el precio de venta?",
     options: [
-      "(Costo – valor de rescate) / años de vida útil",
-      "Costo × años",
-      "Costo – pasivo"
+      "Cantidad a la que se vende un producto al cliente",
+      "Costo de producción",
+      "Precio de compra de materias primas"
     ],
-    answer: "(Costo – valor de rescate) / años de vida útil"
+    answer: "Cantidad a la que se vende un producto al cliente"
   },
 
   // ==========================================
-  // 10. ESTADOS FINANCIEROS BÁSICOS
+  // 10. LEGISLACIÓN LABORAL
   // ==========================================
   {
-    question: "Estado que muestra liquidez:",
+    question: "¿Qué es la legislación laboral?",
     options: [
-      "Estado de flujo de efectivo",
-      "Balance general",
-      "Estado de resultados"
+      "Conjunto de leyes que regulan la relación entre trabajadores y patrones",
+      "Reglas de contabilidad",
+      "Normas de producción"
     ],
-    answer: "Estado de flujo de efectivo"
+    answer: "Conjunto de leyes que regulan la relación entre trabajadores y patrones"
   },
+
   {
-    question: "Estado que se hace a una fecha específica:",
+    question: "¿Qué es la jornada de trabajo?",
     options: [
-      "Balance general",
-      "Estado de resultados",
-      "Flujo de efectivo"
+      "Tiempo en que el trabajador está a disposición del patrón",
+      "Tiempo libre del trabajador",
+      "Tiempo de descanso obligatorio"
     ],
-    answer: "Balance general"
+    answer: "Tiempo en que el trabajador está a disposición del patrón"
   },
+
   {
-    question: "Estado que cubre un periodo determinado:",
+    question: "¿Qué es el salario?",
     options: [
-      "Estado de resultados",
-      "Balance general",
-      "Balanza de comprobación"
+      "Retribución que el patrón paga al trabajador por su trabajo",
+      "Pago de impuestos",
+      "Costo de producción"
     ],
-    answer: "Estado de resultados"
+    answer: "Retribución que el patrón paga al trabajador por su trabajo"
+  },
+
+  // ==========================================
+  // 11. INVENTARIOS
+  // ==========================================
+  {
+    question: "¿Qué significa PEPS?",
+    options: [
+      "Primeras entradas, primeras salidas",
+      "Primeros gastos, primeras ventas",
+      "Producción eficiente por sistema"
+    ],
+    answer: "Primeras entradas, primeras salidas"
   }
+
 ];
