@@ -1,282 +1,244 @@
 let quizData = [
 
   // ==========================================
-  // 1. CONTABILIDAD
+  // 1. CONCEPTOS BÁSICOS
   // ==========================================
   {
-    question: "¿Qué es la contabilidad financiera?",
+    question: "¿Qué es la creatividad?",
     options: [
-      "Rama que registra operaciones para generar información financiera",
-      "Método para calcular salarios",
-      "Sistema para vender productos"
+      "Capacidad de generar ideas nuevas, útiles y diferentes",
+      "Capacidad de memorizar datos rápidamente",
+      "Proceso exclusivo del arte"
     ],
-    answer: "Rama que registra operaciones para generar información financiera"
-  },
-  {
-    question: "¿Qué es la contabilidad de costos?",
-    options: [
-      "Rama que analiza y controla los costos de producción",
-      "Sistema para pagar impuestos",
-      "Proceso de contratación laboral"
-    ],
-    answer: "Rama que analiza y controla los costos de producción"
-  },
-
-  // ==========================================
-  // 2. USUARIOS DE LA INFORMACIÓN
-  // ==========================================
-  {
-    question: "¿Quiénes son usuarios internos de la información contable?",
-    options: [
-      "Gerentes y administradores",
-      "Clientes y proveedores",
-      "Gobierno y bancos"
-    ],
-    answer: "Gerentes y administradores"
-  },
-  {
-    question: "¿Quiénes son usuarios externos de la información contable?",
-    options: [
-      "Inversionistas, bancos y gobierno",
-      "Gerentes de la empresa",
-      "Supervisores de producción"
-    ],
-    answer: "Inversionistas, bancos y gobierno"
-  },
-
-  // ==========================================
-  // 3. PATRIMONIO
-  // ==========================================
-  {
-    question: "¿Qué es el patrimonio en contabilidad?",
-    options: [
-      "Conjunto de bienes, derechos y obligaciones de una entidad",
-      "El dinero guardado en caja",
-      "El valor de los salarios"
-    ],
-    answer: "Conjunto de bienes, derechos y obligaciones de una entidad"
-  },
-
-  // ==========================================
-  // 4. COSTOS Y GASTOS
-  // ==========================================
-  {
-    question: "¿Qué es un costo?",
-    options: [
-      "Recurso utilizado en la producción de bienes o servicios",
-      "Dinero gastado en publicidad",
-      "Pago de impuestos"
-    ],
-    answer: "Recurso utilizado en la producción de bienes o servicios"
-  },
-  {
-    question: "¿Qué es un gasto?",
-    options: [
-      "Recurso usado para operar o administrar la empresa",
-      "Materia prima utilizada",
-      "Pago de maquinaria"
-    ],
-    answer: "Recurso usado para operar o administrar la empresa"
-  },
-
-  // ==========================================
-  // 5. COSTOS FIJOS Y VARIABLES
-  // ==========================================
-  {
-    question: "¿Qué son los costos fijos?",
-    options: [
-      "Costos que no cambian aunque cambie la producción",
-      "Costos que dependen de la producción",
-      "Costos de materias primas"
-    ],
-    answer: "Costos que no cambian aunque cambie la producción"
-  },
-  {
-    question: "¿Qué son los costos variables?",
-    options: [
-      "Costos que cambian según la cantidad producida",
-      "Costos que nunca cambian",
-      "Costos administrativos"
-    ],
-    answer: "Costos que cambian según la cantidad producida"
-  },
-
-  // ==========================================
-  // 6. ELEMENTOS DEL COSTO
-  // ==========================================
-  {
-    question: "¿Cuáles son los tres elementos del costo de producción?",
-    options: [
-      "Materia prima, mano de obra y gastos indirectos de fabricación",
-      "Ventas, impuestos y utilidades",
-      "Producción, marketing y finanzas"
-    ],
-    answer: "Materia prima, mano de obra y gastos indirectos de fabricación"
+    answer: "Capacidad de generar ideas nuevas, útiles y diferentes"
   },
 
   {
-    question: "¿Qué es la materia prima directa?",
+    question: "¿Qué es la innovación?",
     options: [
-      "Material que se identifica directamente con el producto",
-      "Material usado en oficinas",
-      "Material de limpieza"
+      "Aplicar ideas nuevas para generar valor práctico",
+      "Imaginar sin ejecutar",
+      "Copiar procesos existentes"
     ],
-    answer: "Material que se identifica directamente con el producto"
+    answer: "Aplicar ideas nuevas para generar valor práctico"
   },
 
   {
-    question: "¿Qué es la mano de obra directa?",
+    question: "¿Cuál es la diferencia principal entre creatividad e innovación?",
     options: [
-      "Trabajo que participa directamente en la producción",
-      "Trabajo administrativo",
-      "Trabajo de supervisión"
+      "La creatividad genera ideas y la innovación las aplica",
+      "La innovación genera ideas y la creatividad las vende",
+      "Ambas significan exactamente lo mismo"
     ],
-    answer: "Trabajo que participa directamente en la producción"
-  },
-
-  {
-    question: "¿Qué son los gastos indirectos de fabricación?",
-    options: [
-      "Costos de producción que no se identifican directamente con un producto",
-      "Costos de publicidad",
-      "Costos de ventas"
-    ],
-    answer: "Costos de producción que no se identifican directamente con un producto"
+    answer: "La creatividad genera ideas y la innovación las aplica"
   },
 
   // ==========================================
-  // 7. TIPOS DE COSTO
+  // 2. AUTORES IMPORTANTES
   // ==========================================
   {
-    question: "¿Qué es el costo primo?",
+    question: "¿Qué autor propuso el pensamiento divergente y convergente?",
     options: [
-      "Materia prima directa + mano de obra directa",
-      "Mano de obra indirecta + gastos administrativos",
-      "Costos de venta + costos financieros"
+      "J.P. Guilford",
+      "Edward de Bono",
+      "John Dewey"
     ],
-    answer: "Materia prima directa + mano de obra directa"
+    answer: "J.P. Guilford"
   },
 
   {
-    question: "¿Qué es el costo de transformación o conversión?",
+    question: "¿Qué tipo de pensamiento genera múltiples ideas sin juzgarlas?",
     options: [
-      "Mano de obra directa + gastos indirectos de fabricación",
-      "Materia prima directa + gastos financieros",
-      "Gastos de venta + gastos administrativos"
+      "Pensamiento divergente",
+      "Pensamiento convergente",
+      "Pensamiento lineal"
     ],
-    answer: "Mano de obra directa + gastos indirectos de fabricación"
+    answer: "Pensamiento divergente"
   },
 
   {
-    question: "¿Qué es el costo de producción?",
+    question: "¿Qué autor propone el pensamiento lateral?",
     options: [
-      "Materia prima directa + mano de obra directa + gastos indirectos",
-      "Solo mano de obra",
-      "Solo materia prima"
+      "Edward de Bono",
+      "Teresa Amabile",
+      "Polya"
     ],
-    answer: "Materia prima directa + mano de obra directa + gastos indirectos"
+    answer: "Edward de Bono"
   },
 
   {
-    question: "¿Qué es el costo total?",
+    question: "¿Qué autor propuso las cuatro etapas para resolver problemas matemáticos?",
     options: [
-      "Costo de producción + gastos de operación",
-      "Ventas totales",
-      "Solo gastos administrativos"
+      "George Polya",
+      "Koestler",
+      "Gardner"
     ],
-    answer: "Costo de producción + gastos de operación"
-  },
-
-  // ==========================================
-  // 8. UTILIDADES
-  // ==========================================
-  {
-    question: "¿Qué es la utilidad bruta?",
-    options: [
-      "Ventas menos costo de ventas",
-      "Ventas menos impuestos",
-      "Ventas menos gastos financieros"
-    ],
-    answer: "Ventas menos costo de ventas"
+    answer: "George Polya"
   },
 
   {
-    question: "¿Qué es la utilidad neta?",
+    question: "¿Qué autor relaciona creatividad con motivación intrínseca?",
     options: [
-      "Ganancia final después de restar todos los gastos",
-      "Dinero total en caja",
-      "Ventas totales"
+      "Teresa Amabile",
+      "Dewey",
+      "Herrmann"
     ],
-    answer: "Ganancia final después de restar todos los gastos"
-  },
-
-  {
-    question: "¿Qué es el margen de utilidad?",
-    options: [
-      "Diferencia entre precio de venta y costos",
-      "Cantidad de productos vendidos",
-      "Cantidad de empleados"
-    ],
-    answer: "Diferencia entre precio de venta y costos"
+    answer: "Teresa Amabile"
   },
 
   // ==========================================
-  // 9. PRECIO DE VENTA
+  // 3. HABILIDADES CREATIVAS
   // ==========================================
   {
-    question: "¿Qué es el precio de venta?",
+    question: "¿Qué habilidad creativa consiste en producir muchas ideas?",
     options: [
-      "Cantidad a la que se vende un producto al cliente",
-      "Costo de producción",
-      "Precio de compra de materias primas"
+      "Fluidez",
+      "Originalidad",
+      "Elaboración"
     ],
-    answer: "Cantidad a la que se vende un producto al cliente"
-  },
-
-  // ==========================================
-  // 10. LEGISLACIÓN LABORAL
-  // ==========================================
-  {
-    question: "¿Qué es la legislación laboral?",
-    options: [
-      "Conjunto de leyes que regulan la relación entre trabajadores y patrones",
-      "Reglas de contabilidad",
-      "Normas de producción"
-    ],
-    answer: "Conjunto de leyes que regulan la relación entre trabajadores y patrones"
+    answer: "Fluidez"
   },
 
   {
-    question: "¿Qué es la jornada de trabajo?",
+    question: "¿Qué habilidad permite cambiar de enfoque y perspectiva?",
     options: [
-      "Tiempo en que el trabajador está a disposición del patrón",
-      "Tiempo libre del trabajador",
-      "Tiempo de descanso obligatorio"
+      "Flexibilidad",
+      "Fluidez",
+      "Memoria"
     ],
-    answer: "Tiempo en que el trabajador está a disposición del patrón"
+    answer: "Flexibilidad"
   },
 
   {
-    question: "¿Qué es el salario?",
+    question: "¿Qué habilidad implica ideas poco comunes o únicas?",
     options: [
-      "Retribución que el patrón paga al trabajador por su trabajo",
-      "Pago de impuestos",
-      "Costo de producción"
+      "Originalidad",
+      "Elaboración",
+      "Precisión"
     ],
-    answer: "Retribución que el patrón paga al trabajador por su trabajo"
+    answer: "Originalidad"
+  },
+
+  {
+    question: "¿Qué habilidad organiza detalles para llevar una idea a la práctica?",
+    options: [
+      "Elaboración",
+      "Fluidez",
+      "Divergencia"
+    ],
+    answer: "Elaboración"
   },
 
   // ==========================================
-  // 11. INVENTARIOS
+  // 4. BARRERAS DE LA CREATIVIDAD
   // ==========================================
   {
-    question: "¿Qué significa PEPS?",
+    question: "¿Cuál es una barrera de la creatividad?",
     options: [
-      "Primeras entradas, primeras salidas",
-      "Primeros gastos, primeras ventas",
-      "Producción eficiente por sistema"
+      "Temor al ridículo",
+      "Curiosidad",
+      "Confianza"
     ],
-    answer: "Primeras entradas, primeras salidas"
+    answer: "Temor al ridículo"
+  },
+
+  {
+    question: "¿Cuál es un facilitador de la creatividad?",
+    options: [
+      "Libertad para explorar ideas",
+      "Presión constante",
+      "Castigo al error"
+    ],
+    answer: "Libertad para explorar ideas"
+  },
+
+  // ==========================================
+  // 5. MODELOS DE RESOLUCIÓN DE PROBLEMAS
+  // ==========================================
+  {
+    question: "¿Cuál es el primer paso del modelo de John Dewey?",
+    options: [
+      "Identificación del problema",
+      "Evaluación final",
+      "Implementación"
+    ],
+    answer: "Identificación del problema"
+  },
+
+  {
+    question: "¿Cuál es una fase del modelo CPS de Osborn-Parnes?",
+    options: [
+      "Ideación",
+      "Memorización",
+      "Clasificación"
+    ],
+    answer: "Ideación"
+  },
+
+  {
+    question: "¿Qué metodología tiene fases: empatizar, definir, idear, prototipar y testear?",
+    options: [
+      "Design Thinking",
+      "Lean Startup",
+      "TRIZ"
+    ],
+    answer: "Design Thinking"
+  },
+
+  // ==========================================
+  // 6. APLICACIÓN EN TI
+  // ==========================================
+  {
+    question: "¿Qué pensamiento se usa para problemas nuevos en TI?",
+    options: [
+      "Creativo o heurístico",
+      "Rutinario",
+      "Automático"
+    ],
+    answer: "Creativo o heurístico"
+  },
+
+  {
+    question: "¿Qué metodología usa iteraciones rápidas y colaboración continua?",
+    options: [
+      "Ágil",
+      "Tradicional",
+      "Secuencial rígida"
+    ],
+    answer: "Ágil"
+  },
+
+  {
+    question: "¿Qué ejemplo representa innovación tecnológica?",
+    options: [
+      "Uber conectando usuarios mediante app",
+      "Escribir en papel",
+      "Archivar manualmente"
+    ],
+    answer: "Uber conectando usuarios mediante app"
+  },
+
+  // ==========================================
+  // 7. EXAMEN DIRECTO
+  // ==========================================
+  {
+    question: "¿Qué significa pensamiento convergente?",
+    options: [
+      "Seleccionar y refinar la mejor solución",
+      "Generar muchas ideas",
+      "Improvisar sin analizar"
+    ],
+    answer: "Seleccionar y refinar la mejor solución"
+  },
+
+  {
+    question: "¿Qué estado describe Csikszentmihalyi en creatividad?",
+    options: [
+      "Estado de flujo",
+      "Estado mecánico",
+      "Estado repetitivo"
+    ],
+    answer: "Estado de flujo"
   }
 
 ];
